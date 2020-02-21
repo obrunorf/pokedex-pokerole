@@ -1,0 +1,37 @@
+﻿<Application x:Class="Pokedex.Pokerole.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:pokerole="clr-namespace:Pokedex.Pokerole"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
+             xmlns:converters="clr-namespace:Pokedex.Pokerole.Converters"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary
+                    Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary
+                    Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary
+                    Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.DeepPurple.xaml" />
+                <ResourceDictionary
+                    Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <converters:CategoryBackgroundColorConverter x:Key="CategoryBackgroundColorConverter" />
+            <converters:CategoryForegroundColorConverter x:Key="CategoryForegroundColorConverter" />
+            <converters:PokemonTitleConverter x:Key="PokemonTitleConverter" />
+            <converters:VisibleIfNotNullConverter x:Key="VisibleIfNotNull" />
+            <converters:VisibleIfNullConverter x:Key="VisibleIfNull" />
+            <converters:BubbleConverter x:Key="BubbleConverter" />
+
+            <system:String x:Key="StrengthText">Strength</system:String>
+            <system:String x:Key="SpecialText">Special</system:String>
+            <system:String x:Key="InsightText">Insight</system:String>
+            <system:String x:Key="DexterityText">Dexterity</system:String>
+            <system:String x:Key="VitalityText">Vitality</system:String>
+            <system:String x:Key="DisobedienceText">Disobedience</system:String>
+            <system:Int32 x:Key="MaxDisobedience">5</system:Int32>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
