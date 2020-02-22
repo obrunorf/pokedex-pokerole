@@ -3764,13 +3764,13 @@
     },
     {
       "number": "029",
-      "name": "Nidoran ♀",
+      "name": "Nidoran-f",
       "height": "0.41",
       "weight": "7",
       "category": "Poison Pin",
       "pokedex": "A female only species. It lives close to meadows and forests. They are mellow Pokémon. To protect herself, she secretes a powerful toxin through her body. Her horn is small but venomous to the touch.",
       "evolutions": [
-        "Nidoran ♀",
+        "Nidoran-f",
         "Nidorina",
         "Nidoqueen"
       ],
@@ -3881,7 +3881,7 @@
       "category": "Poison Pin",
       "pokedex": "Nidorina are jealous creatures. They don't like other females near their mates. Otherwise, they are very social creatures. When it's around friends and family, its barbs are tucked away to prevent injury.",
       "evolutions": [
-        "Nidoran ♀",
+        "Nidoran-f",
         "Nidorina",
         "Nidoqueen"
       ],
@@ -3992,7 +3992,7 @@
       "category": "Drill ",
       "pokedex": "Motherly by nature, it uses its scaly rugged body to seal the entrance of its nest and protect its young from predators. There are records of angry Nidoqueens sending people flying with a single tackle.",
       "evolutions": [
-        "Nidoran ♀",
+        "Nidoran-f",
         "Nidorina",
         "Nidoqueen"
       ],
@@ -4082,13 +4082,13 @@
     },
     {
       "number": "032",
-      "name": "Nidoran ♂",
+      "name": "Nidoran-m",
       "height": "0.51",
       "weight": "9",
       "category": "Poison Pin",
       "pokedex": "The male Nidoran has developed a great alertness to sounds. Its small body is covered in spikes that are drenched in venom when he's threatened. He will defend his mate and home fiercely.",
       "evolutions": [
-        "Nidoran ♂",
+        "Nidoran-m",
         "Nidorino",
         "Nidoking"
       ],
@@ -4199,7 +4199,7 @@
       "category": "Poison Pin",
       "pokedex": "An independent and fierce creature. It roams alone in search for a mate and will compete with other males around. It will violently charge with a venom drenched horn against intruders.",
       "evolutions": [
-        "Nidoran ♂",
+        "Nidoran-m",
         "Nidorino",
         "Nidoking"
       ],
@@ -4310,7 +4310,7 @@
       "category": "Drill",
       "pokedex": "It is recognized by its rock-hard hide and its extended horn. Be careful with the horn as it contains venom. There are records of one trampling and destroying a radio tower that was built on his territory.",
       "evolutions": [
-        "Nidoran ♂",
+        "Nidoran-m",
         "Nidorino",
         "Nidoking"
       ],

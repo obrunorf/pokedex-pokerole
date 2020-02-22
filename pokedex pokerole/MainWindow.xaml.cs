@@ -25,9 +25,9 @@ namespace pokedex_pokerole
         public MainWindow()
         {
             InitializeComponent();           
-            pkmns = LoadPokeData(@"C:\Users\e-eu\source\repos\pokedex pokerole\pokedex pokerole\data\pokemon.json");
+            pkmns = LoadPokeData(@"C:\Users\e-eu\Documents\GitHub\pokedex-pokerole\pokedex pokerole\data\pokemon.json");
             pkmnList.ItemsSource = pkmns;
-            moves = LoadMoves(@"C:\Users\e-eu\source\repos\pokedex pokerole\pokedex pokerole\data\moves.json");
+            moves = LoadMoves(@"C:\Users\e-eu\Documents\GitHub\pokedex-pokerole\pokedex pokerole\data\moves.json");
 
 
         }
@@ -119,23 +119,71 @@ namespace pokedex_pokerole
 
         private async void  magicalThing()
         {
-            Pokemon p = await DataFetcher.GetApiObject<Pokemon>(1);            
-            Console.WriteLine(p.Name + " " + p.Stats[5].Stat.Name +" " + p.Stats[5].BaseValue);
+            //Pokemon p = await DataFetcher.GetApiObject<Pokemon>(1);            
+            //Console.WriteLine(p.Name + " " + p.Stats[5].Stat.Name +" " + p.Stats[5].BaseValue);
 
-            List<PokemonSpecies> all = new List<PokemonSpecies>;
-            foreach(pokemon p in pkmns)
+            List<PokemonSpecies> all = new List<PokemonSpecies>();
+            
+            //foreach(pokemon po in pkmns)
+            for (int a = 1; a <= 807; a++)            
+             {
+                    PokemonSpecies p2 = await DataFetcher.GetApiObject<PokemonSpecies>(a);
+                    all.Add(p2);
+                    Console.WriteLine("add " + p2.Name + " ..");
+               
+            }
+            Console.WriteLine("all added.");
+            Console.WriteLine(" hp.");
+            //int i = 1;
+
+            var todasEvolucaoMapeada = all.Select(x => x.EvolvesFromSpecies)
+                                                   .Where(x => x?.Name != null)
+                                                   .Distinct()
+                                                   .ToLookup(x => x.Name.ToUpper());
+
+            foreach (pokemon pok in pkmns)
+            //for (int i = 1; i <= 890; i++)
             {
-                PokemonSpecies p2 = await DataFetcher.GetApiObject<PokemonSpecies>(Int32.Parse(p.number));
-                all.Add(p2);
-                Console.WriteLine("add " + p2.Name + " ..");
-            }
-            Console.WriteLine("all added.");         
+                if (!string.IsNullOrEmpty(pok.number))
+                {// { pok.number = i.ToString(); }
+                    PokemonSpecies p2 = await DataFetcher.GetApiObject<PokemonSpecies>(Int32.Parse(pok.number));
+                    Pokemon p3 = await DataFetcher.GetApiObject<Pokemon>(Int32.Parse(pok.number));
 
-            Console.WriteLine(p2.Name + " "+ p2.Names +" " + p2.PokedexNumbers);//species.EvolvesFromSpecies = null > is first form
+                    pok.base_hp = hpBase(pok,
+                                    p2,
+                                    todasEvolucaoMapeada,
+                                    p3);
+                    Console.WriteLine(pok.name + " com hp >" + pok.base_hp);
+
+                    if (string.IsNullOrEmpty(pok.category))
+                    {
+                        pok.category = p2.Genera.FirstOrDefault(w => w.Language.Name == "en").Name;
+                        //pok.category = p2.Genera[2].Name;
+                        Console.WriteLine(pok.category);
+                    }
+                    if (string.IsNullOrEmpty(pok.pokedex))
+                    {
+                        // pok.pokedex = p2.FlavorTexts[1].FlavorText;
+                        pok.pokedex = p2.FlavorTexts.FirstOrDefault(w => w.Language.Name == "en").FlavorText;
+                        Console.WriteLine(pok.pokedex);
+                    }
+                }
+                 //   i++;                
+                
             }
+
+
+            Console.WriteLine("os pokemon tudo feito");
+            string json = JsonConvert.SerializeObject(pkmns.ToArray());
+
+            //write string to file
+            System.IO.File.WriteAllText(@"C:\Users\e-eu\Documents\GitHub\pokedex-pokerole\pokedex pokerole\data\POKEMONSREBUILT.json", json);
+
+            //Console.WriteLine(p2.Name + " "+ p2.Names +" " + p2.PokedexNumbers);//species.EvolvesFromSpecies = null > is first form
+        }
         
 
-        private string hpBase(pokemon pokeRole, PokemonSpecies pokeApi, List<PokemonSpecies> all, Pokemon pokeApiPoke)
+        private string hpBase(pokemon pokeRole, PokemonSpecies pokeApi, ILookup<string, NamedApiResource<PokemonSpecies>> todasEvolucaoMapeada, Pokemon pokeApiPoke)
         /* The next was extracted from "Pokerole Ze stuff for later" on https://docs.google.com/document/d/180rP_Qc8MrPvNq99HZiBzVYvvqdwu60GnkIwh0papDU/edit
           As a note, Pokémon HP is a difficult thing to put to narrative meaning. How would you compare a 28 foot rock snake having its dreams eaten compared to a small fiery lizard getting squirted with a stream of bubbles? So, it might be easier to just stick to having Base HP based on the video games stats instead of coming up with a narrative reason to determine Base HP.
 
@@ -154,25 +202,31 @@ namespace pokedex_pokerole
 
             int hpMin = 3;
             int hp = Convert.ToInt32(Math.Floor(pokeApiPoke.Stats[5].BaseValue / 23.5));            //stats is an array with the stats, base hp is [5]
-            if (Evolves(pokeRole, all)){
+
+           
+            if (todasEvolucaoMapeada.Contains(pokeRole.name.ToUpper())) {// (Evolves(pokeRole, all)){
                 hpMin = 3;
             } else hpMin = 4;
             if (pokeApi.EvolvesFromSpecies != null)
             {
-              hpMin = Int32.Parse(pkmns.Find(p => p.name == pokeApi.EvolvesFromSpecies.Name).base_hp) +1; //if it has a previous evolution, it's minimum hp its the previous form +1
+                //hpMin = Int32.Parse(pkmns.Find(p => p.name.ToUpper() == pokeApi.EvolvesFromSpecies.Name.ToUpper()).base_hp) +1; //if it has a previous evolution, it's minimum hp its the previous form +1
+                hpMin = int.TryParse(pkmns.SingleOrDefault(p => p.name.ToUpper() == pokeApi.EvolvesFromSpecies.Name.ToUpper())?.base_hp, out var novoBrunao) ? novoBrunao+1 : hpMin;
             }
             return Math.Max(hp,hpMin).ToString();            
         }
 
-        private bool Evolves(pokemon pokeRole, List<PokemonSpecies> all)
-        {
-           
+      /*  private bool Evolves(pokemon pokeRole, List<PokemonSpecies> all)
+        {                 
+
+
+            all.Find(p.)
+
             foreach(PokemonSpecies p in all)
             {
-                if (p.EvolvesFromSpecies.Name == pokeRole.name) return true; //it does evolve
+                if ((p.EvolvesFromSpecies?.Name ?? false) == pokeRole.name) return true; //it does evolve
             }
             return false;
-        }
+        }*/
 
         private async void Sprite(int id)
         {
