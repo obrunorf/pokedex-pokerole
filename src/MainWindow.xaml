@@ -257,7 +257,7 @@
                             <ColumnDefinition />
                         </Grid.ColumnDefinitions>
                         <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" FontWeight="Bold"
-                                   Grid.Column="0" Text="{Binding Source={StaticResource SpecialText}}" />
+                                   Grid.Column="0" Text="{Binding Source={StaticResource SpecialText}}" Grid.ColumnSpan="2" />
                         <TextBlock Grid.Column="1" TextAlignment="Left">
                             <TextBlock.Text>
                                 <MultiBinding Converter="{StaticResource BubbleConverter}">
@@ -272,13 +272,12 @@
 
                     <Grid Margin="0 0 0 4">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="24" />
-                            <ColumnDefinition Width="134*"/>
-                            <ColumnDefinition Width="157*" />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
                         </Grid.ColumnDefinitions>
                         <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" FontWeight="Bold"
                                    Grid.Column="0" Text="{Binding Source={StaticResource InsightText}}" Grid.ColumnSpan="2" />
-                        <TextBlock Grid.Column="2" TextAlignment="Left">
+                        <TextBlock Grid.Column="1" TextAlignment="Left">
                             <TextBlock.Text>
                                 <MultiBinding Converter="{StaticResource BubbleConverter}">
                                     <Binding RelativeSource="{RelativeSource AncestorType=Window, Mode=FindAncestor}"
@@ -292,13 +291,12 @@
 
                     <Grid Margin="0 0 0 4">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="24" />
-                            <ColumnDefinition Width="134*"/>
-                            <ColumnDefinition Width="157*" />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
                         </Grid.ColumnDefinitions>
                         <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" FontWeight="Bold"
                                    Grid.Column="0" Text="{Binding Source={StaticResource BaseHPText}}" Grid.ColumnSpan="2" />
-                        <TextBlock Grid.Column="2" TextAlignment="Left">
+                        <TextBlock Grid.Column="1" TextAlignment="Left">
                             <TextBlock.Text >
 
                                 <MultiBinding Converter="{StaticResource BubbleConverter}">
