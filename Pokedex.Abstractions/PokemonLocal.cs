@@ -21,7 +21,7 @@ namespace Pokedex.Abstractions
         public List<int?> special { get; set; }
         public List<int?> insight { get; set; }
         public List<string> abilities { get; set; }
-        public string base_hp { get; set; }
+        public int? base_hp { get; set; }
         public int? disobedience { get; set; }
         public List<Move> moves { get; set; }
     }

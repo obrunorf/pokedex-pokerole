@@ -12,7 +12,9 @@ namespace Pokedex.Pokerole.Converters
         {
             if (values[0] is int currentValue && values[1] is int maxValue)
             {
-                var returnString =
+                return new string('⚫', currentValue) + new string('◯', Math.Max(maxValue - currentValue,0));
+
+                /* var returnString =
                     new StringBuilder();
 
                 var prefix = values.ElementAtOrDefault(2)?.ToString();
@@ -26,8 +28,8 @@ namespace Pokedex.Pokerole.Converters
                 {
                     returnString[i + (prefix?.Length ?? 0)] = '⚫';
                 }
-
-                return returnString.ToString();
+                
+                return returnString.ToString();*/
             }
 
             return null;

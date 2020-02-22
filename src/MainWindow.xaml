@@ -272,12 +272,13 @@
 
                     <Grid Margin="0 0 0 4">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition />
-                            <ColumnDefinition />
+                            <ColumnDefinition Width="24" />
+                            <ColumnDefinition Width="134*"/>
+                            <ColumnDefinition Width="157*" />
                         </Grid.ColumnDefinitions>
                         <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" FontWeight="Bold"
-                                   Grid.Column="0" Text="{Binding Source={StaticResource InsightText}}" />
-                        <TextBlock Grid.Column="1" TextAlignment="Left">
+                                   Grid.Column="0" Text="{Binding Source={StaticResource InsightText}}" Grid.ColumnSpan="2" />
+                        <TextBlock Grid.Column="2" TextAlignment="Left">
                             <TextBlock.Text>
                                 <MultiBinding Converter="{StaticResource BubbleConverter}">
                                     <Binding RelativeSource="{RelativeSource AncestorType=Window, Mode=FindAncestor}"
@@ -288,6 +289,28 @@
                             </TextBlock.Text>
                         </TextBlock>
                     </Grid>
+
+                    <Grid Margin="0 0 0 4">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="24" />
+                            <ColumnDefinition Width="134*"/>
+                            <ColumnDefinition Width="157*" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" FontWeight="Bold"
+                                   Grid.Column="0" Text="{Binding Source={StaticResource BaseHPText}}" Grid.ColumnSpan="2" />
+                        <TextBlock Grid.Column="2" TextAlignment="Left">
+                            <TextBlock.Text >
+
+                                <MultiBinding Converter="{StaticResource BubbleConverter}">
+                                    <Binding RelativeSource="{RelativeSource AncestorType=Window, Mode=FindAncestor}"
+                                             Path="DataContext.SelectedPokemon.base_hp" />
+                                    <Binding Source="{StaticResource MaxHp}" />
+                                </MultiBinding>
+
+                            </TextBlock.Text>
+                        </TextBlock>
+                    </Grid>
+
                 </StackPanel>
             </Grid>
             <Border Padding="8"
