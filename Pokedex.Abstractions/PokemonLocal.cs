@@ -21,6 +21,7 @@ namespace Pokedex.Abstractions
         public List<int?> special { get; set; }
         public List<int?> insight { get; set; }
         public List<string> abilities { get; set; }
+        public List<AbilityDetail> abilitiesDetailed { get; set; }
         public int? base_hp { get; set; }
         public int? disobedience { get; set; }
         public List<Move> moves { get; set; }
@@ -45,5 +46,12 @@ namespace Pokedex.Abstractions
         public string damage_pool { get; set; }
         public string effect { get; set; }
         public string description { get; set; }
+    }
+
+    public class AbilityDetail
+    {
+        public string name { get; set; }
+        public string description { get; set; }
+        public string effect { get; set; }        
     }
 }

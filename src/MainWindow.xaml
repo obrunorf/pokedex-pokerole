@@ -108,7 +108,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
+                <RowDefinition Height=".5*" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition />
@@ -150,24 +150,73 @@
                          Text="{Binding SelectedPokemon.category}" />
             </Grid>
             <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".30*"/>
+                    <ColumnDefinition Width=".70*"/>
+                </Grid.ColumnDefinitions>
                 <ItemsControl Margin="0 0 -8 0" HorizontalContentAlignment="Stretch"
                               ItemsSource="{Binding SelectedPokemon.evolutions}" Grid.IsSharedSizeScope="True">
                     <ItemsControl.ItemsPanel>
                         <ItemsPanelTemplate>
-                            <UniformGrid Rows="1" />
+                            <UniformGrid Rows="3" />
                         </ItemsPanelTemplate>
                     </ItemsControl.ItemsPanel>
                     <ItemsControl.ItemTemplate>
                         <DataTemplate
                             DataType="{x:Type system:String}">
-                            <TextBox controls:TextBoxBehavior.SelectAllTextOnFocus="True" Margin="0 0 8 0"
-                                     HorizontalAlignment="Stretch" materialDesign:HintAssist.Hint="Evolution"
-                                     Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}"
-                                     IsReadOnly="True"
-                                     Text="{Binding Path=.}" />
+                            <controls:SelectableTextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3"
+                                              materialDesign:HintAssist.Hint="Evolution"
+                                              Style="{StaticResource MaterialDesignBody1TextBlock}"
+                                              Text="{Binding Path=.}" />
+                            
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
+                <Grid Grid.Column="1" Margin="0 12 0 0">
+                    <ScrollViewer>
+                        <ItemsControl ItemsSource="{Binding SelectedPokemon.abilitiesDetailed}"
+                                  HorizontalContentAlignment="Stretch">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate
+                                DataType="{x:Type abstractions:AbilityDetail}">
+                                    <Border
+                                    Padding="3"
+                                    BorderThickness="0 0 0 1"
+                                    BorderBrush="{DynamicResource MaterialDesignDivider}">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition />
+                                                <RowDefinition Height="Auto" />
+                                                <RowDefinition Height="Auto" />
+                                            </Grid.RowDefinitions>
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                </Grid.ColumnDefinitions>
+                                                <controls:SelectableTextBlock
+                                                FontWeight="Bold"
+                                                Text="{Binding name}" Style="{StaticResource MaterialDesignTextBlock}" />
+                                            </Grid>
+
+                                            <StackPanel Grid.Row="1">
+
+                                                <controls:SelectableTextBlock HorizontalAlignment="Left" MaxWidth="400"
+                                                                          Text="{Binding description}"
+                                                                          TextWrapping="Wrap"
+                                                                          Style="{StaticResource MaterialDesignCaptionTextBlock}" />
+                                            </StackPanel>
+                                            <StackPanel Grid.Row="2">
+                                                <controls:SelectableTextBlock HorizontalAlignment="Left" MaxWidth="400"
+                                                                          Text="{Binding effect}"
+                                                                          TextWrapping="Wrap"
+                                                                          Style="{StaticResource MaterialDesignCaptionTextBlock}" />
+                                            </StackPanel>
+                                        </Grid>
+                                    </Border>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </ScrollViewer>
+                </Grid>
             </Grid>
             <Grid Grid.Row="3" Margin="0 12 0 0">
                 <Grid.ColumnDefinitions>

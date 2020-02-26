@@ -1,6 +1,4 @@
-{
-  "abilities" : [
-    {
+[ {
       "name": "Adaptability",
       "description": "The Pokémon will easily adapt to its surroundings, it will travel with ease no matter the terrain.",
       "effect": "Whenever this Pokémon uses a Damaging Move that matches its Type, Add 1 Dice to the Damage pool of that attack."
@@ -1040,5 +1038,4 @@
       "description": "Under extreme stress, this Pokémon will unlock its hidden psychic abilities through the power of meditation.",
       "effect": "Only Darmanitan may have a Zen Mode form. When at half or less of its total HP, it changes to Zen Mode form at the start of its next turn. Switch it's Strength with its Special Attribute. Increase/reductions on them switch as well. Gain the Psychic Type. It will return to normal after recovering to full HP."
     }
-  ]
-}
+]
