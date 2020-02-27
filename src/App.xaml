@@ -24,6 +24,8 @@
             <converters:VisibleIfNotNullConverter x:Key="VisibleIfNotNull" />
             <converters:VisibleIfNullConverter x:Key="VisibleIfNull" />
             <converters:BubbleConverter x:Key="BubbleConverter" />
+            <converters:PokemonImageConverter x:Key="PokemonImageConverter" />
+            <converters:CurrentEvolutionConverter x:Key="CurrentEvolutionConverter" />
 
             <system:String x:Key="StrengthText">Strength</system:String>
             <system:String x:Key="SpecialText">Special</system:String>

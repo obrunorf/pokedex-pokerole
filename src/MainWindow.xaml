@@ -5,7 +5,6 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:system="clr-namespace:System;assembly=mscorlib"
-        xmlns:pokerole="clr-namespace:Pokedex.Pokerole"
         xmlns:abstractions="clr-namespace:Pokedex.Abstractions;assembly=Pokedex.Abstractions"
         xmlns:models="clr-namespace:Pokedex.Pokerole.Models"
         xmlns:controls="clr-namespace:Pokedex.Pokerole.Controls"
@@ -18,6 +17,7 @@
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
         Title="MainWindow" Height="613.525" Width="1066.115"
+        Name="Window"
         d:DataContext="{d:DesignInstance models:MainWindowViewModel}">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -160,18 +160,34 @@
                         <controls:SelectableTextBlock
                             FontWeight="Bold"
                             Text="Evolutions"
-                            Style="{StaticResource MaterialDesignTextBlock}" />
+                            Style="{StaticResource MaterialDesignHeadline6TextBlock}" />
                         <ItemsControl HorizontalContentAlignment="Stretch"
                                       ItemsSource="{Binding SelectedPokemon.evolutions}"
                                       Grid.IsSharedSizeScope="True">
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate
                                     DataType="{x:Type system:String}">
-                                    <controls:SelectableTextBlock Margin="0"
-                                                                  Padding="0"
-                                                                  Style="{StaticResource MaterialDesignBody2TextBlock}"
-                                                                  Text="{Binding Path=.}" />
-
+                                    <Grid Height="40" IsSharedSizeScope="True">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition />
+                                            <ColumnDefinition Width="Auto" />
+                                        </Grid.ColumnDefinitions>
+                                        <controls:SelectableTextBlock VerticalAlignment="Center" Margin="0"
+                                                                      Padding="0"
+                                                                      Style="{StaticResource MaterialDesignBody1TextBlock}"
+                                                                      Text="{Binding Path=.}">
+                                            <controls:SelectableTextBlock.FontWeight>
+                                                <MultiBinding Converter="{StaticResource CurrentEvolutionConverter}">
+                                                    <Binding ElementName="Window"
+                                                             Path="DataContext.SelectedPokemon" />
+                                                    <Binding Path="." />
+                                                </MultiBinding>
+                                            </controls:SelectableTextBlock.FontWeight>
+                                        </controls:SelectableTextBlock>
+                                        <Image Grid.Column="1" Stretch="Uniform" MaxHeight="40" MaxWidth="40"
+                                               DataContext="{Binding Path=., Converter={StaticResource PokemonImageConverter}}"
+                                               Source="{Binding Path=Result}" />
+                                    </Grid>
                                 </DataTemplate>
                             </ItemsControl.ItemTemplate>
                         </ItemsControl>

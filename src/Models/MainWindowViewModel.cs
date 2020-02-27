@@ -24,26 +24,27 @@ namespace Pokedex.Pokerole.Models
         public MainWindowViewModel(Dispatcher dispatcher)
         {
             Dispatcher = dispatcher;
-            var moveDetails = LoadMoves(Assembly.GetExecutingAssembly().GetFileStream("moves.json")).ToDictionary(i => i.name);
+            var moveDetails = LoadMoves(Assembly.GetExecutingAssembly().GetFileStream("moves.json"))
+                .ToDictionary(i => i.name);
             var abilityDetails = LoadAbilities(Assembly.GetExecutingAssembly().GetFileStream("abilities.json"));
 
             Pokemons = LoadPokeData(Assembly.GetExecutingAssembly().GetFileStream("pokemon.json")).Select(i =>
             {
-            foreach (var move in i.moves)
-            {
-                move.Detail = moveDetails.TryGetValue(move.name, out var detail) ? detail : null;
-            }
+                foreach (var move in i.moves)
+                {
+                    move.Detail = moveDetails.TryGetValue(move.name, out var detail) ? detail : null;
+                }
 
-            i.abilitiesDetailed = new List<AbilityDetail>();
-            foreach (var ability in i.abilities) //uhh
-            {
+                i.abilitiesDetailed = new List<AbilityDetail>();
+                foreach (var ability in i.abilities) //uhh
+                {
                     var asrg = abilityDetails.Find(x => x.name == ability);
                     AbilityDetail arg = new AbilityDetail();
                     arg.name = asrg.name;
                     arg.description = asrg.description;
                     arg.effect = asrg.effect;
-                    i.abilitiesDetailed.Add(arg);                
-            }
+                    i.abilitiesDetailed.Add(arg);
+                }
 
                 return i;
             }).ToList();
@@ -87,7 +88,10 @@ namespace Pokedex.Pokerole.Models
                 {
                     ImageCancellationTokenSource = new CancellationTokenSource();
                     DataFetcher.GetApiObject<Pokemon>(value.number.Value).ContinueWith(
-                        t => { Dispatcher.Invoke(() => { PokemonImage = new Uri(t.Result.Sprites.FrontMale); }); },
+                        t => { Dispatcher.Invoke(() =>
+                        {
+                            PokemonImage = new Uri(t.Result.Sprites.FrontMale);
+                        }); },
                         ImageCancellationTokenSource.Token);
                 }
             }

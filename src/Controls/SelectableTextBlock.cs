@@ -3,6 +3,8 @@ using System.Windows.Controls;
 
 namespace Pokedex.Pokerole.Controls
 {
+    // Watches a task and raises property-changed notifications when the task completes.
+
     public class SelectableTextBlock : TextBlock
     {
         static SelectableTextBlock()
