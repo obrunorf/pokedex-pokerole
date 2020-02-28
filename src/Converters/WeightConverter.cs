@@ -5,13 +5,13 @@ using Pokedex.Abstractions;
 
 namespace Pokedex.Pokerole.Converters
 {
-    public class PokemonTitleConverter : IValueConverter
+    public class WeightConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            if (value is PokemonLocal pokemonLocal)
+            if (value is string)
             {
-                return $"#{pokemonLocal.number} - {pokemonLocal.name}";
+                return $"{value}kg";
             }
 
             return null;

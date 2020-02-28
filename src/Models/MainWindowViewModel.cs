@@ -70,7 +70,8 @@ namespace Pokedex.Pokerole.Models
                 else
                     FilteredPokemons.Filter = o =>
                         o is PokemonLocal pokemonLocal &&
-                        pokemonLocal.name.StartsWith(value, StringComparison.InvariantCultureIgnoreCase);
+                        (pokemonLocal.name.StartsWith(value, StringComparison.InvariantCultureIgnoreCase)
+                        || pokemonLocal.number.ToString().Equals(value, StringComparison.InvariantCultureIgnoreCase));
             }
         }
 

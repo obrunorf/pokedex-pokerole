@@ -5,6 +5,7 @@
     <TargetFramework>net472</TargetFramework>
     <UseWPF>true</UseWPF>
     <LangVersion>latest</LangVersion>
+    <ApplicationIcon>iconfinder__Pokedex_tool_1337536.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
