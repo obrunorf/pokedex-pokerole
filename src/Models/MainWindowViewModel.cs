@@ -25,7 +25,7 @@ namespace Pokedex.Pokerole.Models
         {
             _executingAssembly = Assembly.GetExecutingAssembly();
 
-            selectableJsonFiles = _executingAssembly.GetFileNames().Where(i => i.Contains("pokemon_")).Select(i =>
+            selectableJsonFiles = _executingAssembly.GetFileNames().Where(i => i.Contains("_")).Select(i =>
                 new SelectableJsonFile
                 {
                     fullName = i,

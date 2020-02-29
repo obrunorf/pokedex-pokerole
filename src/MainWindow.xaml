@@ -20,12 +20,17 @@
                  Title="{Binding Source={StaticResource PokeDexTitle}}" Height="613.525" Width="1066.115"
                  Name="Window"
                  d:DataContext="{d:DesignInstance models:MainWindowViewModel}">
+    <mah:MetroWindow.RightWindowCommands>
+        <mah:WindowCommands>
+            <ComboBox Margin="0 0 8 0"  Style="{StaticResource MaterialDesignComboBox}" materialDesign:HintAssist.Hint="Source" ItemsSource="{Binding selectableJsonFiles}" DisplayMemberPath="displayName"
+                      SelectedItem="{Binding currentSettings.selectedFile}" />
+        </mah:WindowCommands>
+    </mah:MetroWindow.RightWindowCommands>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="380" />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-
 
         <Grid>
             <Grid.RowDefinitions>
@@ -34,8 +39,7 @@
                 <RowDefinition />
             </Grid.RowDefinitions>
             <Border Padding="8">
-                <ComboBox Style="{StaticResource MaterialDesignFloatingHintComboBox}" materialDesign:HintAssist.Hint="Source" ItemsSource="{Binding selectableJsonFiles}" DisplayMemberPath="displayName"
-                          SelectedItem="{Binding currentSettings.selectedFile}" />
+              
             </Border>
             <Border Grid.Row="1" Padding="8">
                 <TextBox Text="{Binding searchText, UpdateSourceTrigger=PropertyChanged}"
