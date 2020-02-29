@@ -28,6 +28,7 @@
             <converters:CurrentEvolutionConverter x:Key="CurrentEvolutionConverter" />
             <converters:HeightConverter x:Key="HeightConverter" />
             <converters:WeightConverter x:Key="WeightConverter" />
+            <converters:ExpConverter x:Key="ExpConverter" />
 
             <system:String x:Key="StrengthText">Strength</system:String>
             <system:String x:Key="SpecialText">Special</system:String>
@@ -37,7 +38,7 @@
             <system:String x:Key="DisobedienceText">Disobedience</system:String>
             <system:String x:Key="BaseHPText">Base HP</system:String>
             <system:String x:Key="PokeDexTitle">Pokerole Pokedex</system:String>
-            
+
             <system:Int32 x:Key="MaxDisobedience">5</system:Int32>
             <system:Int32 x:Key="MaxHp">0</system:Int32>
         </ResourceDictionary>
