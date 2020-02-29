@@ -452,6 +452,10 @@
                                             </StackPanel>
 
                                             <controls:SelectableTextBlock HorizontalAlignment="Left" MaxWidth="400"
+                                                                          Text="{Binding Detail.effect}"
+                                                                          TextWrapping="Wrap"
+                                                                          Style="{StaticResource MaterialDesignCaptionTextBlock}" />
+                                            <controls:SelectableTextBlock HorizontalAlignment="Left" MaxWidth="400"
                                                                           Text="{Binding Detail.description}"
                                                                           TextWrapping="Wrap"
                                                                           Style="{StaticResource MaterialDesignCaptionTextBlock}" />
