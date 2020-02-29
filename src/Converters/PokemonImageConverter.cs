@@ -18,12 +18,12 @@ namespace Pokedex.Pokerole.Converters
             {
                 if (values[1] is string currentEvolution)
                 {
-                    return GetFontWeight(currentEvolution, viewModel.SelectedPokemon.name);
+                    return GetFontWeight(currentEvolution, viewModel.selectedPokemon.name);
                 }
 
                 if (values[1] is PokemonLocal pokemonLocal)
                 {
-                    return GetFontWeight(pokemonLocal.name, viewModel.SelectedPokemon.name);
+                    return GetFontWeight(pokemonLocal.name, viewModel.selectedPokemon.name);
                 }
             }
 
@@ -78,7 +78,13 @@ namespace Pokedex.Pokerole.Converters
         {
             return new TaskCompletionNotifier<Uri>(DataFetcher.GetNamedApiObject<Pokemon>(pokemonName?.ToLower())
                 .ContinueWith(
-                    t => t.IsFaulted || t.IsCanceled ? null : new Uri(t.Result.Sprites.FrontMale)));
+                    t =>
+                    {
+                        if (t.IsFaulted || t.IsCanceled)
+                            return null;
+                        else
+                            return new Uri(t.Result.Sprites.FrontMale);
+                    }));
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

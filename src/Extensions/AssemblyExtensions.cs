@@ -16,6 +16,8 @@ namespace Pokedex.Pokerole.Extensions
             return streamReader.ReadToEnd();
         }
 
+        public static IEnumerable<string> GetFileNames(this Assembly assembly) => assembly.GetManifestResourceNames().Where(i => i.EndsWith(".json"));
+
         public static Stream GetFileStream(this Assembly assembly, string fileName)
         {
             if (!FilesCache.ContainsKey(assembly))

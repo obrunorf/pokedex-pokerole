@@ -1,24 +1,25 @@
-﻿<Window x:Class="Pokedex.Pokerole.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        xmlns:system="clr-namespace:System;assembly=mscorlib"
-        xmlns:abstractions="clr-namespace:Pokedex.Abstractions;assembly=Pokedex.Abstractions"
-        xmlns:models="clr-namespace:Pokedex.Pokerole.Models"
-        xmlns:controls="clr-namespace:Pokedex.Pokerole.Controls"
-        mc:Ignorable="d"
-        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
-        TextElement.FontWeight="Regular"
-        TextElement.FontSize="13"
-        TextOptions.TextFormattingMode="Ideal"
-        TextOptions.TextRenderingMode="Auto"
-        Background="{DynamicResource MaterialDesignPaper}"
-        FontFamily="{DynamicResource MaterialDesignFont}"
-        Title="{Binding Source={StaticResource PokeDexTitle}}" Height="613.525" Width="1066.115"
-        Name="Window"
-        d:DataContext="{d:DesignInstance models:MainWindowViewModel}">
+﻿<mah:MetroWindow x:Class="Pokedex.Pokerole.MainWindow"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+                 xmlns:system="clr-namespace:System;assembly=mscorlib"
+                 xmlns:abstractions="clr-namespace:Pokedex.Abstractions;assembly=Pokedex.Abstractions"
+                 xmlns:models="clr-namespace:Pokedex.Pokerole.Models"
+                 xmlns:controls="clr-namespace:Pokedex.Pokerole.Controls"
+                 xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+                 mc:Ignorable="d"
+                 TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+                 TextElement.FontWeight="Regular"
+                 TextElement.FontSize="13"
+                 TextOptions.TextFormattingMode="Ideal"
+                 TextOptions.TextRenderingMode="Auto"
+                 Background="{DynamicResource MaterialDesignPaper}"
+                 FontFamily="{DynamicResource MaterialDesignFont}"
+                 Title="{Binding Source={StaticResource PokeDexTitle}}" Height="613.525" Width="1066.115"
+                 Name="Window"
+                 d:DataContext="{d:DesignInstance models:MainWindowViewModel}">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="380" />
@@ -29,10 +30,15 @@
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
                 <RowDefinition />
             </Grid.RowDefinitions>
-            <Border Grid.Row="0" Padding="8">
-                <TextBox Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}"
+            <Border Padding="8">
+                <ComboBox Style="{StaticResource MaterialDesignFloatingHintComboBox}" materialDesign:HintAssist.Hint="Source" ItemsSource="{Binding selectableJsonFiles}" DisplayMemberPath="displayName"
+                          SelectedItem="{Binding currentSettings.selectedFile}" />
+            </Border>
+            <Border Grid.Row="1" Padding="8">
+                <TextBox Text="{Binding searchText, UpdateSourceTrigger=PropertyChanged}"
                          Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}" Margin="0 0 0 12"
                          materialDesign:TextFieldAssist.HasClearButton="True">
                     <materialDesign:HintAssist.Hint>
@@ -44,9 +50,9 @@
                 </TextBox>
             </Border>
 
-            <ListView Grid.Row="1"
-                      ItemsSource="{Binding FilteredPokemons}"
-                      SelectedItem="{Binding SelectedPokemon}"
+            <ListView Grid.Row="2"
+                      ItemsSource="{Binding filteredPokemons}"
+                      SelectedItem="{Binding selectedPokemon}"
                       HorizontalContentAlignment="Stretch">
                 <ListView.ItemTemplate>
                     <DataTemplate
@@ -96,13 +102,13 @@
         </Grid>
 
 
-        <Grid Visibility="{Binding SelectedPokemon, Converter={StaticResource VisibleIfNull}}"
+        <Grid Visibility="{Binding selectedPokemon, Converter={StaticResource VisibleIfNull}}"
               HorizontalAlignment="Stretch" Grid.Column="1" Margin="24">
             <TextBlock Text="Select a pokémon!" HorizontalAlignment="Center" VerticalAlignment="Center"
                        Style="{StaticResource MaterialDesignHeadline4TextBlock}" />
         </Grid>
 
-        <Grid Visibility="{Binding SelectedPokemon, Converter={StaticResource VisibleIfNotNull}}"
+        <Grid Visibility="{Binding selectedPokemon, Converter={StaticResource VisibleIfNotNull}}"
               HorizontalAlignment="Stretch" Grid.Column="1" Margin="24">
 
             <Grid.RowDefinitions>
@@ -125,29 +131,30 @@
                     <ColumnDefinition Width="120" />
                 </Grid.ColumnDefinitions>
                 <Image Stretch="UniformToFill" Grid.Row="0" Grid.Column="3" Grid.RowSpan="2"
-                       Source="{Binding PokemonImage}" />
+                       DataContext="{Binding Path=selectedPokemon, Converter={StaticResource PokemonImageConverter}}"
+                       Source="{Binding Path=Result}"/>
                 <controls:SelectableTextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3"
                                               materialDesign:HintAssist.Hint="Pokemon"
                                               Style="{StaticResource MaterialDesignHeadline4TextBlock}"
-                                              Text="{Binding SelectedPokemon, Converter={StaticResource PokemonTitleConverter}}" />
+                                              Text="{Binding selectedPokemon, Converter={StaticResource PokemonTitleConverter}}" />
                 <TextBox Grid.Row="1" Grid.Column="0" controls:TextBoxBehavior.SelectAllTextOnFocus="True"
                          materialDesign:HintAssist.Hint="Height"
                          Margin="0 0 8 0"
                          Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}"
                          IsReadOnly="True"
-                         Text="{Binding SelectedPokemon.height, Converter={StaticResource HeightConverter}}" />
+                         Text="{Binding selectedPokemon.height, Converter={StaticResource HeightConverter}}" />
                 <TextBox Grid.Row="1" controls:TextBoxBehavior.SelectAllTextOnFocus="True"
                          materialDesign:HintAssist.Hint="Weight"
                          Grid.Column="1" Margin="0 0 8 0"
                          Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}"
                          IsReadOnly="True"
-                         Text="{Binding SelectedPokemon.weight, Converter={StaticResource WeightConverter}}" />
+                         Text="{Binding selectedPokemon.weight, Converter={StaticResource WeightConverter}}" />
                 <TextBox Grid.Row="1" controls:TextBoxBehavior.SelectAllTextOnFocus="True"
                          materialDesign:HintAssist.Hint="Category"
                          Grid.Column="2" Margin="0 0 8 0"
                          Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}"
                          IsReadOnly="True"
-                         Text="{Binding SelectedPokemon.category}" />
+                         Text="{Binding selectedPokemon.category}" />
             </Grid>
             <Grid Grid.Row="2">
                 <Grid.ColumnDefinitions>
@@ -162,7 +169,7 @@
                             Text="Evolutions"
                             Style="{StaticResource MaterialDesignHeadline6TextBlock}" />
                         <ItemsControl HorizontalContentAlignment="Stretch"
-                                      ItemsSource="{Binding SelectedPokemon.evolutions}"
+                                      ItemsSource="{Binding selectedPokemon.evolutions}"
                                       Grid.IsSharedSizeScope="True">
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate
@@ -179,7 +186,7 @@
                                             <controls:SelectableTextBlock.FontWeight>
                                                 <MultiBinding Converter="{StaticResource CurrentEvolutionConverter}">
                                                     <Binding ElementName="Window"
-                                                             Path="DataContext.SelectedPokemon" />
+                                                             Path="DataContext.selectedPokemon" />
                                                     <Binding Path="." />
                                                 </MultiBinding>
                                             </controls:SelectableTextBlock.FontWeight>
@@ -196,7 +203,7 @@
 
                 <Grid Grid.Column="1" Margin="0 0 0 0">
                     <ScrollViewer>
-                        <ItemsControl ItemsSource="{Binding SelectedPokemon.abilitiesDetailed}"
+                        <ItemsControl ItemsSource="{Binding selectedPokemon.abilitiesDetailed}"
                                       HorizontalContentAlignment="Stretch">
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate
@@ -256,9 +263,9 @@
                             <TextBlock.Text>
                                 <MultiBinding Converter="{StaticResource BubbleConverter}">
                                     <Binding RelativeSource="{RelativeSource AncestorType=Window, Mode=FindAncestor}"
-                                             Path="DataContext.SelectedPokemon.strength[0]" />
+                                             Path="DataContext.selectedPokemon.strength[0]" />
                                     <Binding RelativeSource="{RelativeSource AncestorType=Window, Mode=FindAncestor}"
-                                             Path="DataContext.SelectedPokemon.strength[1]" />
+                                             Path="DataContext.selectedPokemon.strength[1]" />
                                 </MultiBinding>
                             </TextBlock.Text>
                         </TextBlock>
@@ -275,9 +282,9 @@
                             <TextBlock.Text>
                                 <MultiBinding Converter="{StaticResource BubbleConverter}">
                                     <Binding RelativeSource="{RelativeSource AncestorType=Window, Mode=FindAncestor}"
-                                             Path="DataContext.SelectedPokemon.dexterity[0]" />
+                                             Path="DataContext.selectedPokemon.dexterity[0]" />
                                     <Binding RelativeSource="{RelativeSource AncestorType=Window, Mode=FindAncestor}"
-                                             Path="DataContext.SelectedPokemon.dexterity[1]" />
+                                             Path="DataContext.selectedPokemon.dexterity[1]" />
                                 </MultiBinding>
                             </TextBlock.Text>
                         </TextBlock>
@@ -294,9 +301,9 @@
                             <TextBlock.Text>
                                 <MultiBinding Converter="{StaticResource BubbleConverter}">
                                     <Binding RelativeSource="{RelativeSource AncestorType=Window, Mode=FindAncestor}"
-                                             Path="DataContext.SelectedPokemon.vitality[0]" />
+                                             Path="DataContext.selectedPokemon.vitality[0]" />
                                     <Binding RelativeSource="{RelativeSource AncestorType=Window, Mode=FindAncestor}"
-                                             Path="DataContext.SelectedPokemon.vitality[1]" />
+                                             Path="DataContext.selectedPokemon.vitality[1]" />
                                 </MultiBinding>
                             </TextBlock.Text>
                         </TextBlock>
@@ -313,7 +320,7 @@
                             <TextBlock.Text>
                                 <MultiBinding Converter="{StaticResource BubbleConverter}">
                                     <Binding RelativeSource="{RelativeSource AncestorType=Window, Mode=FindAncestor}"
-                                             Path="DataContext.SelectedPokemon.disobedience" />
+                                             Path="DataContext.selectedPokemon.disobedience" />
                                     <Binding Source="{StaticResource MaxDisobedience}" />
                                 </MultiBinding>
                             </TextBlock.Text>
@@ -333,9 +340,9 @@
                             <TextBlock.Text>
                                 <MultiBinding Converter="{StaticResource BubbleConverter}">
                                     <Binding RelativeSource="{RelativeSource AncestorType=Window, Mode=FindAncestor}"
-                                             Path="DataContext.SelectedPokemon.special[0]" />
+                                             Path="DataContext.selectedPokemon.special[0]" />
                                     <Binding RelativeSource="{RelativeSource AncestorType=Window, Mode=FindAncestor}"
-                                             Path="DataContext.SelectedPokemon.special[1]" />
+                                             Path="DataContext.selectedPokemon.special[1]" />
                                 </MultiBinding>
                             </TextBlock.Text>
                         </TextBlock>
@@ -353,9 +360,9 @@
                             <TextBlock.Text>
                                 <MultiBinding Converter="{StaticResource BubbleConverter}">
                                     <Binding RelativeSource="{RelativeSource AncestorType=Window, Mode=FindAncestor}"
-                                             Path="DataContext.SelectedPokemon.insight[0]" />
+                                             Path="DataContext.selectedPokemon.insight[0]" />
                                     <Binding RelativeSource="{RelativeSource AncestorType=Window, Mode=FindAncestor}"
-                                             Path="DataContext.SelectedPokemon.insight[1]" />
+                                             Path="DataContext.selectedPokemon.insight[1]" />
                                 </MultiBinding>
                             </TextBlock.Text>
                         </TextBlock>
@@ -374,7 +381,7 @@
 
                                 <MultiBinding Converter="{StaticResource BubbleConverter}">
                                     <Binding RelativeSource="{RelativeSource AncestorType=Window, Mode=FindAncestor}"
-                                             Path="DataContext.SelectedPokemon.base_hp" />
+                                             Path="DataContext.selectedPokemon.base_hp" />
                                     <Binding Source="{StaticResource MaxHp}" />
                                 </MultiBinding>
 
@@ -388,11 +395,11 @@
                     BorderThickness="0 0 0 1"
                     BorderBrush="{DynamicResource MaterialDesignDivider}" Grid.Row="4" Margin="0 12 0 0">
                 <controls:SelectableTextBlock Style="{StaticResource MaterialDesignBody1TextBlock}"
-                                              Text="{Binding SelectedPokemon.pokedex}" TextWrapping="Wrap" />
+                                              Text="{Binding selectedPokemon.pokedex}" TextWrapping="Wrap" />
             </Border>
             <Grid Grid.Row="5" Margin="0 12 0 0">
                 <ScrollViewer>
-                    <ItemsControl ItemsSource="{Binding SelectedPokemon.moves}"
+                    <ItemsControl ItemsSource="{Binding selectedPokemon.moves}"
                                   HorizontalContentAlignment="Stretch">
                         <ItemsControl.ItemTemplate>
                             <DataTemplate
@@ -416,8 +423,9 @@
                                             <controls:SelectableTextBlock
                                                 FontWeight="Bold"
                                                 Text="{Binding name}" Style="{StaticResource MaterialDesignTextBlock}" />
-                                            <controls:SelectableTextBlock      Grid.Column="1"                                          
-                                                Text="{Binding exp, Converter={StaticResource ExpConverter}}" Style="{StaticResource MaterialDesignTextBlock}" />
+                                            <controls:SelectableTextBlock Grid.Column="1"
+                                                                          Text="{Binding exp, Converter={StaticResource ExpConverter}}"
+                                                                          Style="{StaticResource MaterialDesignTextBlock}" />
 
                                             <StackPanel Grid.Column="2" Orientation="Horizontal">
                                                 <materialDesign:Chip Margin="0 0 8 0"
@@ -472,4 +480,4 @@
             </Grid>
         </Grid>
     </Grid>
-</Window>
+</mah:MetroWindow>

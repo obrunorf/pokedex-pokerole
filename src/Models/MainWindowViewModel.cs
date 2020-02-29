@@ -4,11 +4,8 @@ using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Threading;
 using System.Windows.Data;
-using System.Windows.Threading;
 using Newtonsoft.Json;
-using PokeAPI;
 using Pokedex.Abstractions;
 using Pokedex.Pokerole.Extensions;
 using PropertyChanged;
@@ -18,87 +15,119 @@ namespace Pokedex.Pokerole.Models
     [AddINotifyPropertyChangedInterface]
     public class MainWindowViewModel
     {
+        private const string SettingsFileName = "settings.json";
+        private readonly Dictionary<string, AbilityDetail> _abilityDetails;
+        private readonly Assembly _executingAssembly;
+        private readonly Dictionary<string, MoveDetail> _moveDetails;
         private string _searchText;
-        private PokemonLocal _selectedPokemon;
 
-        public MainWindowViewModel(Dispatcher dispatcher)
+        public MainWindowViewModel()
         {
-            Dispatcher = dispatcher;
-            var moveDetails = LoadMoves(Assembly.GetExecutingAssembly().GetFileStream("moves.json"))
+            _executingAssembly = Assembly.GetExecutingAssembly();
+
+            selectableJsonFiles = _executingAssembly.GetFileNames().Where(i => i.Contains("pokemon_")).Select(i =>
+                new SelectableJsonFile
+                {
+                    fullName = i,
+                    displayName = i.GetReadableFileName()
+                }).ToList();
+
+            _moveDetails = LoadMoves(_executingAssembly.GetFileStream("moves.json"))
                 .ToDictionary(i => i.name);
-            var abilityDetails = LoadAbilities(Assembly.GetExecutingAssembly().GetFileStream("abilities.json"));
+            _abilityDetails = LoadAbilities(_executingAssembly.GetFileStream("abilities.json"))
+                .ToDictionary(i => i.name);
 
-            Pokemons = LoadPokeData(Assembly.GetExecutingAssembly().GetFileStream("pokemon.json")).Select(i =>
-            {
-                foreach (var move in i.moves)
-                {
-                    move.Detail = moveDetails.TryGetValue(move.name, out var detail) ? detail : null;
-                }
-
-                i.abilitiesDetailed = new List<AbilityDetail>();
-                foreach (var ability in i.abilities) //uhh
-                {
-                    var asrg = abilityDetails.Find(x => x.name == ability);
-                    AbilityDetail arg = new AbilityDetail();
-                    arg.name = asrg.name;
-                    arg.description = asrg.description;
-                    arg.effect = asrg.effect;
-                    i.abilitiesDetailed.Add(arg);
-                }
-
-                return i;
-            }).ToList();
-            FilteredPokemons = CollectionViewSource.GetDefaultView(Pokemons);
+            currentSettings = LoadSettings() ?? new Settings {selectedFile = selectableJsonFiles.First()};
+            currentSettings.PropertyChanged += CurrentSettingsOnPropertyChanged;
+            SaveSettings(currentSettings);
+            LoadPokemons();
         }
 
-        public Dispatcher Dispatcher { get; }
+        public List<SelectableJsonFile> selectableJsonFiles { get; }
 
-        private CancellationTokenSource ImageCancellationTokenSource { get; set; }
+        public Settings currentSettings { get; }
 
-        public List<PokemonLocal> Pokemons { get; set; }
+        private List<PokemonLocal> pokemons { get; set; }
 
-        public ICollectionView FilteredPokemons { get; set; }
+        public ICollectionView filteredPokemons { get; set; }
 
-        public string SearchText
+        public string searchText
         {
             get => _searchText;
             set
             {
                 _searchText = value;
-                if (string.IsNullOrEmpty(value))
-                    FilteredPokemons.Filter = null;
-                else
-                    FilteredPokemons.Filter = o =>
-                        o is PokemonLocal pokemonLocal &&
-                        (pokemonLocal.name.StartsWith(value, StringComparison.InvariantCultureIgnoreCase)
-                        || pokemonLocal.number.ToString().Equals(value, StringComparison.InvariantCultureIgnoreCase));
+                ApplyFilter();
             }
         }
 
-
-        public PokemonLocal SelectedPokemon
+        private void ApplyFilter()
         {
-            get => _selectedPokemon;
-            set
-            {
-                _selectedPokemon = value;
-                PokemonImage = null;
-                ImageCancellationTokenSource?.Cancel();
-
-                if (value?.number != null)
-                {
-                    ImageCancellationTokenSource = new CancellationTokenSource();
-                    DataFetcher.GetApiObject<Pokemon>(value.number.Value).ContinueWith(
-                        t => { Dispatcher.Invoke(() =>
-                        {
-                            PokemonImage = new Uri(t.Result.Sprites.FrontMale);
-                        }); },
-                        ImageCancellationTokenSource.Token);
-                }
-            }
+            if (string.IsNullOrEmpty(searchText))
+                filteredPokemons.Filter = null;
+            else
+                filteredPokemons.Filter = o =>
+                    o is PokemonLocal pokemonLocal &&
+                    (pokemonLocal.name.StartsWith(searchText, StringComparison.InvariantCultureIgnoreCase)
+                     || pokemonLocal.number.ToString().Equals(searchText, StringComparison.InvariantCultureIgnoreCase));
         }
 
-        public Uri PokemonImage { get; set; }
+
+        public PokemonLocal selectedPokemon { get; set; }
+
+        private void LoadPokemons()
+        {
+            pokemons = LoadPokeData(_executingAssembly.GetFileStream(currentSettings.selectedFile.fullName)).Select(i =>
+            {
+                foreach (var move in i.moves)
+                    move.Detail = _moveDetails.TryGetValue(move.name, out var detail) ? detail : null;
+
+                foreach (var ability in i.abilities.Where(_abilityDetails.ContainsKey))
+                    i.abilitiesDetailed.Add(_abilityDetails[ability]);
+
+                return i;
+            }).ToList();
+
+            filteredPokemons = CollectionViewSource.GetDefaultView(pokemons);
+            ApplyFilter();
+        }
+
+        private void CurrentSettingsOnPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            SaveSettings(currentSettings);
+            LoadPokemons();
+        }
+
+        private Settings LoadSettings()
+        {
+            var file = new FileInfo(SettingsFileName);
+
+            if (file.Exists)
+            {
+                using var fileStream = file.OpenRead();
+                using var streamReader = new StreamReader(fileStream);
+                var fileContent = streamReader.ReadToEnd();
+                var deserializeObject = JsonConvert.DeserializeObject<Settings>(fileContent);
+
+                if (selectableJsonFiles.All(i =>
+                    !string.Equals(i.fullName, deserializeObject.selectedFile.fullName,
+                        StringComparison.InvariantCultureIgnoreCase)))
+                {
+                    return null;
+                }
+
+                return deserializeObject;
+            }
+
+            return null;
+        }
+
+        private static void SaveSettings(Settings settings)
+        {
+            var file = new FileInfo(SettingsFileName);
+            var serializeObject = JsonConvert.SerializeObject(settings);
+            File.WriteAllText(file.FullName, serializeObject);
+        }
 
         private static List<MoveDetail> LoadMoves(Stream fileStream) //
         {
