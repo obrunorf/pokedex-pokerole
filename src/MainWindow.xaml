@@ -46,10 +46,14 @@
                          Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}" Margin="0 0 0 12"
                          materialDesign:TextFieldAssist.HasClearButton="True">
                     <materialDesign:HintAssist.Hint>
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Search" Margin="0 0 8 0" />
-                            <materialDesign:PackIcon Kind="Search" />
-                        </StackPanel>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="Search" />
+                            <materialDesign:PackIcon Grid.Column="1" Kind="Search" />
+                        </Grid>
                     </materialDesign:HintAssist.Hint>
                 </TextBox>
             </Border>
@@ -81,7 +85,7 @@
                                 <ItemsControl Grid.Row="0" Grid.Column="1" ItemsSource="{Binding types}">
                                     <ItemsControl.ItemsPanel>
                                         <ItemsPanelTemplate>
-                                            <StackPanel Orientation="Horizontal" />
+                                            <VirtualizingStackPanel Orientation="Horizontal" />
                                         </ItemsPanelTemplate>
                                     </ItemsControl.ItemsPanel>
                                     <ItemsControl.ItemTemplate>
@@ -220,12 +224,16 @@
                 </Grid.ColumnDefinitions>
 
                 <ScrollViewer VerticalScrollBarVisibility="Auto">
-                    <StackPanel>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
                         <controls:SelectableTextBlock
                             FontWeight="Bold"
                             Text="Evolutions"
                             Style="{StaticResource MaterialDesignHeadline6TextBlock}" />
-                        <ItemsControl HorizontalContentAlignment="Stretch"
+                        <ItemsControl Grid.Row="1" HorizontalContentAlignment="Stretch"
                                       ItemsSource="{Binding selectedPokemon.evolutions}"
                                       Grid.IsSharedSizeScope="True">
                             <ItemsControl.ItemTemplate>
@@ -255,7 +263,7 @@
                                 </DataTemplate>
                             </ItemsControl.ItemTemplate>
                         </ItemsControl>
-                    </StackPanel>
+                    </Grid>
                 </ScrollViewer>
 
                 <Grid Grid.Column="1" Margin="0 0 0 0">
@@ -281,20 +289,17 @@
                                                     Text="{Binding name}"
                                                     Style="{StaticResource MaterialDesignTextBlock}" />
                                             </Grid>
+                                            <controls:SelectableTextBlock Grid.Row="1" HorizontalAlignment="Left"
+                                                                          MaxWidth="400"
+                                                                          Text="{Binding description}"
+                                                                          TextWrapping="Wrap"
+                                                                          Style="{StaticResource MaterialDesignCaptionTextBlock}" />
 
-                                            <StackPanel Grid.Row="1">
-
-                                                <controls:SelectableTextBlock HorizontalAlignment="Left" MaxWidth="400"
-                                                                              Text="{Binding description}"
-                                                                              TextWrapping="Wrap"
-                                                                              Style="{StaticResource MaterialDesignCaptionTextBlock}" />
-                                            </StackPanel>
-                                            <StackPanel Grid.Row="2">
-                                                <controls:SelectableTextBlock HorizontalAlignment="Left" MaxWidth="400"
-                                                                              Text="{Binding effect}"
-                                                                              TextWrapping="Wrap"
-                                                                              Style="{StaticResource MaterialDesignCaptionTextBlock}" />
-                                            </StackPanel>
+                                            <controls:SelectableTextBlock Grid.Row="2" HorizontalAlignment="Left"
+                                                                          MaxWidth="400"
+                                                                          Text="{Binding effect}"
+                                                                          TextWrapping="Wrap"
+                                                                          Style="{StaticResource MaterialDesignCaptionTextBlock}" />
                                         </Grid>
                                     </Border>
                                 </DataTemplate>
@@ -308,8 +313,14 @@
                     <ColumnDefinition />
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
-                <StackPanel>
-                    <Grid Margin="0 0 0 4">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0" Margin="0 0 0 4">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition />
                             <ColumnDefinition />
@@ -320,15 +331,14 @@
                             <TextBlock.Text>
                                 <MultiBinding Converter="{StaticResource BubbleConverter}">
                                     <Binding
-                                             Path="selectedPokemon.strength[0]" />
+                                        Path="selectedPokemon.strength[0]" />
                                     <Binding
-                                             Path="selectedPokemon.strength[1]" />
+                                        Path="selectedPokemon.strength[1]" />
                                 </MultiBinding>
                             </TextBlock.Text>
                         </TextBlock>
                     </Grid>
-
-                    <Grid Margin="0 0 0 4">
+                    <Grid Grid.Row="1" Margin="0 0 0 4">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition />
                             <ColumnDefinition />
@@ -338,16 +348,15 @@
                         <TextBlock Grid.Column="1" TextAlignment="Left">
                             <TextBlock.Text>
                                 <MultiBinding Converter="{StaticResource BubbleConverter}">
-                                    <Binding 
-                                             Path="selectedPokemon.dexterity[0]" />
-                                    <Binding 
-                                             Path="selectedPokemon.dexterity[1]" />
+                                    <Binding
+                                        Path="selectedPokemon.dexterity[0]" />
+                                    <Binding
+                                        Path="selectedPokemon.dexterity[1]" />
                                 </MultiBinding>
                             </TextBlock.Text>
                         </TextBlock>
                     </Grid>
-
-                    <Grid Margin="0 0 0 4">
+                    <Grid Grid.Row="2" Margin="0 0 0 4">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition />
                             <ColumnDefinition />
@@ -358,15 +367,14 @@
                             <TextBlock.Text>
                                 <MultiBinding Converter="{StaticResource BubbleConverter}">
                                     <Binding
-                                             Path="selectedPokemon.vitality[0]" />
+                                        Path="selectedPokemon.vitality[0]" />
                                     <Binding
-                                             Path="selectedPokemon.vitality[1]" />
+                                        Path="selectedPokemon.vitality[1]" />
                                 </MultiBinding>
                             </TextBlock.Text>
                         </TextBlock>
                     </Grid>
-
-                    <Grid>
+                    <Grid Grid.Row="3">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition />
                             <ColumnDefinition />
@@ -376,15 +384,20 @@
                         <TextBlock Grid.Column="1" TextAlignment="Left">
                             <TextBlock.Text>
                                 <MultiBinding Converter="{StaticResource BubbleConverter}">
-                                    <Binding 
-                                             Path="selectedPokemon.disobedience" />
+                                    <Binding
+                                        Path="selectedPokemon.disobedience" />
                                     <Binding Source="{StaticResource MaxDisobedience}" />
                                 </MultiBinding>
                             </TextBlock.Text>
                         </TextBlock>
                     </Grid>
-                </StackPanel>
-                <StackPanel Grid.Column="1">
+                </Grid>
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
                     <Grid Margin="0 0 0 4">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition />
@@ -397,15 +410,14 @@
                             <TextBlock.Text>
                                 <MultiBinding Converter="{StaticResource BubbleConverter}">
                                     <Binding
-                                             Path="selectedPokemon.special[0]" />
+                                        Path="selectedPokemon.special[0]" />
                                     <Binding
-                                             Path="selectedPokemon.special[1]" />
+                                        Path="selectedPokemon.special[1]" />
                                 </MultiBinding>
                             </TextBlock.Text>
                         </TextBlock>
                     </Grid>
-
-                    <Grid Margin="0 0 0 4">
+                    <Grid Grid.Row="1" Margin="0 0 0 4">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition />
                             <ColumnDefinition />
@@ -417,15 +429,14 @@
                             <TextBlock.Text>
                                 <MultiBinding Converter="{StaticResource BubbleConverter}">
                                     <Binding
-                                             Path="selectedPokemon.insight[0]" />
+                                        Path="selectedPokemon.insight[0]" />
                                     <Binding
-                                             Path="selectedPokemon.insight[1]" />
+                                        Path="selectedPokemon.insight[1]" />
                                 </MultiBinding>
                             </TextBlock.Text>
                         </TextBlock>
                     </Grid>
-
-                    <Grid Margin="0 0 0 4">
+                    <Grid Grid.Row="2" Margin="0 0 0 4">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition />
                             <ColumnDefinition />
@@ -444,8 +455,7 @@
                             </TextBlock.Text>
                         </TextBlock>
                     </Grid>
-
-                </StackPanel>
+                </Grid>
             </Grid>
             <Border Padding="8"
                     BorderThickness="0 0 0 1"
@@ -483,50 +493,68 @@
                                                                           Text="{Binding exp, Converter={StaticResource ExpConverter}}"
                                                                           Style="{StaticResource MaterialDesignTextBlock}" />
 
-                                            <StackPanel Grid.Column="2" Orientation="Horizontal">
+                                            <Grid Grid.Column="2">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition />
+                                                    <ColumnDefinition />
+                                                </Grid.ColumnDefinitions>
                                                 <materialDesign:Chip Margin="0 0 8 0"
                                                                      Content="{Binding Detail.type}" IsEnabled="False"
                                                                      Background="{Binding Path=Detail.type, Converter={StaticResource CategoryBackgroundColorConverter}}"
                                                                      Foreground="{Binding Path=Detail.type, Converter={StaticResource CategoryForegroundColorConverter}}"
                                                                      ToolTip="{Binding Detail.type}" />
-                                                <materialDesign:Chip
+                                                <materialDesign:Chip Grid.Column="1"
                                                     Content="{Binding Detail.targets}" IsEnabled="False"
                                                     Background="{Binding Path=Detail.targets, Converter={StaticResource CategoryBackgroundColorConverter}}"
                                                     Foreground="{Binding Path=Detail.targets, Converter={StaticResource CategoryForegroundColorConverter}}"
                                                     ToolTip="{Binding Detail.targets}" />
-                                            </StackPanel>
+                                            </Grid>
                                         </Grid>
 
-                                        <StackPanel Grid.Row="1">
-                                            <StackPanel Orientation="Horizontal" ToolTip="Accuracy">
+                                        <Grid Grid.Row="1">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition />
+                                                <RowDefinition />
+                                                <RowDefinition />
+                                                <RowDefinition />
+                                            </Grid.RowDefinitions>
+                                            <Grid ToolTip="Accuracy">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition />
+                                                    <ColumnDefinition />
+                                                </Grid.ColumnDefinitions>
                                                 <materialDesign:PackIcon Kind="Target" VerticalAlignment="Center"
                                                                          Margin="0 0 8 0" />
 
-                                                <controls:SelectableTextBlock HorizontalAlignment="Left" MaxWidth="400"
+                                                <controls:SelectableTextBlock Grid.Column="1" HorizontalAlignment="Left" MaxWidth="400"
                                                                               Text="{Binding Detail.accuracy}"
                                                                               TextWrapping="Wrap"
                                                                               Style="{StaticResource MaterialDesignCaptionTextBlock}" />
-                                            </StackPanel>
+                                            </Grid>
 
-                                            <StackPanel Orientation="Horizontal" ToolTip="Damage">
+                                            <Grid Grid.Row="1" ToolTip="Damage">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition />
+                                                    <ColumnDefinition />
+                                                </Grid.ColumnDefinitions>
                                                 <materialDesign:PackIcon Kind="Blood" VerticalAlignment="Center"
                                                                          Margin="0 0 8 0" />
 
-                                                <controls:SelectableTextBlock HorizontalAlignment="Left" MaxWidth="400"
+                                                <controls:SelectableTextBlock Grid.Column="1" HorizontalAlignment="Left" MaxWidth="400"
                                                                               Text="{Binding Detail.damage_pool}"
                                                                               TextWrapping="Wrap"
                                                                               Style="{StaticResource MaterialDesignCaptionTextBlock}" />
-                                            </StackPanel>
+                                            </Grid>
 
-                                            <controls:SelectableTextBlock HorizontalAlignment="Left" MaxWidth="400"
+                                            <controls:SelectableTextBlock Grid.Row="2" HorizontalAlignment="Left" MaxWidth="400"
                                                                           Text="{Binding Detail.effect}"
                                                                           TextWrapping="Wrap"
                                                                           Style="{StaticResource MaterialDesignCaptionTextBlock}" />
-                                            <controls:SelectableTextBlock HorizontalAlignment="Left" MaxWidth="400"
+                                            <controls:SelectableTextBlock Grid.Row="3" HorizontalAlignment="Left" MaxWidth="400"
                                                                           Text="{Binding Detail.description}"
                                                                           TextWrapping="Wrap"
                                                                           Style="{StaticResource MaterialDesignCaptionTextBlock}" />
-                                        </StackPanel>
+                                        </Grid>
                                     </Grid>
                                 </Border>
                             </DataTemplate>
