@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Globalization;
-using System.Linq;
-using System.Text;
 using System.Windows.Data;
 
 namespace Pokedex.Pokerole.Converters
@@ -12,25 +10,9 @@ namespace Pokedex.Pokerole.Converters
         {
             if (values[0] is int currentValue && values[1] is int maxValue)
             {
-                if (currentValue > 10) { return currentValue.ToString(); } else
-                return new string('⚫', currentValue) + new string('◯', Math.Max(maxValue - currentValue,0));
-
-                /* var returnString =
-                    new StringBuilder();
-
-                var prefix = values.ElementAtOrDefault(2)?.ToString();
-
-                if (!string.IsNullOrEmpty(prefix))
-                    returnString.Append(prefix);
-
-                returnString.Append(Enumerable.Range(0, maxValue).Select(i => "◯").Aggregate((x, y) => $"{x}{y}"));
-
-                foreach (var i in Enumerable.Range(0, currentValue))
-                {
-                    returnString[i + (prefix?.Length ?? 0)] = '⚫';
-                }
-                
-                return returnString.ToString();*/
+                return currentValue > 10
+                    ? currentValue.ToString()
+                    : new string('⚫', currentValue) + new string('◯', Math.Max(maxValue - currentValue, 0));
             }
 
             return null;

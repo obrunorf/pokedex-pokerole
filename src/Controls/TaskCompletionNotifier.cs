@@ -1,11 +1,12 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace Pokedex.Pokerole.Controls
 {
     // https://stackoverflow.com/questions/15003827/async-implementation-of-ivalueconverter
-    public sealed class TaskCompletionNotifier<TResult> : INotifyPropertyChanged
+    public sealed class TaskCompletionNotifier<TResult> : INotifyPropertyChanged where TResult : class
     {
         public TaskCompletionNotifier(Task<TResult> task)
         {
@@ -45,7 +46,23 @@ namespace Pokedex.Pokerole.Controls
         public Task<TResult> Task { get; private set; }
 
         // Gets the result of the task. Returns the default value of TResult if the task has not completed successfully.
-        public TResult Result { get { return (Task.Status == TaskStatus.RanToCompletion) ? Task.Result : default(TResult); } }
+        public TResult Result
+        {
+            get
+            {
+                if (Task.Status == TaskStatus.RanToCompletion)
+                    return Task.Result;
+                else
+                {
+                    if (typeof(TResult) == typeof(Uri))
+                    {
+                        return new Uri("about:blank") as TResult;
+                    }
+                    
+                    return default;
+                }
+            }
+        }
 
         // Gets whether the task has completed.
         public bool IsCompleted { get { return Task.IsCompleted; } }

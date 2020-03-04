@@ -15,6 +15,19 @@ namespace Pokedex.Pokerole.Models
             return false;
         }
 
+        protected bool Equals(SelectableJsonFile other)
+        {
+            return displayName == other.displayName && fullName == other.fullName;
+        }
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                return ((displayName != null ? displayName.GetHashCode() : 0) * 397) ^ (fullName != null ? fullName.GetHashCode() : 0);
+            }
+        }
+
         public string displayName { get; set; }
 
         public string fullName { get; set; }

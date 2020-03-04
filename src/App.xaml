@@ -32,6 +32,9 @@
             <converters:HeightConverter x:Key="HeightConverter" />
             <converters:WeightConverter x:Key="WeightConverter" />
             <converters:ExpConverter x:Key="ExpConverter" />
+            <converters:WeaknessConverter x:Key="WeaknessConverter" />
+            <converters:StrengthsConverter x:Key="StrengthsConverter" />
+            <converters:ImmunitiesConverter x:Key="ImmunitiesConverter" />
 
             <system:String x:Key="StrengthText">Strength</system:String>
             <system:String x:Key="SpecialText">Special</system:String>

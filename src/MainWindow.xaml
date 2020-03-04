@@ -22,7 +22,9 @@
                  d:DataContext="{d:DesignInstance models:MainWindowViewModel}">
     <mah:MetroWindow.RightWindowCommands>
         <mah:WindowCommands>
-            <ComboBox Margin="0 0 8 0"  Style="{StaticResource MaterialDesignComboBox}" materialDesign:HintAssist.Hint="Source" ItemsSource="{Binding selectableJsonFiles}" DisplayMemberPath="displayName"
+            <ComboBox Margin="0 0 8 0" Style="{StaticResource MaterialDesignComboBox}"
+                      materialDesign:HintAssist.Hint="Source" ItemsSource="{Binding selectableJsonFiles}"
+                      DisplayMemberPath="displayName"
                       SelectedItem="{Binding currentSettings.selectedFile}" />
         </mah:WindowCommands>
     </mah:MetroWindow.RightWindowCommands>
@@ -38,9 +40,7 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition />
             </Grid.RowDefinitions>
-            <Border Padding="8">
-              
-            </Border>
+            <Border Padding="8" />
             <Border Grid.Row="1" Padding="8">
                 <TextBox Text="{Binding searchText, UpdateSourceTrigger=PropertyChanged}"
                          Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}" Margin="0 0 0 12"
@@ -129,14 +129,15 @@
                     <RowDefinition />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition />
-                    <ColumnDefinition />
-                    <ColumnDefinition />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="120" />
                 </Grid.ColumnDefinitions>
-                <Image Stretch="UniformToFill" Grid.Row="0" Grid.Column="3" Grid.RowSpan="2"
+                <Image Stretch="UniformToFill" Grid.Row="0" Grid.Column="4" Grid.RowSpan="2"
                        DataContext="{Binding Path=selectedPokemon, Converter={StaticResource PokemonImageConverter}}"
-                       Source="{Binding Path=Result}"/>
+                       Source="{Binding Path=Result}" />
                 <controls:SelectableTextBlock Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3"
                                               materialDesign:HintAssist.Hint="Pokemon"
                                               Style="{StaticResource MaterialDesignHeadline4TextBlock}"
@@ -159,6 +160,52 @@
                          Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}"
                          IsReadOnly="True"
                          Text="{Binding selectedPokemon.category}" />
+                <Grid Grid.Row="1" Grid.Column="3" Margin="0 0 8 0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="Weakness: " Style="{StaticResource MaterialDesignTextBlock}" VerticalAlignment="Top" FontWeight="Bold" />
+                        <controls:SelectableTextBlock Grid.Column="1" controls:TextBoxBehavior.SelectAllTextOnFocus="True"
+                                                      Style="{StaticResource MaterialDesignTextBlock}"
+                                                      TextWrapping="WrapWithOverflow"
+                                                      TextTrimming="CharacterEllipsis"
+                                                      Text="{Binding Path=selectedPokemon, Converter={StaticResource WeaknessConverter}}" />
+                    </Grid>
+
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="Strengths: " Style="{StaticResource MaterialDesignTextBlock}" VerticalAlignment="Top" FontWeight="Bold" />
+                        <controls:SelectableTextBlock Grid.Column="1" controls:TextBoxBehavior.SelectAllTextOnFocus="True"
+                                                      Style="{StaticResource MaterialDesignTextBlock}"
+                                                      TextWrapping="WrapWithOverflow"
+                                                      TextTrimming="CharacterEllipsis"
+                                                      Text="{Binding Path=selectedPokemon, Converter={StaticResource StrengthsConverter}}" />
+                    </Grid>
+                    
+                    <Grid Grid.Row="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="Immunities: " Style="{StaticResource MaterialDesignTextBlock}" VerticalAlignment="Top" FontWeight="Bold" />
+                        <controls:SelectableTextBlock Grid.Column="1" controls:TextBoxBehavior.SelectAllTextOnFocus="True"
+                                                      Style="{StaticResource MaterialDesignTextBlock}"
+                                                      TextWrapping="WrapWithOverflow"
+                                                      TextTrimming="CharacterEllipsis"
+                                                      Text="{Binding Path=selectedPokemon, Converter={StaticResource ImmunitiesConverter}}" />
+                    </Grid>
+                </Grid>
+
             </Grid>
             <Grid Grid.Row="2">
                 <Grid.ColumnDefinitions>
