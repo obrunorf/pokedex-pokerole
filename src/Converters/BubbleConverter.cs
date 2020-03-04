@@ -12,6 +12,7 @@ namespace Pokedex.Pokerole.Converters
         {
             if (values[0] is int currentValue && values[1] is int maxValue)
             {
+                if (currentValue > 10) { return currentValue.ToString(); } else
                 return new string('⚫', currentValue) + new string('◯', Math.Max(maxValue - currentValue,0));
 
                 /* var returnString =
