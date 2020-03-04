@@ -171,8 +171,10 @@
                             <ColumnDefinition Width="Auto" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <TextBlock Text="Weakness: " Style="{StaticResource MaterialDesignTextBlock}" VerticalAlignment="Top" FontWeight="Bold" />
-                        <controls:SelectableTextBlock Grid.Column="1" controls:TextBoxBehavior.SelectAllTextOnFocus="True"
+                        <TextBlock Text="Weakness: " Style="{StaticResource MaterialDesignTextBlock}"
+                                   VerticalAlignment="Top" FontWeight="Bold" />
+                        <controls:SelectableTextBlock Grid.Column="1"
+                                                      controls:TextBoxBehavior.SelectAllTextOnFocus="True"
                                                       Style="{StaticResource MaterialDesignTextBlock}"
                                                       TextWrapping="WrapWithOverflow"
                                                       TextTrimming="CharacterEllipsis"
@@ -184,21 +186,25 @@
                             <ColumnDefinition Width="Auto" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <TextBlock Text="Strengths: " Style="{StaticResource MaterialDesignTextBlock}" VerticalAlignment="Top" FontWeight="Bold" />
-                        <controls:SelectableTextBlock Grid.Column="1" controls:TextBoxBehavior.SelectAllTextOnFocus="True"
+                        <TextBlock Text="Strengths: " Style="{StaticResource MaterialDesignTextBlock}"
+                                   VerticalAlignment="Top" FontWeight="Bold" />
+                        <controls:SelectableTextBlock Grid.Column="1"
+                                                      controls:TextBoxBehavior.SelectAllTextOnFocus="True"
                                                       Style="{StaticResource MaterialDesignTextBlock}"
                                                       TextWrapping="WrapWithOverflow"
                                                       TextTrimming="CharacterEllipsis"
                                                       Text="{Binding Path=selectedPokemon, Converter={StaticResource StrengthsConverter}}" />
                     </Grid>
-                    
+
                     <Grid Grid.Row="2">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <TextBlock Text="Immunities: " Style="{StaticResource MaterialDesignTextBlock}" VerticalAlignment="Top" FontWeight="Bold" />
-                        <controls:SelectableTextBlock Grid.Column="1" controls:TextBoxBehavior.SelectAllTextOnFocus="True"
+                        <TextBlock Text="Immunities: " Style="{StaticResource MaterialDesignTextBlock}"
+                                   VerticalAlignment="Top" FontWeight="Bold" />
+                        <controls:SelectableTextBlock Grid.Column="1"
+                                                      controls:TextBoxBehavior.SelectAllTextOnFocus="True"
                                                       Style="{StaticResource MaterialDesignTextBlock}"
                                                       TextWrapping="WrapWithOverflow"
                                                       TextTrimming="CharacterEllipsis"
@@ -313,10 +319,10 @@
                         <TextBlock Grid.Column="1" TextAlignment="Left">
                             <TextBlock.Text>
                                 <MultiBinding Converter="{StaticResource BubbleConverter}">
-                                    <Binding RelativeSource="{RelativeSource AncestorType=Window, Mode=FindAncestor}"
-                                             Path="DataContext.selectedPokemon.strength[0]" />
-                                    <Binding RelativeSource="{RelativeSource AncestorType=Window, Mode=FindAncestor}"
-                                             Path="DataContext.selectedPokemon.strength[1]" />
+                                    <Binding
+                                             Path="selectedPokemon.strength[0]" />
+                                    <Binding
+                                             Path="selectedPokemon.strength[1]" />
                                 </MultiBinding>
                             </TextBlock.Text>
                         </TextBlock>
@@ -332,10 +338,10 @@
                         <TextBlock Grid.Column="1" TextAlignment="Left">
                             <TextBlock.Text>
                                 <MultiBinding Converter="{StaticResource BubbleConverter}">
-                                    <Binding RelativeSource="{RelativeSource AncestorType=Window, Mode=FindAncestor}"
-                                             Path="DataContext.selectedPokemon.dexterity[0]" />
-                                    <Binding RelativeSource="{RelativeSource AncestorType=Window, Mode=FindAncestor}"
-                                             Path="DataContext.selectedPokemon.dexterity[1]" />
+                                    <Binding 
+                                             Path="selectedPokemon.dexterity[0]" />
+                                    <Binding 
+                                             Path="selectedPokemon.dexterity[1]" />
                                 </MultiBinding>
                             </TextBlock.Text>
                         </TextBlock>
@@ -351,10 +357,10 @@
                         <TextBlock Grid.Column="1" TextAlignment="Left">
                             <TextBlock.Text>
                                 <MultiBinding Converter="{StaticResource BubbleConverter}">
-                                    <Binding RelativeSource="{RelativeSource AncestorType=Window, Mode=FindAncestor}"
-                                             Path="DataContext.selectedPokemon.vitality[0]" />
-                                    <Binding RelativeSource="{RelativeSource AncestorType=Window, Mode=FindAncestor}"
-                                             Path="DataContext.selectedPokemon.vitality[1]" />
+                                    <Binding
+                                             Path="selectedPokemon.vitality[0]" />
+                                    <Binding
+                                             Path="selectedPokemon.vitality[1]" />
                                 </MultiBinding>
                             </TextBlock.Text>
                         </TextBlock>
@@ -370,8 +376,8 @@
                         <TextBlock Grid.Column="1" TextAlignment="Left">
                             <TextBlock.Text>
                                 <MultiBinding Converter="{StaticResource BubbleConverter}">
-                                    <Binding RelativeSource="{RelativeSource AncestorType=Window, Mode=FindAncestor}"
-                                             Path="DataContext.selectedPokemon.disobedience" />
+                                    <Binding 
+                                             Path="selectedPokemon.disobedience" />
                                     <Binding Source="{StaticResource MaxDisobedience}" />
                                 </MultiBinding>
                             </TextBlock.Text>
@@ -390,10 +396,10 @@
                         <TextBlock Grid.Column="1" TextAlignment="Left">
                             <TextBlock.Text>
                                 <MultiBinding Converter="{StaticResource BubbleConverter}">
-                                    <Binding RelativeSource="{RelativeSource AncestorType=Window, Mode=FindAncestor}"
-                                             Path="DataContext.selectedPokemon.special[0]" />
-                                    <Binding RelativeSource="{RelativeSource AncestorType=Window, Mode=FindAncestor}"
-                                             Path="DataContext.selectedPokemon.special[1]" />
+                                    <Binding
+                                             Path="selectedPokemon.special[0]" />
+                                    <Binding
+                                             Path="selectedPokemon.special[1]" />
                                 </MultiBinding>
                             </TextBlock.Text>
                         </TextBlock>
@@ -410,10 +416,10 @@
                         <TextBlock Grid.Column="1" TextAlignment="Left">
                             <TextBlock.Text>
                                 <MultiBinding Converter="{StaticResource BubbleConverter}">
-                                    <Binding RelativeSource="{RelativeSource AncestorType=Window, Mode=FindAncestor}"
-                                             Path="DataContext.selectedPokemon.insight[0]" />
-                                    <Binding RelativeSource="{RelativeSource AncestorType=Window, Mode=FindAncestor}"
-                                             Path="DataContext.selectedPokemon.insight[1]" />
+                                    <Binding
+                                             Path="selectedPokemon.insight[0]" />
+                                    <Binding
+                                             Path="selectedPokemon.insight[1]" />
                                 </MultiBinding>
                             </TextBlock.Text>
                         </TextBlock>
@@ -431,8 +437,7 @@
                             <TextBlock.Text>
 
                                 <MultiBinding Converter="{StaticResource BubbleConverter}">
-                                    <Binding RelativeSource="{RelativeSource AncestorType=Window, Mode=FindAncestor}"
-                                             Path="DataContext.selectedPokemon.base_hp" />
+                                    <Binding Path="selectedPokemon.base_hp" />
                                     <Binding Source="{StaticResource MaxHp}" />
                                 </MultiBinding>
 
