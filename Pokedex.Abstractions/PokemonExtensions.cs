@@ -121,7 +121,7 @@ namespace Pokedex.Abstractions
         public static string GetResistances(this PokemonLocal poke)
         {
             return GetResistancesList(poke)
-                .Cancel(GetResistancesList(poke))
+                .Cancel(GetWeaknessList(poke))
                 .GroupBy(i => i)
                 .Select(i =>
                 {
