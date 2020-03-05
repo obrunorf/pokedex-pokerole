@@ -46,12 +46,12 @@
                          Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}" Margin="0 0 0 12"
                          materialDesign:TextFieldAssist.HasClearButton="True">
                     <materialDesign:HintAssist.Hint>
-                        <Grid>
+                        <Grid HorizontalAlignment="Stretch">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition />
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
-                            <TextBlock Text="Search" />
+                            <TextBlock Text="Search" Margin="0 0 8 0" />
                             <materialDesign:PackIcon Grid.Column="1" Kind="Search" />
                         </Grid>
                     </materialDesign:HintAssist.Hint>
@@ -276,19 +276,19 @@
                                             <TextBlock VerticalAlignment="Center" Margin="0"
                                                        Padding="0">
                                                 <Hyperlink
+                                                    
                                                     CommandParameter="{Binding Path=.}"
                                                     Command="{Binding ElementName=Window, Path=DataContext.changePokemonCommand}"
                                                     Style="{StaticResource MaterialDesignBody1Hyperlink}">
-                                                    <Run Text="{Binding Path=.}">
-                                                        <Run.FontWeight>
-                                                            <MultiBinding
-                                                                Converter="{StaticResource CurrentEvolutionConverter}">
-                                                                <Binding ElementName="Window"
-                                                                         Path="DataContext.selectedPokemon" />
-                                                                <Binding Path="." />
-                                                            </MultiBinding>
-                                                        </Run.FontWeight>
-                                                    </Run>
+                                                    <Hyperlink.IsEnabled>
+                                                        <MultiBinding
+                                                            Converter="{StaticResource NotCurrentEvolutionConverter}">
+                                                            <Binding ElementName="Window"
+                                                                     Path="DataContext.selectedPokemon" />
+                                                            <Binding Path="." />
+                                                        </MultiBinding>
+                                                    </Hyperlink.IsEnabled>
+                                                    <Run Text="{Binding Path=.}" />
                                                 </Hyperlink>
                                             </TextBlock>
                                             <Image Grid.Column="1" Stretch="Uniform" MaxHeight="40" MaxWidth="40"

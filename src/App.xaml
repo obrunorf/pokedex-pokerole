@@ -28,7 +28,8 @@
             <converters:VisibleIfNullConverter x:Key="VisibleIfNull" />
             <converters:BubbleConverter x:Key="BubbleConverter" />
             <converters:PokemonImageConverter x:Key="PokemonImageConverter" />
-            <converters:CurrentEvolutionConverter x:Key="CurrentEvolutionConverter" />
+            <converters:CurrentEvolutionFontWeightConverter x:Key="CurrentEvolutionFontWeightConverter" />
+            <converters:NotCurrentEvolutionConverter x:Key="NotCurrentEvolutionConverter" />
             <converters:HeightConverter x:Key="HeightConverter" />
             <converters:WeightConverter x:Key="WeightConverter" />
             <converters:ExpConverter x:Key="ExpConverter" />
