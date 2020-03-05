@@ -5,7 +5,7 @@ namespace Pokedex.Abstractions
 {
     public static class PokemonExtensions
     {
-        public class TypeRelations
+        private class TypeRelations
         {
             public string Name { get; set; }
             public List<string> Immunities { get; } = new List<string>();
@@ -103,7 +103,8 @@ namespace Pokedex.Abstractions
 
         public static string GetWeakness(this PokemonLocal poke)
         {
-            return poke.types.SelectMany(i => TypeRelationships.GetValueOrDefault(i)?.Weaknesses ?? new List<string>())
+            return GetWeaknessList(poke)
+                .Cancel(GetResistancesList(poke))
                 .GroupBy(i => i)
                 .Select(i =>
                 {
@@ -112,15 +113,26 @@ namespace Pokedex.Abstractions
                 }).OrderBy(i => i).AggregateIfPossible((x, y) => $"{x}, {y}", "None");
         }
 
+        private static IEnumerable<string> GetWeaknessList(PokemonLocal poke)
+        {
+            return poke.types.SelectMany(i => TypeRelationships.GetValueOrDefault(i)?.Weaknesses ?? new List<string>());
+        }
+
         public static string GetResistances(this PokemonLocal poke)
         {
-            return poke.types.SelectMany(i => TypeRelationships.GetValueOrDefault(i)?.Strengths ?? new List<string>())
+            return GetResistancesList(poke)
+                .Cancel(GetResistancesList(poke))
                 .GroupBy(i => i)
                 .Select(i =>
                 {
                     var items = i.ToList();
                     return items.Count == 1 ? i.Key : $"{i.Key}-{items.Count}";
                 }).OrderBy(i => i).AggregateIfPossible((x, y) => $"{x}, {y}", "None");
+        }
+
+        private static IEnumerable<string> GetResistancesList(PokemonLocal poke)
+        {
+            return poke.types.SelectMany(i => TypeRelationships.GetValueOrDefault(i)?.Strengths ?? new List<string>());
         }
 
         public static string GetImmunities(this PokemonLocal poke)
