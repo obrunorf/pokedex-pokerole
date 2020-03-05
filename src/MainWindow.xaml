@@ -125,8 +125,9 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-                <Grid Grid.Row="0" Margin="8 12 8 8">
+                <Grid Grid.Row="0" Margin="8 12 8 0">
                     <Grid.RowDefinitions>
                         <RowDefinition />
                         <RowDefinition />
@@ -164,7 +165,16 @@
 
                     </Grid>
 
-                    <materialDesign:Card Margin="0 0 12 0" Grid.Row="1" Grid.Column="1" Padding="24">
+
+                </Grid>
+
+                <Grid Margin="8 8 8 12" Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="16" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <materialDesign:Card materialDesign:ShadowAssist.ShadowDepth="Depth1" Grid.Column="0" Padding="16">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto" />
@@ -180,7 +190,7 @@
                                     Margin="0 0 0 8"
                                     BorderBrush="{DynamicResource MaterialDesignDivider}">
                                 <TextBlock Text="General Information"
-                                           Style="{StaticResource MaterialDesignHeadline5TextBlock}" />
+                                           Style="{StaticResource MaterialDesignHeadline6TextBlock}" />
                             </Border>
 
                             <Grid Grid.Row="1" Grid.Column="0" Margin="0 0 8 0">
@@ -248,7 +258,7 @@
                         </Grid>
                     </materialDesign:Card>
 
-                    <materialDesign:Card Grid.Row="1" Grid.Column="2" Padding="24">
+                    <materialDesign:Card materialDesign:ShadowAssist.ShadowDepth="Depth1" Grid.Column="2" Padding="16">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto" />
@@ -260,7 +270,7 @@
                                     Margin="0 0 0 8"
                                     BorderBrush="{DynamicResource MaterialDesignDivider}">
                                 <TextBlock Text="Evolutions"
-                                           Style="{StaticResource MaterialDesignHeadline5TextBlock}" />
+                                           Style="{StaticResource MaterialDesignHeadline6TextBlock}" />
                             </Border>
 
                             <ItemsControl Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Stretch"
@@ -276,7 +286,7 @@
                                             <TextBlock VerticalAlignment="Center" Margin="0"
                                                        Padding="0">
                                                 <Hyperlink
-                                                    
+
                                                     CommandParameter="{Binding Path=.}"
                                                     Command="{Binding ElementName=Window, Path=DataContext.changePokemonCommand}"
                                                     Style="{StaticResource MaterialDesignBody1Hyperlink}">
@@ -301,7 +311,8 @@
                         </Grid>
                     </materialDesign:Card>
                 </Grid>
-                <Grid Margin="8 12 8 12" Grid.Row="2">
+
+                <Grid Margin="8 12 8 12" Grid.Row="3">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition />
                         <ColumnDefinition />
@@ -315,12 +326,14 @@
                         </Grid.RowDefinitions>
                         <Grid Grid.Row="0" Margin="0 0 0 4">
                             <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
                                 <ColumnDefinition />
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
+                            <materialDesign:PackIcon VerticalAlignment="Center" Kind="ArmFlex" Margin="0 0 8 0" />
                             <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" FontWeight="Bold"
-                                       Grid.Column="0" Text="{Binding Source={StaticResource StrengthText}}" />
-                            <TextBlock Grid.Column="1" TextAlignment="Left">
+                                       Grid.Column="1" Text="{Binding Source={StaticResource StrengthText}}" />
+                            <TextBlock Grid.Column="2" TextAlignment="Left">
                                 <TextBlock.Text>
                                     <MultiBinding Converter="{StaticResource BubbleConverter}">
                                         <Binding
@@ -333,12 +346,14 @@
                         </Grid>
                         <Grid Grid.Row="1" Margin="0 0 0 4">
                             <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
                                 <ColumnDefinition />
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
+                            <materialDesign:PackIcon VerticalAlignment="Center" Kind="Hand" Margin="0 0 8 0" />
                             <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" FontWeight="Bold"
-                                       Grid.Column="0" Text="{Binding Source={StaticResource DexterityText}}" />
-                            <TextBlock Grid.Column="1" TextAlignment="Left">
+                                       Grid.Column="1" Text="{Binding Source={StaticResource DexterityText}}" />
+                            <TextBlock Grid.Column="2" TextAlignment="Left">
                                 <TextBlock.Text>
                                     <MultiBinding Converter="{StaticResource BubbleConverter}">
                                         <Binding
@@ -351,12 +366,14 @@
                         </Grid>
                         <Grid Grid.Row="2" Margin="0 0 0 4">
                             <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
                                 <ColumnDefinition />
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
+                            <materialDesign:PackIcon VerticalAlignment="Center" Kind="Blood" Margin="0 0 8 0" />
                             <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" FontWeight="Bold"
-                                       Grid.Column="0" Text="{Binding Source={StaticResource VitalityText}}" />
-                            <TextBlock Grid.Column="1" TextAlignment="Left">
+                                       Grid.Column="1" Text="{Binding Source={StaticResource VitalityText}}" />
+                            <TextBlock Grid.Column="2" TextAlignment="Left">
                                 <TextBlock.Text>
                                     <MultiBinding Converter="{StaticResource BubbleConverter}">
                                         <Binding
@@ -369,12 +386,14 @@
                         </Grid>
                         <Grid Grid.Row="3">
                             <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
                                 <ColumnDefinition />
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
+                            <materialDesign:PackIcon VerticalAlignment="Center" Kind="SkullCrossbones" Margin="0 0 8 0" />
                             <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" FontWeight="Bold"
-                                       Grid.Column="0" Text="{Binding Source={StaticResource DisobedienceText}}" />
-                            <TextBlock Grid.Column="1" TextAlignment="Left">
+                                       Grid.Column="1" Text="{Binding Source={StaticResource DisobedienceText}}" />
+                            <TextBlock Grid.Column="2" TextAlignment="Left">
                                 <TextBlock.Text>
                                     <MultiBinding Converter="{StaticResource BubbleConverter}">
                                         <Binding
@@ -393,13 +412,15 @@
                         </Grid.RowDefinitions>
                         <Grid Margin="0 0 0 4">
                             <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
                                 <ColumnDefinition />
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
+                            <materialDesign:PackIcon VerticalAlignment="Center" Kind="WhiteBalanceSunny" Margin="0 0 8 0" />
                             <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" FontWeight="Bold"
-                                       Grid.Column="0" Text="{Binding Source={StaticResource SpecialText}}"
+                                       Grid.Column="1" Text="{Binding Source={StaticResource SpecialText}}"
                                        Grid.ColumnSpan="2" />
-                            <TextBlock Grid.Column="1" TextAlignment="Left">
+                            <TextBlock Grid.Column="2" TextAlignment="Left">
                                 <TextBlock.Text>
                                     <MultiBinding Converter="{StaticResource BubbleConverter}">
                                         <Binding
@@ -412,13 +433,15 @@
                         </Grid>
                         <Grid Grid.Row="1" Margin="0 0 0 4">
                             <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
                                 <ColumnDefinition />
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
+                            <materialDesign:PackIcon VerticalAlignment="Center" Kind="Eye" Margin="0 0 8 0" />
                             <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" FontWeight="Bold"
-                                       Grid.Column="0" Text="{Binding Source={StaticResource InsightText}}"
+                                       Grid.Column="1" Text="{Binding Source={StaticResource InsightText}}"
                                        Grid.ColumnSpan="2" />
-                            <TextBlock Grid.Column="1" TextAlignment="Left">
+                            <TextBlock Grid.Column="2" TextAlignment="Left">
                                 <TextBlock.Text>
                                     <MultiBinding Converter="{StaticResource BubbleConverter}">
                                         <Binding
@@ -431,13 +454,15 @@
                         </Grid>
                         <Grid Grid.Row="2" Margin="0 0 0 4">
                             <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
                                 <ColumnDefinition />
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
+                            <materialDesign:PackIcon VerticalAlignment="Center" Kind="Hospital" Margin="0 0 8 0" />
                             <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" FontWeight="Bold"
-                                       Grid.Column="0" Text="{Binding Source={StaticResource BaseHPText}}"
+                                       Grid.Column="1" Text="{Binding Source={StaticResource BaseHPText}}"
                                        Grid.ColumnSpan="2" />
-                            <TextBlock Grid.Column="1" TextAlignment="Left">
+                            <TextBlock Grid.Column="2" TextAlignment="Left">
                                 <TextBlock.Text>
 
                                     <MultiBinding Converter="{StaticResource BubbleConverter}">
@@ -450,7 +475,7 @@
                         </Grid>
                     </Grid>
                 </Grid>
-                <ItemsControl Margin="8 0 8 0" Grid.Row="3" ItemsSource="{Binding selectedPokemon.abilitiesDetailed}"
+                <ItemsControl Margin="8 0 8 0" Grid.Row="4" ItemsSource="{Binding selectedPokemon.abilitiesDetailed}"
                               HorizontalContentAlignment="Stretch">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate
@@ -487,8 +512,7 @@
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
-
-                <ItemsControl Grid.Row="4" Margin="8 12 8 0" ItemsSource="{Binding selectedPokemon.moves}"
+                <ItemsControl Grid.Row="5" Margin="8 12 8 0" ItemsSource="{Binding selectedPokemon.moves}"
                               HorizontalContentAlignment="Stretch">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate
@@ -592,7 +616,6 @@
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
-
             </Grid>
         </ScrollViewer>
     </Grid>
