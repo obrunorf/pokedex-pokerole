@@ -101,7 +101,7 @@ namespace Pokedex.Abstractions
 
         public static string GetWeakness(this PokemonLocal poke)
         {
-            return TypeRelationships.GetValueOrDefault(poke.types[0])?.Weaknesses
+            return poke.types.SelectMany(i => TypeRelationships.GetValueOrDefault(i)?.Weaknesses ?? new List<string>())
                 .GroupBy(i => i)
                 .Select(i =>
                 {
@@ -112,7 +112,7 @@ namespace Pokedex.Abstractions
 
         public static string GetResistances(this PokemonLocal poke)
         {
-            return TypeRelationships.GetValueOrDefault(poke.types[0])?.Strengths
+            return poke.types.SelectMany(i => TypeRelationships.GetValueOrDefault(i)?.Strengths ?? new List<string>())
                 .GroupBy(i => i)
                 .Select(i =>
                 {
@@ -123,7 +123,7 @@ namespace Pokedex.Abstractions
 
         public static string GetImmunities(this PokemonLocal poke)
         {
-            return TypeRelationships.GetValueOrDefault(poke.types[0])?.Immunities
+            return poke.types.SelectMany(i => TypeRelationships.GetValueOrDefault(i)?.Immunities ?? new List<string>())
                 .GroupBy(i => i)
                 .Select(i =>
                 {
