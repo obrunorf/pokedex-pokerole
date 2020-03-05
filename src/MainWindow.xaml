@@ -234,7 +234,7 @@
                                 Style="{StaticResource MaterialDesignTextBlock}"
                                 TextWrapping="WrapWithOverflow"
                                 TextTrimming="CharacterEllipsis">
-                                <Run FontWeight="Bold">Weakness:</Run>
+                                <Run FontWeight="Bold">Weaknesses:</Run>
                                 <Run
                                     Text="{Binding Path=selectedPokemon, Converter={StaticResource WeaknessConverter}}" />
                             </controls:SelectableTextBlock>
@@ -243,7 +243,7 @@
                                                           Style="{StaticResource MaterialDesignTextBlock}"
                                                           TextWrapping="WrapWithOverflow"
                                                           TextTrimming="CharacterEllipsis">
-                                <Run FontWeight="Bold">Strengths:</Run>
+                                <Run FontWeight="Bold">Resistances:</Run>
                                 <Run
                                     Text="{Binding Path=selectedPokemon, Converter={StaticResource StrengthsConverter}}" />
                             </controls:SelectableTextBlock>
@@ -312,7 +312,7 @@
 
                     <Grid Grid.Row="2">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width=".8*" />
+                            <ColumnDefinition Width="1*" />
                             <ColumnDefinition />
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
@@ -387,9 +387,9 @@
                                 </TextBlock.Text>
                             </TextBlock>
                         </Grid>
-                        <Grid Grid.Column="1" Grid.Row="1">
+                        <Grid Grid.Column="0" Grid.Row="4">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width=".8*" />
+                                <ColumnDefinition Width=".7*" />
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
                             <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" FontWeight="Bold"
@@ -404,7 +404,7 @@
                                 </TextBlock.Text>
                             </TextBlock>
                         </Grid>
-                        <Grid Grid.Row="2" Grid.Column="1" Margin="0 0 0 4">
+                        <Grid Grid.Row="1" Grid.Column="1" Margin="0 0 0 4">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width=".8*" />
                                 <ColumnDefinition />
@@ -422,7 +422,7 @@
                                 </TextBlock.Text>
                             </TextBlock>
                         </Grid>
-                        <Grid Grid.Row="3" Grid.Column="1" Margin="0 0 0 4">
+                        <Grid Grid.Row="2" Grid.Column="1" Margin="0 0 0 4">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width=".8*" />
                                 <ColumnDefinition />
