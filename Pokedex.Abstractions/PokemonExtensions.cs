@@ -15,86 +15,88 @@ namespace Pokedex.Abstractions
 
         private static readonly Dictionary<string, TypeRelations> TypeRelationships = new List<TypeRelations>
         {
-            new TypeRelations {Name = "Normal", Immunities = {"Ghost"}, Weaknesses = {"Rock", "Steel"}},
+            new TypeRelations {Name = "Normal", Immunities = {"Ghost"}, Weaknesses = {"Fighting"}},
             new TypeRelations
             {
-                Name = "Fire", Weaknesses = {"Fire", "Water", "Rock", "Dragon"},
-                Strengths = {"Grass", "Ice", "Bug", "Steel"}
+                Name = "Fire", Weaknesses = {"Ground", "Water", "Rock"},
+                Strengths = {"Fire", "Ice", "Grass", "Bug","Steel", "Fairy"}
             },
             new TypeRelations
             {
-                Name = "Water", Weaknesses = {"Water", "Grass", "Dragon"},
-                Strengths = {"Fire", "Ground", "Rock"}
+                Name = "Water", Weaknesses = {"Electric", "Grass"},
+                Strengths = {"Fire", "Water", "Ice", "Steel"}
             },
             new TypeRelations
             {
-                Name = "Electric", Immunities = {"Ground"}, Weaknesses = {"Electric", "Grass", "Dragon"},
-                Strengths = {"Water", "Flying"}
+                Name = "Electric", Weaknesses = {"Ground"},
+                Strengths = {"Steel", "Flying","Electric" }
             },
             new TypeRelations
             {
                 Name = "Grass",
-                Weaknesses = {"Fire", "Grass", "Poison", "Flying", "Bug", "Dragon", "Steel"},
-                Strengths = {"Water", "Ground", "Rock"}
+                Weaknesses = {"Fire", "Ice", "Poison", "Bug"},
+                Strengths = {"Water", "Electric", "Grass","Ground"}
             },
             new TypeRelations
             {
-                Name = "Ice", Weaknesses = {"Fire", "Water", "Ice", "Steel"},
-                Strengths = {"Grass", "Ground", "Flying", "Dragon"}
+                Name = "Ice", Weaknesses = {"Fire", "Fighting", "Rock", "Steel"},
+                Strengths = {"Ice"}
             },
             new TypeRelations
             {
-                Name = "Fighting", Immunities = {"Ghost"}, Weaknesses = {"Poison", "Flying", "Psychic", "Bug", "Fairy"},
-                Strengths = {"Normal", "Ice", "Rock", "Dark", "Steel"}
+                Name = "Fighting", Weaknesses = {"Flying", "Psychic", "Fairy"},
+                Strengths = { "Rock", "Dark", "Bug"}
             },
             new TypeRelations
             {
-                Name = "Poison", Immunities = {"Steel"}, Weaknesses = {"Poison", "Ground", "Rock", "Ghost"},
-                Strengths = {"Grass", "Fairy"}
+                Name = "Poison", Weaknesses = {"Psychic", "Ground"},
+                Strengths = {"Grass", "Fairy","Fighting", "Poison", "Bug"}
             },
             new TypeRelations
             {
-                Name = "Ground", Immunities = {"Flying"}, Weaknesses = {"Grass", "Bug"},
-                Strengths = {"Fire", "Electric", "Poison", "Rock", "Steel"}
+                Name = "Ground", Immunities = {"Electric"}, Weaknesses = {"Grass", "Ice", "Water"},
+                Strengths = {"Poison", "Rock"}
             },
             new TypeRelations
             {
-                Name = "Flying", Weaknesses = {"Electric", "Rock", "Steel"},
-                Strengths = {"Grass", "Fighting", "Bug"}
+                Name = "Flying", Weaknesses = {"Electric", "Rock", "Ice"},
+                Strengths = {"Grass", "Fighting", "Bug"},
+                Immunities = {"Ground"}
             },
             new TypeRelations
             {
-                Name = "Psychic", Immunities = {"Dark"}, Weaknesses = {"Psychic", "Steel"},
-                Strengths = {"Fighting", "Poison"}
+                Name = "Psychic", Weaknesses = {"Bug", "Ghost", "Dark"},
+                Strengths = {"Fighting", "Psychic"}
             },
             new TypeRelations
             {
                 Name = "Bug",
-                Weaknesses = {"Fire", "Fighting", "Poison", "Flying", "Ghost", "Steel", "Fairy"},
-                Strengths = {"Grass", "Psychic", "Dark"}
+                Weaknesses = {"Fire","Flying", "Rock"},
+                Strengths = {"Grass", "Fighting", "Ground"}
             },
             new TypeRelations
             {
-                Name = "Rock", Weaknesses = {"Fighting", "Ground", "Steel"},
-                Strengths = {"Fire", "Ice", "Flying", "Bug"}
+                Name = "Rock", Weaknesses = {"Fighting", "Water", "Grass", "Ground", "Steel"},
+                Strengths = {"Fire", "Normal", "Flying", "Poison"}
             },
             new TypeRelations
-                {Name = "Ghost", Immunities = {"Normal"}, Weaknesses = {"Dark"}, Strengths = {"Psychic", "Ghost"}},
-            new TypeRelations {Name = "Dragon", Immunities = {"Fairy"}, Weaknesses = {"Steel"}, Strengths = {"Dragon"}},
+                {Name = "Ghost", Immunities = {"Normal, Fighting"}, Weaknesses = {"Dark, Ghost"}, Strengths = {"Poison", "Bug"}},
+
+            new TypeRelations {Name = "Dragon", Weaknesses = {"Ice","Dragon","Fairy"}, Strengths = {"Fire","Water", "Electric","Grass"}},
             new TypeRelations
             {
-                Name = "Dark", Weaknesses = {"Fighting", "Dark", "Fairy"},
-                Strengths = {"Psychic", "Ghost"}
-            },
-            new TypeRelations
-            {
-                Name = "Steel", Weaknesses = {"Fire", "Water", "Electric", "Steel"},
-                Strengths = {"Ice", "Rock", "Fairy"}
+                Name = "Dark",Immunities={ "Psychic"}, Weaknesses = {"Fighting", "Bug", "Fairy"},
+                Strengths = {"Dark", "Ghost"}
             },
             new TypeRelations
             {
-                Name = "Fairy", Weaknesses = {"Fire", "Poison", "Steel"},
-                Strengths = {"Fighting", "Dragon", "Dark"}
+                Name = "Steel",Immunities={ "Poison"}, Weaknesses = {"Fire", "Fighting", "Ground"},
+                Strengths = {"Normal", "Grass", "Ice", "Flying", "Psychic","Bug","Rock","Dragon","Steel","Fairy"}
+            },
+            new TypeRelations
+            {
+                Name = "Fairy",Immunities={ "Dragon"}, Weaknesses = {"Poison", "Steel"},
+                Strengths = {"Fighting", "Bug", "Dark"}
             }
         }.ToDictionary(i => i.Name);
 
