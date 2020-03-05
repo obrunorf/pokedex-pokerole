@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Globalization;
-using System.Linq;
-using System.Text;
 using System.Windows.Data;
 
-namespace Pokedex.Pokerole.Converters
+namespace Pokedex.Pokerole
 {
     public class BubbleConverterHP : IValueConverter
     {

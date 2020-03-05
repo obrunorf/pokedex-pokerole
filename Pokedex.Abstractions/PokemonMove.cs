@@ -1,4 +1,4 @@
-﻿namespace Pokedex.Pokerole
+﻿namespace Pokedex.Abstractions
 {
     public class PokemonMove
     {

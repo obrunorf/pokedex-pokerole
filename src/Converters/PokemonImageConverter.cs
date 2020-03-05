@@ -22,7 +22,7 @@ namespace Pokedex.Pokerole.Converters
                 return BuildImageTask(pokemonLocal.name);
             }
 
-            return new TaskCompletionNotifier<Uri>(Task.FromResult(new Uri("about:blank")));
+            return null;
         }
 
         private static object BuildImageTask(string pokemonName)
@@ -32,7 +32,7 @@ namespace Pokedex.Pokerole.Converters
                     t =>
                     {
                         if (t.IsFaulted || t.IsCanceled)
-                            return new Uri("about:blank");
+                            return null;
                         return new Uri(t.Result.Sprites.FrontMale);
                     }));
         }
