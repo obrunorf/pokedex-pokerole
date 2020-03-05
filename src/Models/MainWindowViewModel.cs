@@ -5,8 +5,10 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Windows.Data;
+using System.Windows.Input;
 using Newtonsoft.Json;
 using Pokedex.Abstractions;
+using Pokedex.Pokerole.Controls;
 using Pokedex.Pokerole.Extensions;
 using PropertyChanged;
 
@@ -36,6 +38,15 @@ namespace Pokedex.Pokerole.Models
                 .ToDictionary(i => i.name);
             _abilityDetails = LoadAbilities(_executingAssembly.GetFileStream("abilities.json"))
                 .ToDictionary(i => i.name);
+            changePokemonCommand = new CommandHandler((x) =>
+            {
+                var newPokemon = pokemons.SingleOrDefault(o => string.Equals(o.name, x?.ToString(), StringComparison.InvariantCultureIgnoreCase));
+
+                if (newPokemon != null && selectedPokemon != newPokemon)
+                {
+                    selectedPokemon = newPokemon;
+                }
+            }, (x) => true);
 
             currentSettings = LoadSettings() ?? new Settings {selectedFile = selectableJsonFiles.First()};
             currentSettings.PropertyChanged += CurrentSettingsOnPropertyChanged;
@@ -48,6 +59,8 @@ namespace Pokedex.Pokerole.Models
         public Settings currentSettings { get; }
 
         private List<PokemonLocal> pokemons { get; set; }
+
+        public ICommand changePokemonCommand { get; }
 
         public ICollectionView filteredPokemons { get; set; }
 

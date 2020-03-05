@@ -192,7 +192,8 @@
                                     Text="{Binding selectedPokemon.weight, Converter={StaticResource WeightConverter}}" />
                             </controls:SelectableTextBlock>
 
-                            <controls:SelectableTextBlock TextWrapping="Wrap" Style="{StaticResource MaterialDesignTextBlock}" Grid.Row="2">
+                            <controls:SelectableTextBlock TextWrapping="Wrap"
+                                                          Style="{StaticResource MaterialDesignTextBlock}" Grid.Row="2">
                                 <Run FontWeight="Bold">Category:</Run>
                                 <Run Text="{Binding selectedPokemon.category}" />
                             </controls:SelectableTextBlock>
@@ -259,18 +260,24 @@
                                             <ColumnDefinition />
                                             <ColumnDefinition Width="Auto" />
                                         </Grid.ColumnDefinitions>
-                                        <controls:SelectableTextBlock VerticalAlignment="Center" Margin="0"
-                                                                      Padding="0"
-                                                                      Style="{StaticResource MaterialDesignTextBlock}"
-                                                                      Text="{Binding Path=.}">
-                                            <controls:SelectableTextBlock.FontWeight>
-                                                <MultiBinding Converter="{StaticResource CurrentEvolutionConverter}">
-                                                    <Binding ElementName="Window"
-                                                             Path="DataContext.selectedPokemon" />
-                                                    <Binding Path="." />
-                                                </MultiBinding>
-                                            </controls:SelectableTextBlock.FontWeight>
-                                        </controls:SelectableTextBlock>
+                                        <TextBlock VerticalAlignment="Center" Margin="0"
+                                                   Padding="0">
+                                            <Hyperlink
+                                                CommandParameter="{Binding Path=.}"
+                                                Command="{Binding ElementName=Window, Path=DataContext.changePokemonCommand}"
+                                                Style="{StaticResource MaterialDesignBody1Hyperlink}">
+                                                <Run Text="{Binding Path=.}">
+                                                    <Run.FontWeight>
+                                                        <MultiBinding
+                                                            Converter="{StaticResource CurrentEvolutionConverter}">
+                                                            <Binding ElementName="Window"
+                                                                     Path="DataContext.selectedPokemon" />
+                                                            <Binding Path="." />
+                                                        </MultiBinding>
+                                                    </Run.FontWeight>
+                                                </Run>
+                                            </Hyperlink>
+                                        </TextBlock>
                                         <Image Grid.Column="1" Stretch="Uniform" MaxHeight="40" MaxWidth="40"
                                                DataContext="{Binding Path=., Converter={StaticResource PokemonImageConverter}}"
                                                Source="{Binding Path=Result}" />
@@ -305,13 +312,13 @@
                                                 Style="{StaticResource MaterialDesignTextBlock}" />
                                         </Grid>
                                         <controls:SelectableTextBlock Grid.Row="1" HorizontalAlignment="Left"
-                                                                      
+
                                                                       Text="{Binding description}"
                                                                       TextWrapping="Wrap"
                                                                       Style="{StaticResource MaterialDesignCaptionTextBlock}" />
 
                                         <controls:SelectableTextBlock Grid.Row="2" HorizontalAlignment="Left"
-                                                                      
+
                                                                       Text="{Binding effect}"
                                                                       TextWrapping="Wrap"
                                                                       Style="{StaticResource MaterialDesignCaptionTextBlock}" />
