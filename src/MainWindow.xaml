@@ -280,11 +280,15 @@
                                     DataType="{x:Type system:String}">
                                     <Grid Height="20" IsSharedSizeScope="True">
                                         <Grid.ColumnDefinitions>
-                                            <ColumnDefinition />
+                                            <ColumnDefinition Width="Auto"/>
                                             <ColumnDefinition Width="Auto" />
                                         </Grid.ColumnDefinitions>
+                                        <Image Grid.Column="0" Stretch="Uniform" MaxHeight="40" MaxWidth="40"
+                                               DataContext="{Binding Path=., Converter={StaticResource PokemonImageConverter}}"
+                                               Source="{Binding Path=Result}" />
                                         <TextBlock VerticalAlignment="Center" Margin="0"
-                                                   Padding="0">
+                                                   Padding="0"
+                                                   Grid.Column="1">
                                             <Hyperlink
 
                                                 CommandParameter="{Binding Path=.}"
@@ -301,9 +305,7 @@
                                                 <Run Text="{Binding Path=.}" />
                                             </Hyperlink>
                                         </TextBlock>
-                                        <Image Grid.Column="1" Stretch="Uniform" MaxHeight="40" MaxWidth="40"
-                                               DataContext="{Binding Path=., Converter={StaticResource PokemonImageConverter}}"
-                                               Source="{Binding Path=Result}" />
+                                        
                                     </Grid>
                                 </DataTemplate>
                             </ItemsControl.ItemTemplate>
