@@ -331,7 +331,7 @@
                                        Style="{StaticResource MaterialDesignHeadline6TextBlock}" />
                         </Border>
 
-                        <Grid Grid.Row="1" Grid.Column="0" Margin="0 0 0 4">
+                        <Grid Grid.Row="1" Grid.Column="0">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width=".7*" />
                                 <ColumnDefinition />
@@ -339,7 +339,7 @@
 
                             <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" FontWeight="Bold"
                                        Grid.Column="0" Text="{Binding Source={StaticResource StrengthText}}" />
-                            <TextBlock Grid.Column="1" TextAlignment="Left">
+                            <TextBlock VerticalAlignment="Center" Grid.Column="1" TextAlignment="Left">
                                 <TextBlock.Text>
                                     <MultiBinding Converter="{StaticResource BubbleConverter}">
                                         <Binding
@@ -350,14 +350,14 @@
                                 </TextBlock.Text>
                             </TextBlock>
                         </Grid>
-                        <Grid Grid.Row="2" Grid.Column="0" Margin="0 0 0 4">
+                        <Grid Grid.Row="2" Grid.Column="0">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width=".7*" />
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
                             <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" FontWeight="Bold"
                                        Grid.Column="0" Text="{Binding Source={StaticResource DexterityText}}" />
-                            <TextBlock Grid.Column="1" TextAlignment="Left">
+                            <TextBlock VerticalAlignment="Center" Grid.Column="1" TextAlignment="Left">
                                 <TextBlock.Text>
                                     <MultiBinding Converter="{StaticResource BubbleConverter}">
                                         <Binding
@@ -368,7 +368,7 @@
                                 </TextBlock.Text>
                             </TextBlock>
                         </Grid>
-                        <Grid Grid.Row="3" Grid.Column="0" Margin="0 0 0 4">
+                        <Grid Grid.Row="3" Grid.Column="0">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width=".7*" />
                                 <ColumnDefinition />
@@ -376,7 +376,7 @@
 
                             <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" FontWeight="Bold"
                                        Grid.Column="0" Text="{Binding Source={StaticResource VitalityText}}" />
-                            <TextBlock Grid.Column="1" TextAlignment="Left">
+                            <TextBlock VerticalAlignment="Center" Grid.Column="1" TextAlignment="Left">
                                 <TextBlock.Text>
                                     <MultiBinding Converter="{StaticResource BubbleConverter}">
                                         <Binding
@@ -394,7 +394,7 @@
                             </Grid.ColumnDefinitions>
                             <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" FontWeight="Bold"
                                        Grid.Column="0" Text="{Binding Source={StaticResource DisobedienceText}}" />
-                            <TextBlock Grid.Column="1" TextAlignment="Left">
+                            <TextBlock VerticalAlignment="Center" Grid.Column="1" TextAlignment="Left">
                                 <TextBlock.Text>
                                     <MultiBinding Converter="{StaticResource BubbleConverter}">
                                         <Binding
@@ -411,7 +411,7 @@
                             </Grid.ColumnDefinitions>
                             <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" FontWeight="Bold"
                                        Grid.Column="0" Text="{Binding Source={StaticResource SpecialText}}" />
-                            <TextBlock Grid.Column="1" TextAlignment="Left">
+                            <TextBlock VerticalAlignment="Center" Grid.Column="1" TextAlignment="Left">
                                 <TextBlock.Text>
                                     <MultiBinding Converter="{StaticResource BubbleConverter}">
                                         <Binding
@@ -429,7 +429,7 @@
                             </Grid.ColumnDefinitions>
                             <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" FontWeight="Bold"
                                        Grid.Column="0" Text="{Binding Source={StaticResource InsightText}}" />
-                            <TextBlock Grid.Column="1" TextAlignment="Left">
+                            <TextBlock VerticalAlignment="Center" Grid.Column="1" TextAlignment="Left">
                                 <TextBlock.Text>
                                     <MultiBinding Converter="{StaticResource BubbleConverter}">
                                         <Binding
@@ -447,7 +447,7 @@
                             </Grid.ColumnDefinitions>
                             <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" FontWeight="Bold"
                                        Grid.Column="0" Text="{Binding Source={StaticResource BaseHPText}}" />
-                            <TextBlock Grid.Column="1" TextAlignment="Left">
+                            <TextBlock VerticalAlignment="Center" Grid.Column="1" TextAlignment="Left">
                                 <TextBlock.Text>
 
                                     <MultiBinding Converter="{StaticResource BubbleConverter}">
