@@ -12,17 +12,24 @@ namespace Pokedex.Pokerole.Converters
         {
             return value switch
             {
-                "Bug" => "#8a970b".ToColorBrush(),
-                "Electric" => "#f1bc38".ToColorBrush(),
-                "Fire" => "#c22000".ToColorBrush(),
-                "Grass" => "#486d3a".ToColorBrush(),
-                "Normal" => "#cbc8c1".ToColorBrush(),
-                "Rock" => "#927e39".ToColorBrush(),
-                "Dark" => "#523c2f".ToColorBrush(),
-                "Fairy" => "#cc79d5".ToColorBrush(),
-                "Flying" => "#686ec2".ToColorBrush(),
-                "Poison" => "#8d418c".ToColorBrush(),
-                "Water" => "#2c94f7".ToColorBrush(),
+                "Bug" => "#A8B820".ToColorBrush(),
+                "Electric" => "#F8D030".ToColorBrush(),
+                "Fire" => "#F08030".ToColorBrush(),
+                "Grass" => "#78C850".ToColorBrush(),
+                "Normal" => "#A8A878".ToColorBrush(),
+                "Rock" => "#B8A038".ToColorBrush(),
+                "Dark" => "#705848".ToColorBrush(),
+                "Fairy" => "#EE99AC".ToColorBrush(),
+                "Flying" => "#A890F0".ToColorBrush(),
+                "Poison" => "#A040A0".ToColorBrush(),
+                "Water" => "#6890F0".ToColorBrush(),
+                "Ice" => "#98D8D8".ToColorBrush(),
+                "Fighting" => "#C03028".ToColorBrush(),                
+                "Ground" => "#E0C068".ToColorBrush(),
+                "Psychic" => "#F85888".ToColorBrush(),
+                "Dragon" => "#7038F8".ToColorBrush(),
+                "Ghost" => "#705898".ToColorBrush(),                
+                "Steel" => "#B8B8D0".ToColorBrush(),
                 _ => new SolidColorBrush(Colors.Gray)
             };
         }
