@@ -30,7 +30,7 @@
     </mah:MetroWindow.RightWindowCommands>
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="360" />
+            <ColumnDefinition Width="340" />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
