@@ -194,7 +194,7 @@ namespace pokedex_pokerole
                         temp = p3.Mass / 10;
                         pok.weight = temp.ToString();
                     }
-                    if (pok.types.Count == 0)
+                   // if (pok.types.Count == 0)
                     {
                         pok.types = new List<string>();
                         pok.types.Add(UppercaseFirst(p3.Types[0].Type.Name));
