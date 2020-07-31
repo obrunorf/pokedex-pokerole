@@ -430,14 +430,32 @@
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
                             <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" FontWeight="Bold"
-                                       Grid.Column="0" Text="{Binding Source={StaticResource InsightText}}" />
+                                       Grid.Column="0" Text="{Binding Source={StaticResource DefenseText}}" />
                             <TextBlock VerticalAlignment="Center" Grid.Column="1" TextAlignment="Left">
                                 <TextBlock.Text>
                                     <MultiBinding Converter="{StaticResource BubbleConverter}">
                                         <Binding
-                                            Path="selectedPokemon.insight[0]" />
+                                            Path="selectedPokemon.defense[0]" />
                                         <Binding
-                                            Path="selectedPokemon.insight[1]" />
+                                            Path="selectedPokemon.defense[1]" />
+                                    </MultiBinding>
+                                </TextBlock.Text>
+                            </TextBlock>
+                        </Grid>
+                        <Grid Grid.Row="3" Grid.Column="1" Margin="0 0 0 4">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width=".8*" />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Style="{StaticResource MaterialDesignCaptionTextBlock}" FontWeight="Bold"
+                                       Grid.Column="0" Text="{Binding Source={StaticResource SpdefText}}" />
+                            <TextBlock VerticalAlignment="Center" Grid.Column="1" TextAlignment="Left">
+                                <TextBlock.Text>
+                                    <MultiBinding Converter="{StaticResource BubbleConverter}">
+                                        <Binding
+                                            Path="selectedPokemon.spdef[0]" />
+                                        <Binding
+                                            Path="selectedPokemon.spdef[1]" />
                                     </MultiBinding>
                                 </TextBlock.Text>
                             </TextBlock>

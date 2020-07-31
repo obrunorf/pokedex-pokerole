@@ -167,12 +167,12 @@ namespace Pokedex.Pokerole.Models
             //ate aqui ok preenchemos nosso array com a lista do jasao e os argonautas
             for (var i = 0; i < pkmns.Count; i++)
             {
-                if (pkmns[i].name.Contains("(")) //no mega/weirdos as for now
-                {
-                    pkmns.Remove(pkmns[i]);
-                    i--;
-                }
-
+               // if (pkmns[i].name.Contains("(")) //no mega/weirdos as for now
+              //  {
+              //      pkmns.Remove(pkmns[i]);
+              //      i--;
+              //  }
+            
                 ;
             }
 

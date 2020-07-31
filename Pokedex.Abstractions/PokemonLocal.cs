@@ -20,6 +20,8 @@ namespace Pokedex.Abstractions
         public List<int?> vitality { get; set; }
         public List<int?> special { get; set; }
         public List<int?> insight { get; set; }
+        public List<int?> defense { get; set; }
+        public List<int?> spdef { get; set; }
         public List<string> abilities { get; set; }
         public List<AbilityDetail> abilitiesDetailed { get; set; } = new List<AbilityDetail>();
         public int? base_hp { get; set; }
