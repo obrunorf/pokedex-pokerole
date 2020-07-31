@@ -23,6 +23,8 @@ namespace pokedex_pokerole
         public List<string> vitality { get; set; }
         public List<string> special { get; set; }
         public List<string> insight { get; set; }
+        public List<string> defense { get; set; }
+        public List<string> spdef { get; set; }
         public List<string> abilities { get; set; }
         public string base_hp { get; set; }
         public string disobedience { get; set; }

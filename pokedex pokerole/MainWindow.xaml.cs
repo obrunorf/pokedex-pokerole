@@ -125,7 +125,7 @@ namespace pokedex_pokerole
             List<PokemonSpecies> all = new List<PokemonSpecies>();
             
             //foreach(pokemon po in pkmns)
-            for (int a = 1; a <= 807; a++)            
+            for (int a = 1; a <= 807; a++)  //1 ate 807          
              {
                     PokemonSpecies p2 = await DataFetcher.GetApiObject<PokemonSpecies>(a);
                     all.Add(p2);
@@ -141,13 +141,33 @@ namespace pokedex_pokerole
                                                    .Distinct()
                                                    .ToLookup(x => x.Name.ToUpper());
 
-            foreach (pokemon pok in pkmns)
-            //for (int i = 1; i <= 890; i++)
+            foreach (pokemon pok in pkmns) //buscar pelo nome! ignorar o q tiver entre parenteses!           
             {
                 if (!string.IsNullOrEmpty(pok.number))
+                //if (!string.IsNullOrEmpty(pok.name))
                 {// { pok.number = i.ToString(); }
-                    PokemonSpecies p2 = await DataFetcher.GetApiObject<PokemonSpecies>(Int32.Parse(pok.number));
-                    Pokemon p3 = await DataFetcher.GetApiObject<Pokemon>(Int32.Parse(pok.number));
+                    string pokemonnameprocessado = pok.name.Replace("'", "");
+                    if (pok.name.IndexOf('(') >0) {
+                        pokemonnameprocessado = (pok.name.Substring(0, pok.name.IndexOf('('))).Trim(); }    
+                    if (pokemonnameprocessado.Contains("Rotom")) { pokemonnameprocessado = "Rotom"; }
+
+                    string pokemonnameprocessado2 = pokemonnameprocessado;
+                    if (pokemonnameprocessado.Contains("Tornadus")) { pokemonnameprocessado2 = "tornadus"; }
+                    if (pokemonnameprocessado.Contains("Thundurus")) { pokemonnameprocessado2 = "thundurus"; }
+                    if (pokemonnameprocessado.Contains("Landorus")) { pokemonnameprocessado2 = "landorus"; }
+                    if (pokemonnameprocessado.Contains("Keldeo")) { pokemonnameprocessado2 = "keldeo"; }
+                    if (pokemonnameprocessado.Contains("Meloetta")) { pokemonnameprocessado2 = "Meloetta"; }
+                    if (pokemonnameprocessado.Contains("Oricorio")) { pokemonnameprocessado2 = "Oricorio"; }
+                    if (pokemonnameprocessado.Contains("Wishiwashi")) { pokemonnameprocessado2 = "Wishiwashi"; }
+                    if (pokemonnameprocessado.Contains("Minior")) { pokemonnameprocessado2 = "Minior"; }
+                    if (pokemonnameprocessado.Contains("Mimikyu")) { pokemonnameprocessado2 = "Mimikyu"; }
+                    PokemonSpecies p2 = await DataFetcher.GetNamedApiObject<PokemonSpecies>(pokemonnameprocessado2.ToLower()); //ESPECIE
+
+                    if (pokemonnameprocessado.Contains("Giratina")) { pokemonnameprocessado = "giratina-altered"; } //meu deus
+                    if (pokemonnameprocessado.Contains("Basculin")) { pokemonnameprocessado = "basculin-red-striped"; }
+                    if (pokemonnameprocessado.Contains("Darmanitan")) { pokemonnameprocessado = "darmanitan-standard"; }                    
+                    Pokemon p3 = await DataFetcher.GetNamedApiObject<Pokemon>(pokemonnameprocessado.ToLower());             //POKEMON
+                    //Pokemon p3 = await DataFetcher.GetApiObject<Pokemon>(Int32.Parse(pok.number));
 
                     pok.base_hp = hpBase(pok,
                                     p2,
@@ -163,10 +183,64 @@ namespace pokedex_pokerole
                     }
                     if (string.IsNullOrEmpty(pok.pokedex))
                     {
-                        // pok.pokedex = p2.FlavorTexts[1].FlavorText;
+                         pok.pokedex = p2.FlavorTexts[1].FlavorText;
                         pok.pokedex = p2.FlavorTexts.FirstOrDefault(w => w.Language.Name == "en").FlavorText;
                         Console.WriteLine(pok.pokedex);
                     }
+                    if (string.IsNullOrEmpty(pok.height))
+                    {
+                        float temp = p3.Height /10 ;
+                        pok.height = temp.ToString();
+                        temp = p3.Mass / 10;
+                        pok.weight = temp.ToString();
+                    }
+                    if (pok.types.Count == 0)
+                    {
+                        pok.types = new List<string>();
+                        pok.types.Add(p3.Types[0].Type.Name);
+                        if (p3.Types.Count() > 1){ //se houver dois tipos
+                            pok.types.Add(p3.Types[1].Type.Name);
+                        }
+                    }
+                    /*if (pok.evolutions.Count == 0){
+                        //a cadeia evolucionaria é composta pelos q vieram antes, ele mesmo, e as evolucoes, em ordem
+                        pok.evolutions = new List<string>();
+                        if (!string.IsNullOrEmpty(p2.EvolvesFromSpecies?.Name ?? string.Empty))
+                        {                            
+                            pok.evolutions.Add(p2.EvolvesFromSpecies.Name);
+                        }
+
+                        pok.evolutions.Add(p2.Name);
+
+                        EvolutionChain evo = await DataFetcher.GetApiObject<EvolutionChain>(p2.ID);                   
+                        {
+                            if (string.IsNullOrEmpty((evo.Chain.EvolvesTo.FirstOrDefault().Species?.Name ?? string.Empty))){
+                                pok.evolutions.Add(evo.Chain.EvolvesTo.FirstOrDefault().Species.Name);
+                            }
+
+                            //  if (string.IsNullOrEmpty(evo.Chain.EvolvesTo.FirstOrDefault().EvolvesTo?.First().Species.Name ?? string.Empty)) //se houver outro estágio alem
+                            // {
+                            //pok.evolutions.Add(evo.Chain.EvolvesTo.FirstOrDefault().EvolvesTo.First().Species.Name);
+                            // }
+
+                        }                                              
+                    }*/
+                    pok.defense =new List<string>();
+                    pok.spdef = new List<string>();                    
+
+                    pok.defense.AddRange(converterStatus(p3.Stats[2].BaseValue));
+                    pok.spdef.AddRange(converterStatus(p3.Stats[4].BaseValue));
+
+                    if (pok.strength.Count == 0)
+                    {
+                        pok.strength = new List<string>();
+                        pok.special = new List<string>();
+                        pok.dexterity = new List<string>();
+                        pok.strength.AddRange(converterStatus(p3.Stats[1].BaseValue));
+                        pok.special.AddRange(converterStatus(p3.Stats[3].BaseValue));
+                        pok.dexterity.AddRange(converterStatus(p3.Stats[5].BaseValue));
+                    }
+
                 }
                  //   i++;                
                 
@@ -177,11 +251,54 @@ namespace pokedex_pokerole
             string json = JsonConvert.SerializeObject(pkmns.ToArray());
 
             //write string to file
-            System.IO.File.WriteAllText(@"C:\Users\e-eu\Documents\GitHub\pokedex-pokerole\pokedex pokerole\data\POKEMONSREBUILT.json", json);
+            System.IO.File.WriteAllText(@"C:\Users\e-eu\Documents\GitHub\pokedex-pokerole\pokedex pokerole\data\POKEMONSREBUILTversao_meu_pau.json", json);
 
             //Console.WriteLine(p2.Name + " "+ p2.Names +" " + p2.PokedexNumbers);//species.EvolvesFromSpecies = null > is first form
         }
-        
+
+        private List<string> converterStatus(int original) //recebe o stat original, calcular o max a partir dai
+        {
+            int inicial, maximo;
+            int original2 = ((original) * 2) + 5;
+
+            switch (original2)
+            {
+                case int n when (n <= 20):
+                    inicial = 1;   maximo = 1;
+                    break;
+                case int n when (n <= 44):
+                    inicial = 1;  maximo = 2;
+                    break;
+                case int n when (n <= 94):
+                    inicial = 1;  maximo = 3;
+                    break;
+                case int n when (n <= 144):
+                    inicial = 2; maximo = 4;
+                    break;
+                case int n when (n <= 194):
+                    inicial = 2; maximo = 5;
+                    break;
+                case int n when (n <= 244):
+                    inicial = 3; maximo = 6;
+                    break;
+                case int n when (n <= 294):
+                    inicial = 3; maximo = 7;
+                    break;
+                case int n when (n <= 344):
+                    inicial = 4; maximo = 8;
+                    break;
+                case int n when (n <= 394):
+                    inicial = 4; maximo = 9;
+                    break;             
+                default: //maior q 394 >> 5/10
+                    inicial = 5; maximo = 10;
+                    break;
+            }
+            var retList = new List<string>();
+            retList.Add(inicial.ToString());
+            retList.Add(maximo.ToString());
+            return retList;
+        }
 
         private string hpBase(pokemon pokeRole, PokemonSpecies pokeApi, ILookup<string, NamedApiResource<PokemonSpecies>> todasEvolucaoMapeada, Pokemon pokeApiPoke)
         /* The next was extracted from "Pokerole Ze stuff for later" on https://docs.google.com/document/d/180rP_Qc8MrPvNq99HZiBzVYvvqdwu60GnkIwh0papDU/edit
