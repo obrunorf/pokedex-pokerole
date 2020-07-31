@@ -165,16 +165,16 @@ namespace Pokedex.Pokerole.Models
 
             var pkmns = JsonConvert.DeserializeObject<List<PokemonLocal>>(json);
             //ate aqui ok preenchemos nosso array com a lista do jasao e os argonautas
-            for (var i = 0; i < pkmns.Count; i++)
-            {
+            //for (var i = 0; i < pkmns.Count; i++)
+            //{
                // if (pkmns[i].name.Contains("(")) //no mega/weirdos as for now
               //  {
               //      pkmns.Remove(pkmns[i]);
               //      i--;
               //  }
             
-                ;
-            }
+             //   ;
+            //}
 
             return pkmns;
         }
