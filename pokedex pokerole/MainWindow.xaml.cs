@@ -197,9 +197,9 @@ namespace pokedex_pokerole
                     if (pok.types.Count == 0)
                     {
                         pok.types = new List<string>();
-                        pok.types.Add(p3.Types[0].Type.Name);
+                        pok.types.Add(UppercaseFirst(p3.Types[0].Type.Name));
                         if (p3.Types.Count() > 1){ //se houver dois tipos
-                            pok.types.Add(p3.Types[1].Type.Name);
+                            pok.types.Add(UppercaseFirst(p3.Types[1].Type.Name));
                         }
                     }
                     /*if (pok.evolutions.Count == 0){
@@ -318,7 +318,7 @@ namespace pokedex_pokerole
             if (pokeRole.abilities.Contains("Wonder Guard")) { return "1"; } //exception
 
             int hpMin = 3;
-            int hp = Convert.ToInt32(Math.Floor(pokeApiPoke.Stats[5].BaseValue / 23.5));            //stats is an array with the stats, base hp is [5]
+            int hp = Convert.ToInt32(Math.Floor(pokeApiPoke.Stats[0].BaseValue / 10.0));            //stats is an array with the stats, base hp is [0] 23.5
 
            
             if (todasEvolucaoMapeada.Contains(pokeRole.name.ToUpper())) {// (Evolves(pokeRole, all)){
@@ -326,10 +326,12 @@ namespace pokedex_pokerole
             } else hpMin = 4;
             if (pokeApi.EvolvesFromSpecies != null)
             {
-                //hpMin = Int32.Parse(pkmns.Find(p => p.name.ToUpper() == pokeApi.EvolvesFromSpecies.Name.ToUpper()).base_hp) +1; //if it has a previous evolution, it's minimum hp its the previous form +1
+                hpMin = Int32.Parse(pkmns.Find(p => p.name.ToUpper() == pokeApi.EvolvesFromSpecies.Name.ToUpper()).base_hp) +1; //if it has a previous evolution, it's minimum hp its the previous form +1
                 hpMin = int.TryParse(pkmns.SingleOrDefault(p => p.name.ToUpper() == pokeApi.EvolvesFromSpecies.Name.ToUpper())?.base_hp, out var novoBrunao) ? novoBrunao+1 : hpMin;
             }
+            //hpMin = 0;
             return Math.Max(hp,hpMin).ToString();            
+
         }
 
       /*  private bool Evolves(pokemon pokeRole, List<PokemonSpecies> all)
@@ -384,6 +386,17 @@ namespace pokedex_pokerole
             moveTarget.Text = yay;
             moveEffect1.Text = yay;
             moveDamage.Text = yay;
+        }
+
+        static string UppercaseFirst(string s)
+        {
+            // Check for empty string.
+            if (string.IsNullOrEmpty(s))
+            {
+                return string.Empty;
+            }
+            // Return char and concat substring.
+            return char.ToUpper(s[0]) + s.Substring(1);
         }
     }
 }
