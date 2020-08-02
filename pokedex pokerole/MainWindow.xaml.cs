@@ -318,7 +318,7 @@ namespace pokedex_pokerole
             if (pokeRole.abilities.Contains("Wonder Guard")) { return "1"; } //exception
 
             int hpMin = 3;
-            int hp = Convert.ToInt32(Math.Floor(pokeApiPoke.Stats[0].BaseValue / 10.0));            //stats is an array with the stats, base hp is [0] 23.5
+            int hp = Convert.ToInt32(Math.Floor(pokeApiPoke.Stats[0].BaseValue / 5.0));            //stats is an array with the stats, base hp is [0] 23.5
 
            
             if (todasEvolucaoMapeada.Contains(pokeRole.name.ToUpper())) {// (Evolves(pokeRole, all)){
