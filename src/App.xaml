@@ -32,6 +32,7 @@
             <converters:NotCurrentEvolutionConverter x:Key="NotCurrentEvolutionConverter" />
             <converters:HeightConverter x:Key="HeightConverter" />
             <converters:WeightConverter x:Key="WeightConverter" />
+            <converters:NumberConverter x:Key="NumberConverter" />
             <converters:ExpConverter x:Key="ExpConverter" />
             <converters:WeaknessConverter x:Key="WeaknessConverter" />
             <converters:StrengthsConverter x:Key="StrengthsConverter" />

@@ -75,13 +75,21 @@
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition />
-                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
-                                <TextBlock
+                                <Grid Grid.Column="0">
+                                    <StackPanel Orientation="Horizontal">
+                                        
+                                    <TextBlock
+                                    FontWeight="Bold"
+                                    Text="{Binding number, Converter={StaticResource NumberConverter}}" />
+                                    <TextBlock
                                     FontWeight="Bold"
                                     Text="{Binding name}" />
-
-                                <ItemsControl Grid.Row="0" Grid.Column="1" ItemsSource="{Binding types}">
+                                    </StackPanel>
+                                </Grid>
+                                <Grid Grid.Column="1">
+                                    <ItemsControl Grid.Row="0" Grid.Column="1" ItemsSource="{Binding types}">
                                     <ItemsControl.ItemsPanel>
                                         <ItemsPanelTemplate>
                                             <VirtualizingStackPanel Orientation="Horizontal" />
@@ -98,7 +106,8 @@
                                         </DataTemplate>
                                     </ItemsControl.ItemTemplate>
                                 </ItemsControl>
-                                <TextBlock Grid.Row="1" Grid.Column="0"
+                                </Grid >
+                                    <TextBlock Grid.Row="1" Grid.Column="0"
                                            Text="{Binding category}" />
                             </Grid>
 
