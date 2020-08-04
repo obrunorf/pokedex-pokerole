@@ -478,7 +478,6 @@
                                        Grid.Column="0" Text="{Binding Source={StaticResource BaseHPText}}" />
                             <TextBlock VerticalAlignment="Center" Grid.Column="1" TextAlignment="Left">
                                 <TextBlock.Text>
-
                                     <MultiBinding Converter="{StaticResource BubbleConverter}">
                                         <Binding Path="selectedPokemon.base_hp" />
                                         <Binding Source="{StaticResource MaxHp}" />

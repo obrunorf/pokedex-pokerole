@@ -47,7 +47,7 @@
             <system:String x:Key="BaseHPText">Base HP</system:String>
             <system:String x:Key="DefenseText">Defense</system:String>
             <system:String x:Key="SpdefText">Sp Def</system:String>
-            <system:String x:Key="PokeDexTitle">Pokerole Pokedex</system:String>
+            <system:String x:Key="PokeDexTitle">Pokerole D20 Pokedex</system:String>
 
             <system:Int32 x:Key="MaxDisobedience">5</system:Int32>
             <system:Int32 x:Key="MaxHp">0</system:Int32>

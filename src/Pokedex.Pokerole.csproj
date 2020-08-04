@@ -6,6 +6,7 @@
     <UseWPF>true</UseWPF>
     <LangVersion>latest</LangVersion>
     <ApplicationIcon>iconfinder__Pokedex_tool_1337536.ico</ApplicationIcon>
+    <AssemblyName>Pokedex.Pokerole</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
