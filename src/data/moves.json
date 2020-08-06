@@ -544,7 +544,7 @@
     "targets": "Foe",
     "power": "1",
     "category": "Support",
-    "accuracy": "Insight + Social + Intimidate",
+    "accuracy": "Special + Social + Intimidate",
     "damage_pool": "1d4 ",
     "effect": "Add Damage to this Move for every Attribute increase the user has. (1d4,1d6,2d4,1d8+2,2d4+2,1d10+3,2d6+2) (ie. the user has 2 increased points on Defense, add 1d6 dmg...).",
     "description": "In the heat of the battle, the Pokémon gets carried away, relishing on its own power."
@@ -1171,7 +1171,7 @@
     "targets": "All Foes",
     "power": "2",
     "category": "Support",
-    "accuracy": "Insight + Social + Allure",
+    "accuracy": "Special + Social + Allure",
     "damage_pool": "1d8",
     "effect": "Sound Based. Never Fail.",
     "description": "With a charming and manipulative cry, the user deals emotional damage to its opponent. This move always makes the targets feel bad."
@@ -1182,7 +1182,7 @@
     "targets": "Foe",
     "power": "2",
     "category": "Support",
-    "accuracy": "Insight + Social + Allure",
+    "accuracy": "Special + Social + Allure",
     "damage_pool": "1d8",
     "effect": "The User restores HP equal to half the damage dealt, rounded down.",
     "description": "The user sends a kiss with a flirty intention, the foe catches the kiss but it ends up draining the target's energy."
@@ -1380,7 +1380,7 @@
     "targets": "User",
     "power": "-",
     "category": "Support",
-    "accuracy": "Insight + Physical + Alert",
+    "accuracy": "Special + Physical + Alert",
     "damage_pool": "-",
     "effect": "Priority 5. Shield Move. Negate damage and effects of Support Moves that target the user. Fails if used twice in sequence.",
     "description": "The user detects the intentions of the attacker and acts out to minimize the damage."
@@ -2381,7 +2381,7 @@
     "targets": "Foe",
     "power": "-",
     "category": "Support",
-    "accuracy": "Insight + Social + Intimidate",
+    "accuracy": "Special + Social + Intimidate",
     "damage_pool": "-",
     "effect": "Will only work if the Target is asleep. Deal 1 Damage to the foe. Deal 1 Damage again at the beginning of each Round if the target is still asleep.",
     "description": "The user enters the target's dreams to torment it."
@@ -2865,7 +2865,7 @@
     "targets": "Foe",
     "power": "-",
     "category": "Support",
-    "accuracy": "Insight + Survival + Nature",
+    "accuracy": "Special + Survival + Nature",
     "damage_pool": "-",
     "effect": "Reduce Foe's Strength. User Heals HP equal to the Foe's Current Strength Score. Healing in-battle limitations apply.",
     "description": "The Pokémon looks for a weak point on its foe, then feeds on its vital energy. The foe is left feeling feeble."
@@ -3417,7 +3417,7 @@
     "category": "Support",
     "accuracy": "Dexterity + Survival + Stealth",
     "damage_pool": "-",
-    "effect": "Usable by both Humans and Pokemon. The user rolls against an unsuspecting foe's Insight + Physical + Alert. If the user wins the roll, it gets a free action against it.",
+    "effect": "Usable by both Humans and Pokemon. The user rolls against an unsuspecting foe's Special + Physical + Alert. If the user wins the roll, it gets a free action against it.",
     "description": "An attempt to sneak up on a foe."
   },
   {
@@ -3943,7 +3943,7 @@
     "targets": "Foe",
     "power": "-",
     "category": "Support",
-    "accuracy": "Insight + Physical + Alert",
+    "accuracy": "Special + Physical + Alert",
     "damage_pool": "-",
     "effect": "Ignore any Increase in the foe's Evasion. User's Normal and Physicaling Moves can affect Ghost Types and Ghost Moves can affect Normal Types.",
     "description": "The Pokémon uses its developed senses and mental ability to foresee the immediate future."
@@ -4196,7 +4196,7 @@
     "targets": "User",
     "power": "-",
     "category": "Support",
-    "accuracy": "Insight + Physical + Alert",
+    "accuracy": "Special + Physical + Alert",
     "damage_pool": "-",
     "effect": "The next time the user lands a hit, it will be treated as if it were a Critical Hit.",
     "description": "Through its incredible awareness the Pokémon finds a straight path into a weak point of the foe. The attack that follows is usually devastating."
@@ -4229,7 +4229,7 @@
     "targets": "User",
     "power": "-",
     "category": "Support",
-    "accuracy": "Insight + Physical + Alert",
+    "accuracy": "Special + Physical + Alert",
     "damage_pool": "-",
     "effect": "The next attack the user performs has 2 automatic unremovable successes on its Accuracy Roll.",
     "description": "The Pokémon's eyes zoom at a moving target to ensure that the next attack will be dealt with precision."
@@ -4339,7 +4339,7 @@
     "targets": "Foe",
     "power": "-",
     "category": "Special",
-    "accuracy": "Insight + Physical + Channel",
+    "accuracy": "Special + Physical + Channel",
     "damage_pool": "-",
     "effect": "This Pokémon gets 2 automatic successes on the next Accuracy Roll or Evasion Roll against the target.",
     "description": "The user reads the foe's mind. It knows exactly what to do next."
@@ -4416,7 +4416,7 @@
     "targets": "Foe",
     "power": "-",
     "category": "Support",
-    "accuracy": "Insight + Physical + Alert",
+    "accuracy": "Special + Physical + Alert",
     "damage_pool": "-",
     "effect": "Ignore any Increase in the foe's Evasion. User's Normal and Fighting Moves can affect Ghost Types and Ghost Moves can affect Normal Types. Add +5 to any Rolls to track the target.",
     "description": "The Pokémon uses its keen smell to detect the foe."
@@ -4504,7 +4504,7 @@
     "targets": "Foe",
     "power": "-",
     "category": "Special",
-    "accuracy": "Insight + Physical + Channel",
+    "accuracy": "Special + Physical + Channel",
     "damage_pool": "-",
     "effect": "Copy the Target's Attribute and Trait Modifiers and keep them until the end of the scene.",
     "description": "The Pokémon mentalizes itself stronger than anyone. They feel good. They can win. They. Can. Do. This."
@@ -4757,7 +4757,7 @@
     "targets": "Foe",
     "power": "-",
     "category": "Special",
-    "accuracy": "Insight + Physical + Channel",
+    "accuracy": "Special + Physical + Channel",
     "damage_pool": "-",
     "effect": "Target Pokémon ability is now \"Simple\".",
     "description": "The Pokémon sends out a small psychic wave to its target, giving it a simpler point of view about the world."
@@ -5153,7 +5153,7 @@
     "targets": "Area",
     "power": "-",
     "category": "Support",
-    "accuracy": "Insight + Social + Perform",
+    "accuracy": "Special + Social + Perform",
     "damage_pool": "-",
     "effect": "Inflicts Confusion.",
     "description": "The user starts dancing around with wobbly movements. Friends and foes will get dizzy by trying to follow it."
@@ -5626,7 +5626,7 @@
     "targets": "Foe",
     "power": "-",
     "category": "Support",
-    "accuracy": "Insight + Physical + Alert",
+    "accuracy": "Special + Physical + Alert",
     "damage_pool": "-",
     "effect": "Increase the User's Sp. Defense by 2.",
     "description": "As a fine example of mind over matter, the user temporarily empties its mind to make it more resilient."
@@ -5648,7 +5648,7 @@
     "targets": "User",
     "power": "-",
     "category": "Special",
-    "accuracy": "Insight + Physical + Channel",
+    "accuracy": "Special + Physical + Channel",
     "damage_pool": "-",
     "effect": "Increase the User's Special and Sp. Defense.",
     "description": "The user quietly calms its spirit to strengthen its mind and body."
@@ -5758,7 +5758,7 @@
     "targets": "OneAlly",
     "power": "-",
     "category": "Special",
-    "accuracy": "Insight + Physical + Channel",
+    "accuracy": "Special + Physical + Channel",
     "damage_pool": "-",
     "effect": "Basic Heal.",
     "description": "The user emits a pulse of energy that heals the wounds of its allies."
@@ -5780,7 +5780,7 @@
     "targets": "Foe",
     "power": "2",
     "category": "Support",
-    "accuracy": "Insight + Social + Allure",
+    "accuracy": "Special + Social + Allure",
     "damage_pool": "2d4",
     "effect": "30% Chance to Flinch the foe.",
     "description": "The move controls the emotions of the target, making it feel loved and safe. They may strike immediately."
@@ -5791,7 +5791,7 @@
     "targets": "Foe",
     "power": "-",
     "category": "Support",
-    "accuracy": "Insight + Social + Allure",
+    "accuracy": "Special + Social + Allure",
     "damage_pool": "-",
     "effect": "Switch any Trait Increase/Decrease with the target.",
     "description": "The user and the target swap their feelings of power and weakness, insecurity and courage, love and hate. Boosts are also swapped."
@@ -5802,7 +5802,7 @@
     "targets": "Foe",
     "power": "-",
     "category": "Support",
-    "accuracy": "Insight + Social + Allure - 4",
+    "accuracy": "Special + Social + Allure - 4",
     "damage_pool": "-",
     "effect": "Put the target to sleep. Dark-Type Pokémon are not immune to this move.",
     "description": "Employ a hypnotic suggestion to make the target feel drowsy and fall into a deep slumber. Works better on a target that is not is danger."
@@ -5824,7 +5824,7 @@
     "targets": "Foe",
     "power": "-",
     "category": "Support",
-    "accuracy": "Insight + Social + Perform",
+    "accuracy": "Special + Social + Perform",
     "damage_pool": "-",
     "effect": "Selected Target repeats their last move used this Round, taking the successes on the Accuracy Roll of \"Instruct\" as if they were for their move. Target must have previously used a successful move during the Round, other \"Instruct\" will fail.",
     "description": "The Pokémon sends a psychic command to one of its allies or foes to enable them to repeat their last action."
@@ -5879,7 +5879,7 @@
     "targets": "Foe",
     "power": "-",
     "category": "Support",
-    "accuracy": "Insight + Physical + Alert",
+    "accuracy": "Special + Physical + Alert",
     "damage_pool": "-",
     "effect": "Increase the User's Strength.",
     "description": "The Pokémon meditates to unleash a power that's been sleeping deep inside other user."
@@ -5890,7 +5890,7 @@
     "targets": "User",
     "power": "-",
     "category": "Support",
-    "accuracy": "Insight + Physical + Alert",
+    "accuracy": "Special + Physical + Alert",
     "damage_pool": "-",
     "effect": "The User may hit Dark Type Pokémon with Psychic Moves. The Pokémon ignores Evasion modifiers. Opponents can't reduce the User's Accuracy.",
     "description": "The user's sight transcends the flesh and can look directly into the innermost mental presence of the everyone around. Hidden enemies can be detected."
@@ -6156,7 +6156,7 @@
     "category": "Special",
     "accuracy": "Special + Physical + Channel",
     "damage_pool": "-",
-    "effect": "Defense and Sp. Defense will be calculated with Insight instead of Vitality. Lasts 4 Rounds.",
+    "effect": "Defense and Sp. Defense will be calculated with Special instead of Vitality. Lasts 4 Rounds.",
     "description": "Inside the Wonder Room, a strong mind makes a strong body and a resilient body makes a resilient mind. However, if the mind is weak, the body will be weak and vice versa."
   },
   {

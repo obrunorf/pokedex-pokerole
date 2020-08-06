@@ -62,7 +62,7 @@
   {
     "name": "Blaze",
     "description": "The Fire on this Pokémon's body will burn incredibly fierce just before fading.",
-    "effect": "When this Pokémon is low on HP, its Fire-Type Moves get dice added to their Damage Pool equal to their Pain Penalizations. (e.g. -2 Pain Penalizations will add 1d6  to the damage pool)"
+    "effect": "When this Pokémon is low on HP, its Fire-Type Moves get dice added to their Damage equal to their Pain Penalizations. (1:1d4, 2:1d6, 3:1d8)"
   },
   {
     "name": "Bulletproof",
@@ -547,7 +547,7 @@
   {
     "name": "Overgrow",
     "description": "When this Pokémon is hurt, it will grow huge plants in its body to defend itself, these plants are very strong but wither quickly.",
-    "effect": "When this Pokémon is low on HP, its Grass-Type Moves get dice added to their Damage Pool equal to the Pain Penalizations. (e.g. -2 Pain Penalizations will add 1d6  to the damage pool)"
+    "effect": "When this Pokémon is low on HP, its Grass-Type Moves get dice added to their Damage equal to the Pain Penalizations. (1:1d4, 2:1d6, 3:1d8)"
   },
   {
     "name": "Own Tempo",
@@ -882,7 +882,7 @@
   {
     "name": "Swarm",
     "description": "The Pokémon enters a hive mind state when its life is on the line, becoming for feral and aggressive.",
-    "effect": "When this Pokémon is low on HP, its Bug-Type Moves get dice added to their Damage Pool equal to their Pain Penalizations. (e.g. -2 Pain Penalizations will add 1d6  to the damage pool)"
+    "effect": "When this Pokémon is low on HP, its Bug-Type Moves get dice added to their Damage equal to their Pain Penalizations. (1:1d4, 2:1d6, 3:1d8)"
   },
   {
     "name": "Sweet Veil",
@@ -937,7 +937,7 @@
   {
     "name": "Torrent",
     "description": "This Pokémon builds up pressure to shoot water streams. When that pressure cannot be held in, it is released through uncontrollable torrents.",
-    "effect": "When this Pokémon is low on HP, its Water-Type Moves get dice added to their Damage Pool equal to their Pain Penalizations. (e.g. -2 Pain Penalizations will add 1d6  to the Damage Pool)"
+    "effect": "When this Pokémon is low on HP, its Water-Type Moves get dice added to their Damage equal to their Pain Penalizations. (1:1d4, 2:1d6, 3:1d8)"
   },
   {
     "name": "Tough Claws",
