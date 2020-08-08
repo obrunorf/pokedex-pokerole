@@ -489,7 +489,7 @@
     "targets": "User",
     "power": "-",
     "category": "Support",
-    "accuracy": "Smart + Physical + Alert",
+    "accuracy": "Special + Physical + Alert",
     "damage_pool": "-",
     "effect": "Increase the user's Special by 1.",
     "description": "The Pokémon starts plotting on how to defeat the enemy. Its evil laugh reveals the bad intentions."
@@ -599,7 +599,7 @@
     "targets": "Foe",
     "power": "-",
     "category": "Support",
-    "accuracy": "Smart + Survival + Stealth",
+    "accuracy": "Special + Survival + Stealth",
     "damage_pool": "-",
     "effect": "Erash any Increase or Decrease on the foe's Traits, and place them on the User instead.",
     "description": "The User analyzes the advantages of the foe then makes them their own."
@@ -621,7 +621,7 @@
     "targets": "Foe",
     "power": "-",
     "category": "Support",
-    "accuracy": "Smart + Survival + Stealth",
+    "accuracy": "Special + Survival + Stealth",
     "damage_pool": "-",
     "effect": "User and Foe switch their Held Item. If only one Pokémon is holding an item it gives it away.",
     "description": "The user quickly switches the held items before the foe can realize what happened."
@@ -665,7 +665,7 @@
     "targets": "Foe",
     "power": "-",
     "category": "Special",
-    "accuracy": "Smart + Physical + Channel",
+    "accuracy": "Special + Physical + Channel",
     "damage_pool": "-",
     "effect": "Any Decreases on the foe's Attributes become Increases and vice versa.",
     "description": "The user changes the nature of its target, bad things become good and good things become bad."
@@ -3426,7 +3426,7 @@
     "targets": "OneAlly",
     "power": "s",
     "category": "Support",
-    "accuracy": "Smart + Social + Perform",
+    "accuracy": "Special + Social + Perform",
     "damage_pool": "Varies",
     "effect": "Choose one Move known by a random member of your party. You performed that Move using the Accuracy roll from Assist.",
     "description": "The Pokémon hurriedly remembers one action performed by a partner. Some Pokémon can even do what a human does and assist him with any tasks."
@@ -3547,7 +3547,7 @@
     "targets": "User",
     "power": "-",
     "category": "Support",
-    "accuracy": "Smart + Survival + Stealth",
+    "accuracy": "Special + Survival + Stealth",
     "damage_pool": "-",
     "effect": "The user changes type to whatever terrain it's standing on (ie. User stands on rocks in a cave, becomes rock type). Lasts for the rest of the scene.",
     "description": "The user mimics the environment, it becomes one with the surroundings."
@@ -3613,7 +3613,7 @@
     "targets": "User",
     "power": "-",
     "category": "Support",
-    "accuracy": "Smart + Knowledge + Science",
+    "accuracy": "Special + Survival + Nature",
     "damage_pool": "-",
     "effect": "The user changes its type at random.",
     "description": "The Pokémon downloads the data a Move to add it to its code."
@@ -3624,7 +3624,7 @@
     "targets": "User",
     "power": "-",
     "category": "Support",
-    "accuracy": "Smart + Knowledge + Science",
+    "accuracy": "Special + Survival + Nature",
     "damage_pool": "-",
     "effect": "After being dealt damage, choose a Type resistant to the Type of that attack. That's the Type of the User until it uses this Move again.",
     "description": "The Pokémon downloads the data of a move that was used against it. Change the code of the user to a type resistant to that move."
@@ -4328,7 +4328,7 @@
     "targets": "Foe",
     "power": "-",
     "category": "Support",
-    "accuracy": "Smart + Social + Perform",
+    "accuracy": "Special + Social + Perform",
     "damage_pool": "-",
     "effect": "Copies the last move the target used until the end of the scene. That move replaces Mimic.",
     "description": "Making use of its acting talents, the Pokémon imitates what the target just did."
@@ -4944,7 +4944,7 @@
     "targets": "OneAlly",
     "power": "-",
     "category": "Support",
-    "accuracy": "Dexterity + Knowledge + Medicine - 3",
+    "accuracy": "Dexterity + Mental + Medicine - 3",
     "damage_pool": "-",
     "effect": "The User applies CPR and/or first aid to an unconscious Ally. It won't receive Lethal Damage each hour anymore.",
     "description": "An attempt to apply basic first aid to a wounded ally."
@@ -5813,7 +5813,7 @@
     "targets": "Foe",
     "power": "-",
     "category": "Special",
-    "accuracy": "Smart + Physical + Channel",
+    "accuracy": "Special + Physical + Channel",
     "damage_pool": "-",
     "effect": "The foe cannot use any Moves known by the User. Lasts for a day.",
     "description": "This moves blocks specific parts of the memory the user is well aware of. Be it moves, techniques, names, places, people or situations. The target won't be able to recall those memories."
@@ -6055,7 +6055,7 @@
     "targets": "Foe",
     "power": "-",
     "category": "Support",
-    "accuracy": "Smart + Social + Perform",
+    "accuracy": "Special + Social + Perform",
     "damage_pool": "-",
     "effect": "Copy the target's Ability. The abilities Flower Gift, Illusion, Imposter, Stance Change, Wonder Guard, and Plot Device cannot be copied.",
     "description": "The user mimics the target and takes on the most basic features from that character."
@@ -6066,7 +6066,7 @@
     "targets": "Foe",
     "power": "-",
     "category": "Support",
-    "accuracy": "Smart + Social + Perform",
+    "accuracy": "Special + Social + Perform",
     "damage_pool": "-",
     "effect": "Switch Abilities with the foe. The abilities Flower Gift, Illusion, Imposter, Stance Change, Wonder Guard and Plot Device cannot be switched.",
     "description": "The user swaps its identity with the target, making both feel like they are from each other's species."
@@ -6517,7 +6517,7 @@
     "targets": "Foe",
     "power": "-",
     "category": "Special",
-    "accuracy": "Smart + Physical + Channel",
+    "accuracy": "Special + Physical + Channel",
     "damage_pool": "-",
     "effect": "Sound Based. Reduce the foe's Special Defense by 2.",
     "description": "The user produces a horrible noise that impedes the foe from focusing on the fight, leaving it vulnerable to attacks."
@@ -6556,7 +6556,7 @@
     "description": "The Pokémon has its gears rotate quickly. Working like a powerful machine."
   },
   {
-    "name": "Smart Strike",
+    "name": "Special Strike",
     "type": "Steel",
     "targets": "Foe",
     "power": "3",
