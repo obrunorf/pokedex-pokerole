@@ -1458,7 +1458,7 @@
     "power": "6",
     "category": "Fighting",
     "accuracy": "Dexterity + Physical + Brawl",
-    "damage_pool": "3d6+3",
+    "damage_pool": "2d10+5",
     "effect": "Fist Based. Charge Move. The User will flinch if it gets hit before releasing this attack.",
     "description": "A brutal punch that requires calm and concentration."
   },
@@ -1744,7 +1744,7 @@
     "power": "6",
     "category": "Special",
     "accuracy": "Dexterity + Physical + Channel - 1",
-    "damage_pool": "3d6+3",
+    "damage_pool": "2d10+5",
     "effect": "Lethal. Must Recharge.",
     "description": "The Pokémon uses all of its power to deliver an infernal blast to the foe. The user is left exhausted."
   },
@@ -1788,7 +1788,7 @@
     "power": "6",
     "category": "Special",
     "accuracy": "Dexterity + Physical + Channel",
-    "damage_pool": "3d6+3",
+    "damage_pool": "2d10+5",
     "effect": "Lethal. Reduce 1 Damage for every 2 missing HP the User has. Up to 10 damage may be removed this way.",
     "description": "A fierce burst of lava coming from the user at full force charring whatever comes in contact with it."
   },
@@ -2008,7 +2008,7 @@
     "power": "6",
     "category": "Support",
     "accuracy": "Dexterity + Survival + Stealth",
-    "damage_pool": "3d6+3",
+    "damage_pool": "2d8+5",
     "effect": "Volt. Low Priority 3. This Move strikes the next time the user is hit with a Non-Ranged Physical attack.",
     "description": "It apparently just buried underground, but secretly the Pokémon prepares its shell to detonate; anyone who steps on it will be blown to pieces."
   },
@@ -2039,7 +2039,7 @@
     "type": "Flying",
     "targets": "Foe",
     "power": "4",
-    "category": "Support",
+    "category": "Fighting",
     "accuracy": "Dexterity + Physical + Athletic",
     "damage_pool": "2d4",
     "effect": "If the User has a Held Item, remove 1d4 from the Damage.",
@@ -2085,7 +2085,7 @@
     "power": "4",
     "category": "Special",
     "accuracy": "Dexterity + Physical + Channel",
-    "damage_pool": "2d6+2",
+    "damage_pool": "2d8+4",
     "effect": "Ranged. Charge Move. Low Priority 3. If the User is hit by a Non Ranged Physical Attack while this move is charging, Apply Burn 2 to the foe.",
     "description": "The Pokémon gets ready to release a boiling gas through its beak which gets incredibly hot. The resulting blast sounds like a train's horn."
   },
@@ -2096,7 +2096,7 @@
     "power": "3",
     "category": "Fighting",
     "accuracy": "Dexterity + Physical + Brawl",
-    "damage_pool": "2d4+2",
+    "damage_pool": "2d8+4",
     "effect": "Charge Move. While charging this Move, the user will be out of range. 30% Chance to Paralyze the foe.",
     "description": "The Pokémon will jump 30 feet in the air before landing on top of the foe. The user won't suffer any falling damage."
   },
@@ -2162,7 +2162,7 @@
     "power": "3",
     "category": "Fighting",
     "accuracy": "Dexterity + Physical + Brawl",
-    "damage_pool": "1d10+3",
+    "damage_pool": "2d10+5",
     "effect": "Charge Move. While charging this move, the User will be out of range, with the exception of the attacks Hurricane and Thunder.",
     "description": "The user flies up high in one action, then drops and strikes in the next one. The Pokémon can fly for extremely long periods of time without getting tired."
   },
@@ -2404,7 +2404,7 @@
     "power": "3",
     "category": "Fighting",
     "accuracy": "Dexterity + Physical + Brawl",
-    "damage_pool": "1d10+3",
+    "damage_pool": "2d8+3",
     "effect": "Charge Move. While charging this Move, other Moves will not affect the user. If the Target made a Shielding Action the shield is destroyed and won't have any effect.",
     "description": "The Pokémon disappears into a dark dimension to infiltrate even the most impenetrable defenses. It may reappear during its next action."
   },
@@ -2580,7 +2580,7 @@
     "power": "6",
     "category": "Special",
     "accuracy": "Dexterity + Physical + Channel - 1",
-    "damage_pool": "3d6+3",
+    "damage_pool": "2d10+5",
     "effect": "Must Recharge.",
     "description": "User roots down and calls the plants to grow in a frenzy around the foe, though it leaves the user exhausted."
   },
@@ -2822,7 +2822,7 @@
     "power": "5",
     "category": "Special",
     "accuracy": "Dexterity + Physical + Channel",
-    "damage_pool": "1d12+3",
+    "damage_pool": "2d10+5",
     "effect": "Charge Move. If there is a Sunny Weather, you skip this Move's Charge action. If performed under Rain, Sandstorm or Hail Weather, this Move takes two actions to Charge.",
     "description": "The user focuses the sunlight it has absorbed into a powerful and devastating beam of light."
   },
@@ -2833,7 +2833,7 @@
     "power": "5",
     "category": "Fighting",
     "accuracy": "Dexterity + Physical + Brawl",
-    "damage_pool": "1d12+3",
+    "damage_pool": "2d10+5",
     "effect": "Charge Move. If there is a Sunny Weather, you skip this Move's Charge action. If performed under Rain, Sandstorm or Hail Weather, this Move takes two actions to Charge.",
     "description": "The Pokémon focuses the sunlight on its sharp leaves, then releases the energy with a shattering blow."
   },
@@ -2987,7 +2987,7 @@
     "power": "3",
     "category": "Fighting",
     "accuracy": "Dexterity + Physical + Brawl",
-    "damage_pool": "2d4+2",
+    "damage_pool": "2d8+4",
     "effect": "Charge Move. While charging this move, the User will be out of range. Can be hit by Earthquake, Magnitude or a similar move.",
     "description": "The user digs a tunnel on the ground and attacks while coming out from below."
   },
@@ -3853,11 +3853,11 @@
     "name": "Facade",
     "type": "Normal",
     "targets": "Foe",
-    "power": ")",
+    "power": "-",
     "category": "Fighting",
     "accuracy": "Dexterity + Physical + Brawl",
     "damage_pool": "1d8+2",
-    "effect": "If User's got a Status Ailment (Paralysis, Poison, Burn, etc.) Add 1d8 Damage Roll of this move.",
+    "effect": "If User's got a Status Ailment (Paralysis, Poison, Burn, etc.) Add 1d8 to Damage Roll of this move.",
     "description": "The Pokémon will make an upfront attack, if the user is suffering the attack will be stronger."
   },
   {
@@ -3988,7 +3988,7 @@
     "power": "6",
     "category": "Fighting",
     "accuracy": "Dexterity + Physical + Brawl - 1",
-    "damage_pool": "3d6+3",
+    "damage_pool": "2d10+5",
     "effect": "Must Recharge. Lethal.",
     "description": "The Pokémon strikes with a brutal force using all its body. The impact leaves the user somewhat stunned."
   },
@@ -4153,7 +4153,7 @@
     "power": "6",
     "category": "Special",
     "accuracy": "Dexterity + Physical + Channel - 1",
-    "damage_pool": "3d6+3",
+    "damage_pool": "2d10+5",
     "effect": "Must Recharge. Lethal.",
     "description": "The Pokémon casts an incredible beam that leaves a giant trail of destruction behind. The user is left exhausted."
   },
@@ -4384,7 +4384,7 @@
     "power": "3",
     "category": "Special",
     "accuracy": "Dexterity + Physical + Channel",
-    "damage_pool": "Strength + 3",
+    "damage_pool": "1d8",
     "effect": "User loses its held berry. Ranged. See Natural Gift on p.368 for more info.",
     "description": "The user throws its berry at the foe, the results can be quite surprising."
   },
@@ -4395,7 +4395,7 @@
     "power": "3",
     "category": "Special",
     "accuracy": "Dexterity + Physical + Channel",
-    "damage_pool": "Special + 3",
+    "damage_pool": "1d8",
     "effect": "The type of this move is determined by the environment. See Nature Power p.368 for more info.",
     "description": "The Pokémon makes use of the terrain and asks the nature for aid in battle."
   },
@@ -4657,7 +4657,7 @@
     "type": "Normal",
     "targets": "Foe",
     "power": ")",
-    "category": "Support",
+    "category": "Special",
     "accuracy": "Special + Social + Perform",
     "damage_pool": "2d4",
     "effect": "If the User and an Ally are able to use Round, both may choose to do it at the same time. Both Pokémon add 1d8 to the Damage Roll.",
@@ -5209,7 +5209,7 @@
     "power": ")",
     "category": "Special",
     "accuracy": "Dexterity + Physical + Channel",
-    "damage_pool": "Special + 1d4 (or x)",
+    "damage_pool": "1d4 (or x)",
     "effect": "If User's Will is half spent add 1d6 to the Damage Roll, if the User's Will is depleted add 1d12+2 to the Damage Pool.",
     "description": "The more exhausted the user is, the stronger this attack will become. When the Pokémon is at the last of its strength this move can be devastating."
   },
@@ -6156,7 +6156,7 @@
     "category": "Special",
     "accuracy": "Special + Physical + Channel",
     "damage_pool": "-",
-    "effect": "Defense and Sp. Defense will be calculated with Special instead of Vitality. Lasts 4 Rounds.",
+    "effect": "Defense and Sp. Defense will be reversed for damage reduction calculations. Lasts 4 Rounds.",
     "description": "Inside the Wonder Room, a strong mind makes a strong body and a resilient body makes a resilient mind. However, if the mind is weak, the body will be weak and vice versa."
   },
   {
@@ -6199,7 +6199,7 @@
     "power": "6",
     "category": "Fighting",
     "accuracy": "Dexterity + Physical + Brawl - 2",
-    "damage_pool": "3d6+3",
+    "damage_pool": "2d10+5",
     "effect": "Recoil.",
     "description": "The user charges head first to attack the foe, the strike is devastating for both."
   },
@@ -6276,7 +6276,7 @@
     "power": "6",
     "category": "Special",
     "accuracy": "Dexterity + Physical + Channel - 1",
-    "damage_pool": "3d6+3",
+    "damage_pool": "2d10+5",
     "effect": "Ranged. Must Recharge. Lethal.",
     "description": "The user shoots a huge boulder as if it were a cannon ball that can even go through thick walls. This, however, requires a lot of energy from the user."
   },
@@ -6343,7 +6343,7 @@
     "category": "Special",
     "accuracy": "Dexterity + Physical + Channel",
     "damage_pool": "-",
-    "effect": "Priority 3. Shield. Reduce 1d8 from the foe's Damage Pool.",
+    "effect": "Priority 3. Shield. Reduce to 0 all area damage and area status moves.",
     "description": "The Pokémon uses its whole body to provide coverage and protection to its allies against an incoming attack."
   },
   {
@@ -6468,7 +6468,7 @@
     "description": "The user hits the foe with its hardened tail. The target is left vulnerable against subsequent attacks."
   },
   {
-    "name": "King's Shield",
+    "name": "Kings Shield",
     "type": "Steel",
     "targets": "Foe",
     "power": "-",
@@ -6596,7 +6596,7 @@
     "category": "Support",
     "accuracy": "Special + Survival + Nature",
     "damage_pool": "-",
-    "effect": "At the end of each Round, recover 1 HP. Lasts 4 Rounds.",
+    "effect": "At the end of each Round, recover 1d4+1 HP. Lasts 4 Rounds.",
     "description": "The user coats itself in a special flowing water that lessens the pain."
   },
   {
@@ -6672,7 +6672,7 @@
     "power": "2",
     "category": "Fighting",
     "accuracy": "Dexterity + Physical + Brawl",
-    "damage_pool": "2d4+2",
+    "damage_pool": "2d10+5",
     "effect": "Charge Move. While charging this move, the User will be out of range. Allows the Pokémon to swim into Deep Waters.",
     "description": "The user submerges into the water and continues diving at an insane speed."
   },
@@ -6683,7 +6683,7 @@
     "power": "6",
     "category": "Special",
     "accuracy": "Dexterity + Physical + Channel - 1",
-    "damage_pool": "3d6+3",
+    "damage_pool": "2d10+5",
     "effect": "Must Recharge.",
     "description": "The Pokémon blasts the foe with a water surge that could bring down a house. The user needs to rest afterwards."
   },
@@ -6859,7 +6859,7 @@
     "power": "6",
     "category": "Special",
     "accuracy": "Special + Physical + Channel",
-    "damage_pool": "3d6+3",
+    "damage_pool": "2d10+5",
     "effect": "Remove 2 Damage from the roll for every 3 missing HP of the User. Up to 15 missing HP. (3: 2, 6: 4, 9: 6, 12: 8, 15: 10)",
     "description": "The Pokémon builds up an amazing pressure and releases a huge columnar vortex of water that could even reach the clouds."
   },

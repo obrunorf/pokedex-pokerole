@@ -2116,6 +2116,126 @@
       ]
    },
    {
+      "number": "019",
+      "name": "Rattata-Alola",
+      "height": "0.30",
+      "weight": "3.5",
+      "category": "Mouse",
+      "pokedex": "Rattata first came to Alola through cargo ships, it thrived and almost destroyed the region's ecosystem. Attemps to exterminate this Pokémon made it more vicious than its regular counterpart.",
+      "evolutions": [
+         "Rattata-Alola",
+         "Raticate-Alola"
+      ],
+      "evolution_method": "Evolves after reaching maturity.",
+      "stage": "1",
+      "generation": "1",
+      "types": [
+        "Dark",
+         "Normal"
+      ],
+      "strength": [
+         "2",
+         "4"
+      ],
+      "dexterity": [
+         "2",
+         "5"
+      ],
+      "vitality": [
+         "1",
+         "3"
+      ],
+      "special": [
+         "1",
+         "3"
+      ],
+      "insight": [
+         "1",
+         "3"
+      ],
+      "defense": [
+         "1",
+         "3"
+      ],
+      "spdef": [
+         "1",
+         "3"
+      ],
+      "abilities": [
+         "Gluttony",
+         "Hustle"
+      ],
+      "base_hp": "6",
+      "disobedience": "1",
+      "moves": [
+         {
+            "name": "Tackle",
+            "exp": "0"
+         },
+         {
+            "name": "Tail Whip",
+            "exp": "0"
+         },
+         {
+            "name": "Quick Attack",
+            "exp": "4"
+         },
+         {
+            "name": "Focus Energy",
+            "exp": "7"
+         },
+         {
+            "name": "Bite",
+            "exp": "10"
+         },
+         {
+            "name": "Pursuit",
+            "exp": "13"
+         },
+         {
+            "name": "Hyper Fang",
+            "exp": "16"
+         },
+         {
+            "name": "Assurance",
+            "exp": "19"
+         },
+         {
+            "name": "Crunch",
+            "exp": "22"
+         },
+         {
+            "name": "Sucker Punch",
+            "exp": "25"
+         },
+
+         {
+            "name": "Super Fang",
+            "exp": "28"
+         },
+         {
+            "name": "Double-Edge",
+            "exp": "31"
+         },
+         {
+            "name": "Endeavor",
+            "exp": "34"
+         },
+         {
+            "name": "Reversal",
+            "exp": "?"
+         },
+         {
+            "name": "Snatch",
+            "exp": "?"
+         },
+         {
+            "name": "Switcheroo",
+            "exp": "?"
+         }
+      ]
+   },
+   {
       "number": "020",
       "name": "Raticate",
       "height": "0.71",
@@ -2238,6 +2358,133 @@
          {
             "name": "Final Gambit",
             "exp": "."
+         }
+      ]
+   },
+   {
+      "number": "020",
+      "name": "Raticate-Alola",
+      "height": "0.71",
+      "weight": "18.5",
+      "category": "Mouse",
+      "pokedex": "Alolan Raticate command their Rattata underlings to bring them food every night. Five star restaurants often struggle with these aggresive Pokémon nesting close to the grounds.",
+      "evolutions": [
+         "Rattata-Alola",
+         "Raticate-Alola"
+      ],
+      "evolution_method": "",
+      "stage": "2",
+      "generation": "1",
+      "types": [
+        "Dark",
+         "Normal"
+      ],
+      "strength": [
+         "2",
+         "5"
+      ],
+      "dexterity": [
+         "3",
+         "6"
+      ],
+      "vitality": [
+         "2",
+         "4"
+      ],
+      "special": [
+         "2",
+         "4"
+      ],
+      "insight": [
+         "2",
+         "5"
+      ],
+      "defense": [
+         "2",
+         "4"
+      ],
+      "spdef": [
+         "2",
+         "5"
+      ],
+      "abilities": [
+         "Hustle",
+         "Thick Fat"
+      ],
+      "base_hp": "11",
+      "disobedience": "0",
+      "moves": [
+        {
+           "name": "Scary Face",
+           "exp": "0"
+        },
+         {
+            "name": "Swords Dance",
+            "exp": "0"
+         },
+         {
+            "name": "Tackle",
+            "exp": "0"
+         },
+         {
+            "name": "Tail Whip",
+            "exp": "0"
+         },
+         {
+            "name": "Quick Attack",
+            "exp": "0"
+         },
+         {
+            "name": "Focus Energy",
+            "exp": "0"
+         },
+         {
+            "name": "Bite",
+            "exp": "10"
+         },
+         {
+            "name": "Pursuit",
+            "exp": "13"
+         },
+         {
+            "name": "Hyper Fang",
+            "exp": "16"
+         },
+         {
+            "name": "Assurance",
+            "exp": "19"
+         },
+         {
+            "name": "Crunch",
+            "exp": "24"
+         },
+         {
+            "name": "Sucker Punch",
+            "exp": "29"
+         },
+         {
+            "name": "Super Fang",
+            "exp": "34"
+         },
+         {
+            "name": "Double-Edge",
+            "exp": "39"
+         },
+         {
+            "name": "Endeavor",
+            "exp": "44"
+         },
+         {
+            "name": "Stockpile",
+            "exp": "?"
+         },
+         {
+            "name": "Swallow",
+            "exp": "?"
+         },
+         {
+            "name": "Me First",
+            "exp": "?"
          }
       ]
    },
@@ -2764,7 +3011,7 @@
          "Pichu",
          "Pikachu",
          "Raichu",
-         "Raichu (Alola)"
+         "Raichu-Alola"
       ],
       "evolution_method": "Evolves with a Thunder Stone.",
       "stage": "1",
@@ -2968,6 +3215,97 @@
       ]
    },
    {
+      "number": "026",
+      "name": "Raichu-Alola",
+      "height": "0.79",
+      "weight": "30",
+      "category": "Mouse",
+      "pokedex": "Scientists were baffled to discover Raichu's evolution in the Alola Region. There is no explanation as to how it gained Psychic abilities, but diet seems to be factor. It loves sweed food and pancakes.",
+      "evolutions": [
+        "Pichu",
+         "Pikachu",
+         "Raichu-Alola"
+      ],
+      "evolution_method": "",
+      "stage": "2",
+      "generation": "1",
+      "types": [
+         "Electric",
+         "Psychic"
+      ],
+      "strength": [
+         "2",
+         "5"
+      ],
+      "dexterity": [
+         "3",
+         "6"
+      ],
+      "vitality": [
+         "2",
+         "4"
+      ],
+      "special": [
+         "3",
+         "6"
+      ],
+      "insight": [
+         "2",
+         "5"
+      ],
+      "defense": [
+         "2",
+         "4"
+      ],
+      "spdef": [
+         "2",
+         "5"
+      ],
+      "abilities": [
+         "Surge Surfer"
+      ],
+      "base_hp": "12",
+      "disobedience": "0",
+      "moves": [
+        {
+           "name": "Psychic",
+           "exp": "0"
+        },
+        {
+         "name": "Speed Swap",
+         "exp": "0"
+       },
+         {
+            "name": "Thunder Shock",
+            "exp": "0"
+         },
+         {
+            "name": "Tail Whip",
+            "exp": "0"
+         },
+         {
+            "name": "Quick Attack",
+            "exp": "0"
+         },
+         {
+            "name": "Thunderbolt",
+            "exp": "0"
+         },
+         {
+            "name": "Electric Terrain",
+            "exp": "?"
+         },
+         {
+            "name": "Reflect",
+            "exp": "?"
+         },
+         {
+            "name": "Volt Tackle",
+            "exp": "?"
+         }
+      ]
+   },
+   {
       "number": "027",
       "name": "Sandshrew",
       "height": "0.61",
@@ -3098,6 +3436,141 @@
          {
             "name": "Metal Claw",
             "exp": "."
+         }
+      ]
+   },
+   {
+      "number": "027",
+      "name": "Sandshrew-Alola",
+      "height": "0.61",
+      "weight": "12",
+      "category": "Mouse",
+      "pokedex": "Sandshrew who became trapped in the merciless cold weather of Alola had to change their types to survive. They now depend on snow to roll around, without it they are unable to curl up into a ball.",
+      "evolutions": [
+         "Sandshrew-Alola",
+         "Sandslash-Alola"
+      ],
+      "evolution_method": "Evolves after reaching a certain level.",
+      "stage": "1",
+      "generation": "1",
+      "types": [
+         "Ice",
+         "Steel"
+      ],
+      "strength": [
+         "2",
+         "5"
+      ],
+      "dexterity": [
+         "1",
+         "3"
+      ],
+      "vitality": [
+         "2",
+         "5"
+      ],
+      "special": [
+         "1",
+         "3"
+      ],
+      "insight": [
+         "1",
+         "3"
+      ],
+      "defense": [
+         "2",
+         "5"
+      ],
+      "spdef": [
+         "1",
+         "3"
+      ],
+      "abilities": [
+         "Snow Cloak",
+         "Slush Rush"
+      ],
+      "base_hp": "10",
+      "disobedience": "0",
+      "moves": [
+         {
+            "name": "Scratch",
+            "exp": "0"
+         },
+         {
+            "name": "Defense Curl",
+            "exp": "0"
+         },
+         {
+            "name": "Bide",
+            "exp": "3"
+         },
+         {
+            "name": "Powder Snow",
+            "exp": "5"
+         },
+         {
+            "name": "Ice Ball",
+            "exp": "7"
+         },
+         {
+            "name": "Rapid Spin",
+            "exp": "9"
+         },
+         {
+            "name": "Fury Cutter",
+            "exp": "11"
+         },
+         {
+            "name": "Metal Claw",
+            "exp": "14"
+         },
+         {
+            "name": "Swift",
+            "exp": "17"
+         },
+         {
+            "name": "Fury Swipes",
+            "exp": "20"
+         },
+         {
+            "name": "Iron Defense",
+            "exp": "23"
+         },
+         {
+            "name": "Slash",
+            "exp": "26"
+         },
+         {
+            "name": "Iron Head",
+            "exp": "30"
+         },
+         {
+            "name": "Gyro Ball",
+            "exp": "34"
+         },
+         {
+            "name": "Swords Dance",
+            "exp": "38"
+         },
+         {
+            "name": "Hail",
+            "exp": "42"
+         },
+         {
+            "name": "Blizzard",
+            "exp": "46"
+         },
+         {
+            "name": "Chip Away",
+            "exp": "?"
+         },
+         {
+            "name": "Counter",
+            "exp": "?"
+         },
+         {
+            "name": "Aerial Ace",
+            "exp": "?"
          }
       ]
    },
@@ -3236,6 +3709,101 @@
          {
             "name": "Counter",
             "exp": "."
+         }
+      ]
+   },
+   {
+      "number": "028",
+      "name": "Sandslash-Alola",
+      "height": "0.99",
+      "weight": "29.5",
+      "category": "Mouse",
+      "pokedex": "These Pokémon make their burrows on Alola's ice caverns, hidden in plain sight. Careful with its spikes, any puncture into the skin and you can get severe frostbite. They can't stand high temperatures.",
+      "evolutions": [
+         "Sandshrew-Alola",
+         "Sandslash-Alola"
+      ],
+      "evolution_method": "",
+      "stage": "2",
+      "generation": "1",
+      "types": [
+         "Ice",
+         "Steel"
+      ],
+      "strength": [
+         "3",
+         "6"
+      ],
+      "dexterity": [
+         "2",
+         "4"
+      ],
+      "vitality": [
+         "3",
+         "6"
+      ],
+      "special": [
+         "2",
+         "4"
+      ],
+      "insight": [
+         "2",
+         "4"
+      ],
+      "defense": [
+         "3",
+         "6"
+      ],
+      "spdef": [
+         "2",
+         "4"
+      ],
+      "abilities": [
+         "Snow Cloak",
+         "Slush Rush"
+      ],
+      "base_hp": "15",
+      "disobedience": "0",
+      "moves": [
+         {
+            "name": "Icicle Spear",
+            "exp": "0"
+         },
+         {
+            "name": "Metal Burst",
+            "exp": "0"
+         },
+         {
+            "name": "Icicle Crash",
+            "exp": "0"
+         },
+         {
+            "name": "Slash",
+            "exp": "0"
+         },
+         {
+            "name": "Defense Curl",
+            "exp": "0"
+         },
+         {
+            "name": "Ice Ball",
+            "exp": "0"
+         },
+         {
+            "name": "Metal Claw",
+            "exp": "0"
+         },
+         {
+            "name": "Chip Away",
+            "exp": "?"
+         },
+         {
+            "name": "Counter",
+            "exp": "?"
+         },
+         {
+            "name": "Aurora Veil",
+            "exp": "?"
          }
       ]
    },
@@ -4316,6 +4884,152 @@
       ]
    },
    {
+      "number": "037",
+      "name": "Vulpix-Alola",
+      "height": "0.61",
+      "weight": "9.9",
+      "category": "Fox",
+      "pokedex": "The Vulpix who became stranded in Alola had to change type in order to survive. Alola's local name for this Pokémon is Keokeo. They use their tails as a fan to cool themselves in hot climates.",
+      "evolutions": [
+         "Vulpix-Alola",
+         "Ninetales-Alola"
+      ],
+      "evolution_method": "Evolves with an Ice Stone.",
+      "stage": "1",
+      "generation": "1",
+      "types": [
+         "Ice"
+      ],
+      "strength": [
+         "1",
+         "3"
+      ],
+      "dexterity": [
+         "2",
+         "4"
+      ],
+      "vitality": [
+         "1",
+         "3"
+      ],
+      "special": [
+         "2",
+         "4"
+      ],
+      "insight": [
+         "2",
+         "4"
+      ],
+      "defense": [
+         "1",
+         "3"
+      ],
+      "spdef": [
+         "2",
+         "4"
+      ],
+      "abilities": [
+         "Snow Cloak",
+         "Snow Warning"
+      ],
+      "base_hp": "7",
+      "disobedience": "0",
+      "moves": [
+         {
+            "name": "Powder Snow",
+            "exp": "0"
+         },
+         {
+            "name": "Tail Whip",
+            "exp": "4"
+         },
+         {
+            "name": "Roar",
+            "exp": "7"
+         },
+         {
+            "name": "Baby-Doll Eyes",
+            "exp": "9"
+         },
+         {
+            "name": "Ice Shard",
+            "exp": "10"
+         },
+         {
+            "name": "Confuse Ray",
+            "exp": "12"
+         },
+         {
+            "name": "Icy Wind",
+            "exp": "15"
+         },
+         {
+            "name": "Payback",
+            "exp": "18"
+         },
+         {
+            "name": "Mist",
+            "exp": "20"
+         },
+         {
+            "name": "Feint Attack",
+            "exp": "23"
+         },
+         {
+            "name": "Hex",
+            "exp": "26"
+         },
+         {
+            "name": "Aurora Beam",
+            "exp": "28"
+         },
+         {
+            "name": "Extrasensory",
+            "exp": "31"
+         },
+         {
+            "name": "Safeguard",
+            "exp": "34"
+         },
+         {
+            "name": "Ice Beam",
+            "exp": "36"
+         },
+         {
+            "name": "Imprison",
+            "exp": "39"
+         },
+         {
+            "name": "Blizzard",
+            "exp": "42"
+         },
+         {
+            "name": "Grudge",
+            "exp": "44"
+         },
+         {
+            "name": "Captivate",
+            "exp": "47"
+         },
+         {
+            "name": "Sheer Cold",
+            "exp": "50"
+         },
+         {
+            "name": "Moonblast",
+            "exp": "?"
+         },
+         {
+            "name": "Spite",
+            "exp": "?"
+         },
+         {
+            "name": "Freeze Dry",
+            "exp": "?"
+         }
+      ]
+   },
+   {
       "number": "038",
       "name": "Ninetales",
       "height": "1.09",
@@ -4402,6 +5116,101 @@
          {
             "name": "Heat Wave",
             "exp": "."
+         }
+      ]
+   },
+   {
+      "number": "038",
+      "name": "Ninetales-Alola",
+      "height": "1.09",
+      "weight": "19.9",
+      "category": "Fox",
+      "pokedex": "In old times, Alolan natives revered this Pokémon as a god incarnate. It is usually calm and benevolent, but it can be ruthless when disturbed, leaving its foes as a cold block of ice in the snow.",
+      "evolutions": [
+         "Vulpix-Alola",
+         "Ninetales-Alola"
+      ],
+      "evolution_method": "",
+      "stage": "2",
+      "generation": "1",
+      "types": [
+         "Ice",
+         "Fairy"
+      ],
+      "strength": [
+         "2",
+         "5"
+      ],
+      "dexterity": [
+         "3",
+         "6"
+      ],
+      "vitality": [
+         "2",
+         "5"
+      ],
+      "special": [
+         "2",
+         "5"
+      ],
+      "insight": [
+         "3",
+         "6"
+      ],
+      "defense": [
+         "2",
+         "5"
+      ],
+      "spdef": [
+         "3",
+         "6"
+      ],
+      "abilities": [
+         "Snow Cloak",
+         "Snow Warning"
+      ],
+      "base_hp": "14",
+      "disobedience": "0",
+      "moves": [
+         {
+            "name": "Dazzling Gleam",
+            "exp": "0"
+         },
+         {
+            "name": "Nasty Plot",
+            "exp": "0"
+         },
+         {
+            "name": "Imprison",
+            "exp": "0"
+         },
+         {
+            "name": "Ice Beam",
+            "exp": "0"
+         },
+         {
+            "name": "Ice Shard",
+            "exp": "0"
+         },
+         {
+            "name": "Confuse Ray",
+            "exp": "0"
+         },
+         {
+            "name": "Safeguard",
+            "exp": "0"
+         },
+         {
+            "name": "Aurora Veil",
+            "exp": "?"
+         },
+         {
+            "name": "Moonblast",
+            "exp": "?"
+         },
+         {
+            "name": "Agility",
+            "exp": "?"
          }
       ]
    },
@@ -5812,6 +6621,129 @@
       ]
    },
    {
+      "number": "050",
+      "name": "Diglett-Alola",
+      "height": "0.20",
+      "weight": "0.8",
+      "category": "Mole",
+      "pokedex": "This variant of Diglett is only found in the Alola region. The small hairs on its head are used perceive its surroundings while burrowed, do not cut them or Diglett will become very sick.",
+      "evolutions": [
+         "Diglett-Alola",
+         "Dugtrio-Alola"
+      ],
+      "evolution_method": "Evolves after reaching a certain size.",
+      "stage": "1",
+      "generation": "1",
+      "types": [
+         "Ground",
+         "Steel"
+      ],
+      "strength": [
+         "2",
+         "4"
+      ],
+      "dexterity": [
+         "3",
+         "6"
+      ],
+      "vitality": [
+         "1",
+         "3"
+      ],
+      "special": [
+         "1",
+         "3"
+      ],
+      "insight": [
+         "1",
+         "3"
+      ],
+      "defense": [
+         "1",
+         "3"
+      ],
+      "spdef": [
+         "2",
+         "4"
+      ],
+      "abilities": [
+         "Sand Veil",
+         "Tangling Hair"
+      ],
+      "base_hp": "3",
+      "disobedience": "0",
+      "moves": [
+         {
+            "name": "Metal Claw",
+            "exp": "0"
+         },
+         {
+            "name": "Sand Attack",
+            "exp": "0"
+         },
+         {
+            "name": "Growl",
+            "exp": "4"
+         },
+         {
+            "name": "Astonish",
+            "exp": "7"
+         },
+         {
+            "name": "Mud Slap",
+            "exp": "10"
+         },
+         {
+            "name": "Magnitude",
+            "exp": "14"
+         },
+         {
+            "name": "Bulldoze",
+            "exp": "18"
+         },
+         {
+            "name": "Sucker Punch",
+            "exp": "22"
+         },
+         {
+            "name": "Mud Bomb",
+            "exp": "25"
+         },
+         {
+            "name": "Earth Power",
+            "exp": "28"
+         },
+         {
+            "name": "Dig",
+            "exp": "31"
+         },
+         {
+            "name": "Iron Head",
+            "exp": "35"
+         },
+         {
+            "name": "Earthquake",
+            "exp": "39"
+         },
+         {
+            "name": "Fissure",
+            "exp": "43"
+         },
+         {
+            "name": "Thrash",
+            "exp": "?"
+         },
+         {
+            "name": "Metal Sound",
+            "exp": "?"
+         },
+         {
+            "name": "Feint Attack",
+            "exp": "?"
+         }
+      ]
+   },
+   {
       "number": "051",
       "name": "Dugtrio",
       "height": "0.71",
@@ -5950,6 +6882,145 @@
       ]
    },
    {
+      "number": "051",
+      "name": "Dugtrio-Alola",
+      "height": "0.71",
+      "weight": "33.3",
+      "category": "Mole",
+      "pokedex": "Thanks to its golden mane, this Pokémon has been revered as a femenine diety. The triplets groom each other to help keep the hair glossy and dirt-free, they don't like to be petted.",
+      "evolutions": [
+         "Diglett-Alola",
+         "Dugtrio-Alola"
+      ],
+      "evolution_method": "",
+      "stage": "2",
+      "generation": "1",
+      "types": [
+         "Ground",
+         "Steel"
+      ],
+      "strength": [
+         "3",
+         "6"
+      ],
+      "dexterity": [
+         "3",
+         "6"
+      ],
+      "vitality": [
+         "2",
+         "4"
+      ],
+      "special": [
+         "2",
+         "4"
+      ],
+      "insight": [
+         "2",
+         "5"
+      ],
+      "defense": [
+         "2",
+         "4"
+      ],
+      "spdef": [
+         "2",
+         "5"
+      ],
+      "abilities": [
+         "Sand Veil",
+         "Tangling Hair"
+      ],
+      "base_hp": "7",
+      "disobedience": "0",
+      "moves": [
+         {
+            "name": "Sand Tomb",
+            "exp": "0"
+         },
+         {
+            "name": "Rototiller",
+            "exp": "0"
+         },
+         {
+            "name": "Night Slash",
+            "exp": "0"
+         },
+         {
+            "name": "Tri Attack",
+            "exp": "0"
+         },
+         {
+            "name": "Metal Claw",
+            "exp": "0"
+         },
+         {
+            "name": "Sand Attack",
+            "exp": "0"
+         },
+         {
+            "name": "Growl",
+            "exp": "0"
+         },
+         {
+            "name": "Astonish",
+            "exp": "7"
+         },
+         {
+            "name": "Mud Slap",
+            "exp": "10"
+         },
+         {
+            "name": "Magnitude",
+            "exp": "14"
+         },
+         {
+            "name": "Bulldoze",
+            "exp": "18"
+         },
+         {
+            "name": "Sucker Punch",
+            "exp": "22"
+         },
+         {
+            "name": "Mud Bomb",
+            "exp": "25"
+         },
+         {
+            "name": "Earth Power",
+            "exp": "30"
+         },
+         {
+            "name": "Dig",
+            "exp": "35"
+         },
+         {
+            "name": "Iron Head",
+            "exp": "41"
+         },
+         {
+            "name": "Earthquake",
+            "exp": "47"
+         },
+         {
+            "name": "Fissure",
+            "exp": "53"
+         },
+         {
+            "name": "Stone Edge",
+            "exp": "?"
+         },
+         {
+            "name": "Ancient Power",
+            "exp": "?"
+         },
+         {
+            "name": "Thrash",
+            "exp": "?"
+         }
+      ]
+   },
+   {
       "number": "052",
       "name": "Meowth",
       "height": "0.41",
@@ -6072,6 +7143,136 @@
          {
             "name": "Snatch",
             "exp": "."
+         }
+      ]
+   },
+   {
+      "number": "052",
+      "name": "Meowth-Alola",
+      "height": "0.41",
+      "weight": "4.2",
+      "category": "Scratch Cat",
+      "pokedex": "In old times, Meowth were taken to Alola as gifts for the tribe's royals, this caused them to become incredibly greedy and pampered. Nowdays they are feral, bu their prideful nature remained.",
+      "evolutions": [
+         "Meowth-Alola",
+         "Persian-Alola"
+      ],
+      "evolution_method": "Evolves by being spoiled rotten.",
+      "stage": "1",
+      "generation": "1",
+      "types": [
+         "Dark"
+      ],
+      "strength": [
+         "2",
+         "4"
+      ],
+      "dexterity": [
+         "2",
+         "5"
+      ],
+      "vitality": [
+         "1",
+         "3"
+      ],
+      "special": [
+         "1",
+         "3"
+      ],
+      "insight": [
+         "1",
+         "3"
+      ],
+      "defense": [
+         "1",
+         "3"
+      ],
+      "spdef": [
+         "1",
+         "3"
+      ],
+      "abilities": [
+         "Pick Up",
+         "Technician"
+      ],
+      "base_hp": "8",
+      "disobedience": "1",
+      "moves": [
+         {
+            "name": "Scratch",
+            "exp": "0"
+         },
+         {
+            "name": "Growl",
+            "exp": "0"
+         },
+         {
+            "name": "Bite",
+            "exp": "6"
+         },
+         {
+            "name": "Fake Out",
+            "exp": "9"
+         },
+         {
+            "name": "Fury Swipes",
+            "exp": "14"
+         },
+         {
+            "name": "Screech",
+            "exp": "17"
+         },
+         {
+            "name": "Feint Attack",
+            "exp": "22"
+         },
+         {
+            "name": "Taunt",
+            "exp": "25"
+         },
+         {
+            "name": "Pay Day",
+            "exp": "30"
+         },
+         {
+            "name": "Slash",
+            "exp": "33"
+         },
+         {
+            "name": "Nasty Plot",
+            "exp": "38"
+         },
+         {
+            "name": "Assurance",
+            "exp": "41"
+         },
+         {
+            "name": "Captivate",
+            "exp": "46"
+         },
+         {
+            "name": "Night Slash",
+            "exp": "49"
+         },
+         {
+            "name": "Feint",
+            "exp": "50"
+         },
+         {
+            "name": "Dark Pulse",
+            "exp": "55"
+         },
+         {
+            "name": "Charm",
+            "exp": "?"
+         },
+         {
+            "name": "Spite",
+            "exp": "?"
+         },
+         {
+            "name": "Flatter",
+            "exp": "?"
          }
       ]
    },
@@ -6210,6 +7411,152 @@
          {
             "name": "Assist",
             "exp": "."
+         }
+      ]
+   },
+   {
+      "number": "053",
+      "name": "Persian-Alola",
+      "height": "0.99",
+      "weight": "32",
+      "category": "Classy Cat",
+      "pokedex": "They were bred for their silky fur and round faces, not for their temperament. This is an extremely proud Pokémon who will look down to anyone but itself, despite this, it's very popular among Alola's elite.",
+      "evolutions": [
+         "Meowth-Alola",
+         "Persian-Alola"
+      ],
+      "evolution_method": "",
+      "stage": "2",
+      "generation": "1",
+      "types": [
+         "Dark"
+      ],
+      "strength": [
+         "2",
+         "5"
+      ],
+      "dexterity": [
+         "3",
+         "6"
+      ],
+      "vitality": [
+         "2",
+         "4"
+      ],
+      "special": [
+         "2",
+         "4"
+      ],
+      "insight": [
+         "2",
+         "4"
+      ],
+      "defense": [
+         "2",
+         "4"
+      ],
+      "spdef": [
+         "2",
+         "4"
+      ],
+      "abilities": [
+         "Fur Coat",
+         "Technician"
+      ],
+      "base_hp": "13",
+      "disobedience": "4",
+      "moves": [
+        {
+           "name": "Swift",
+           "exp": "0"
+        },
+        {
+           "name": "Quash",
+           "exp": "0"
+        },
+         {
+            "name": "Play Rough",
+            "exp": "0"
+         },
+         {
+            "name": "Switcheroo",
+            "exp": "0"
+         },
+         {
+            "name": "Scratch",
+            "exp": "0"
+         },
+         {
+            "name": "Growl",
+            "exp": "0"
+         },
+         {
+            "name": "Bite",
+            "exp": "0"
+         },
+         {
+            "name": "Fake Out",
+            "exp": "0"
+         },
+         {
+            "name": "Fury Swipes",
+            "exp": "14"
+         },
+         {
+            "name": "Screech",
+            "exp": "17"
+         },
+         {
+            "name": "Feint Attack",
+            "exp": "22"
+         },
+         {
+            "name": "Taunt",
+            "exp": "25"
+         },
+         {
+            "name": "Power Gem",
+            "exp": "32"
+         },
+         {
+            "name": "Slash",
+            "exp": "37"
+         },
+         {
+            "name": "Nasty Plot",
+            "exp": "44"
+         },
+         {
+            "name": "Assurance",
+            "exp": "49"
+         },
+         {
+            "name": "Captivate",
+            "exp": "56"
+         },
+         {
+            "name": "Night Slash",
+            "exp": "61"
+         },
+         {
+            "name": "Feint",
+            "exp": "65"
+         },
+         {
+            "name": "Dark Pulse",
+            "exp": "69"
+         },
+         {
+            "name": "Parting Shot",
+            "exp": "?"
+         },
+         {
+            "name": "Snarl",
+            "exp": "?"
+         },
+         {
+            "name": "Torment",
+            "exp": "?"
          }
       ]
    },
@@ -8748,6 +10095,138 @@
       ]
    },
    {
+      "number": "074",
+      "name": "Geodude-Alola",
+      "height": "0.41",
+      "weight": "20",
+      "category": "Rock",
+      "pokedex": "The magnetic fields on Alola's Blush Mountain made Geodude develop Electric charges on its body. They tend to disguise themselves as regular rocks, caution is adviced as they shock you if you stemp on them.",
+      "evolutions": [
+         "Geodude-Alola",
+         "Graveler-Alola",
+         "Golem-Alola"
+      ],
+      "evolution_method": "Evolves after reaching a certain size.",
+      "stage": "1",
+      "generation": "1",
+      "types": [
+         "Rock",
+         "Electric"
+      ],
+      "strength": [
+         "2",
+         "5"
+      ],
+      "dexterity": [
+         "1",
+         "3"
+      ],
+      "vitality": [
+         "3",
+         "6"
+      ],
+      "special": [
+         "1",
+         "3"
+      ],
+      "insight": [
+         "1",
+         "3"
+      ],
+      "defense": [
+         "3",
+         "6"
+      ],
+      "spdef": [
+         "1",
+         "3"
+      ],
+      "abilities": [
+         "Magnet Pull",
+         "Sturdy"
+      ],
+      "base_hp": "8",
+      "disobedience": "0",
+      "moves": [
+         {
+            "name": "Tackle",
+            "exp": "0"
+         },
+         {
+            "name": "Defense Curl",
+            "exp": "0"
+         },
+         {
+            "name": "Charge",
+            "exp": "4"
+         },
+         {
+            "name": "Rock Polish",
+            "exp": "8"
+         },
+         {
+            "name": "Rollout",
+            "exp": "10"
+         },
+         {
+            "name": "Spark",
+            "exp": "12"
+         },
+         {
+            "name": "Rock Throw",
+            "exp": "16"
+         },
+         {
+            "name": "Smack Down",
+            "exp": "18"
+         },
+         {
+            "name": "Thunder Punch",
+            "exp": "22"
+         },
+         {
+            "name": "Self Destruct",
+            "exp": "24"
+         },
+         {
+            "name": "Stealth Rock",
+            "exp": "28"
+         },
+         {
+            "name": "Rock Blast",
+            "exp": "30"
+         },
+         {
+            "name": "Discharge",
+            "exp": "34"
+         },
+         {
+            "name": "Explosion",
+            "exp": "36"
+         },
+         {
+            "name": "Double Edge",
+            "exp": "40"
+         },
+         {
+            "name": "Stone Edge",
+            "exp": "42"
+         },
+         {
+            "name": "Rock Climb",
+            "exp": "?"
+         },
+         {
+            "name": "Wide Guard",
+            "exp": "?"
+         },
+         {
+            "name": "Screech",
+            "exp": "?"
+         }
+      ]
+   },
+   {
       "number": "075",
       "name": "Graveler",
       "height": "0.99",
@@ -8876,6 +10355,138 @@
          {
             "name": "Sucker Punch",
             "exp": "."
+         }
+      ]
+   },
+   {
+      "number": "075",
+      "name": "Graveler-Alola",
+      "height": "0.99",
+      "weight": "105",
+      "category": "Rock",
+      "pokedex": "These Pokémon charge themselves by rolling around, it is dangerous if two of them colide, a loud noise and a flash of light will be seen and heard at great distance. They feed on golden dravite.",
+      "evolutions": [
+         "Geodude-Alola",
+         "Graveler-Alola",
+         "Golem-Alola"
+      ],
+      "evolution_method": "Evolves after being traded.",
+      "stage": "2",
+      "generation": "1",
+      "types": [
+         "Rock",
+         "Electric"
+      ],
+      "strength": [
+         "3",
+         "6"
+      ],
+      "dexterity": [
+         "1",
+         "3"
+      ],
+      "vitality": [
+         "3",
+         "6"
+      ],
+      "special": [
+         "2",
+         "4"
+      ],
+      "insight": [
+         "2",
+         "4"
+      ],
+      "defense": [
+         "3",
+         "6"
+      ],
+      "spdef": [
+         "2",
+         "4"
+      ],
+      "abilities": [
+         "Magnet Pull",
+         "Sturdy"
+      ],
+      "base_hp": "11",
+      "disobedience": "0",
+      "moves": [
+         {
+            "name": "Tackle",
+            "exp": "0"
+         },
+         {
+            "name": "Defense Curl",
+            "exp": "0"
+         },
+         {
+            "name": "Charge",
+            "exp": "0"
+         },
+         {
+            "name": "Rock Polish",
+            "exp": "0"
+         },
+         {
+            "name": "Rollout",
+            "exp": "10"
+         },
+         {
+            "name": "Spark",
+            "exp": "12"
+         },
+         {
+            "name": "Rock Throw",
+            "exp": "16"
+         },
+         {
+            "name": "Smack Down",
+            "exp": "18"
+         },
+         {
+            "name": "Thunder Punch",
+            "exp": "22"
+         },
+         {
+            "name": "Self Destruct",
+            "exp": "24"
+         },
+         {
+            "name": "Stealth Rock",
+            "exp": "30"
+         },
+         {
+            "name": "Rock Blast",
+            "exp": "34"
+         },
+         {
+            "name": "Discharge",
+            "exp": "40"
+         },
+         {
+            "name": "Explosion",
+            "exp": "44"
+         },
+         {
+            "name": "Double-Edge",
+            "exp": "50"
+         },
+         {
+            "name": "Stone Edge",
+            "exp": "54"
+         },
+         {
+            "name": "Rock Climb",
+            "exp": "?"
+         },
+         {
+            "name": "Wide Guard",
+            "exp": "?"
+         },
+         {
+            "name": "Screech",
+            "exp": "?"
          }
       ]
    },
@@ -9012,6 +10623,142 @@
          {
             "name": "Thunder Punch",
             "exp": "."
+         }
+      ]
+   },
+   {
+      "number": "076",
+      "name": "Golem-Alola",
+      "height": "1.40",
+      "weight": "300",
+      "category": "Megaton",
+      "pokedex": "The Alolan variant of Golem does not roll around like its counter-part, instead it loads rocks into the charger on its head and shoots them around, if the rocks miss, the electric shockwave won't.",
+      "evolutions": [
+         "Geodude-Alola",
+         "Graveler-Alola",
+         "Golem-Alola"
+      ],
+      "evolution_method": "",
+      "stage": "3",
+      "generation": "1",
+      "types": [
+         "Rock",
+         "Ground"
+      ],
+      "strength": [
+         "3",
+         "8"
+      ],
+      "dexterity": [
+         "2",
+         "4"
+      ],
+      "vitality": [
+         "3",
+         "7"
+      ],
+      "special": [
+         "2",
+         "4"
+      ],
+      "insight": [
+         "2",
+         "4"
+      ],
+      "defense": [
+         "3",
+         "7"
+      ],
+      "spdef": [
+         "2",
+         "4"
+      ],
+      "abilities": [
+         "Galvanize",
+         "Sturdy"
+      ],
+      "base_hp": "16",
+      "disobedience": "0",
+      "moves": [
+         {
+            "name": "Tackle",
+            "exp": "0"
+         },
+         {
+            "name": "Defense Curl",
+            "exp": "0"
+         },
+         {
+            "name": "Charge",
+            "exp": "0"
+         },
+         {
+            "name": "Rock Polish",
+            "exp": "0"
+         },
+         {
+            "name": "Rollout",
+            "exp": "10"
+         },
+         {
+            "name": "Spark",
+            "exp": "12"
+         },
+         {
+            "name": "Rock Throw",
+            "exp": "16"
+         },
+         {
+            "name": "Smack Down",
+            "exp": "18"
+         },
+         {
+            "name": "Thunder Punch",
+            "exp": "22"
+         },
+         {
+            "name": "Self Destruct",
+            "exp": "24"
+         },
+         {
+            "name": "Stealth Rock",
+            "exp": "30"
+         },
+         {
+            "name": "Rock Blast",
+            "exp": "34"
+         },
+         {
+            "name": "Discharge",
+            "exp": "40"
+         },
+         {
+            "name": "Explosion",
+            "exp": "44"
+         },
+         {
+            "name": "Double Edge",
+            "exp": "50"
+         },
+         {
+            "name": "Stone Edge",
+            "exp": "54"
+         },
+         {
+            "name": "Heavy Slam",
+            "exp": "60"
+         },
+         {
+            "name": "Magnet Rise",
+            "exp": "?"
+         },
+         {
+            "name": "Counter",
+            "exp": "?"
+         },
+         {
+            "name": "Wild Charge",
+            "exp": "?"
          }
       ]
    },
@@ -10599,6 +12346,137 @@
       ]
    },
    {
+      "number": "088",
+      "name": "Grimer-Alola",
+      "height": "0.89",
+      "weight": "30",
+      "category": "Sludge",
+      "pokedex": "Grimer were brought into Alola to eat garbage on the region. It seemed like a counterintuitive measure but ended up solving the problem. But now Grimer are incredibly noxious, much more toxic than usual.",
+      "evolutions": [
+         "Grimer-Alola",
+         "Muk-Alola"
+      ],
+      "evolution_method": "Evolves after reaching a certain size.",
+      "stage": "1",
+      "generation": "1",
+      "types": [
+         "Poison",
+         "Dark"
+      ],
+      "strength": [
+         "2",
+         "5"
+      ],
+      "dexterity": [
+         "1",
+         "3"
+      ],
+      "vitality": [
+         "2",
+         "4"
+      ],
+      "special": [
+         "1",
+         "3"
+      ],
+      "insight": [
+         "2",
+         "4"
+      ],
+      "defense": [
+         "2",
+         "4"
+      ],
+      "spdef": [
+         "2",
+         "4"
+      ],
+      "abilities": [
+         "Poison Touch",
+         "Power of Alchemy"
+      ],
+      "base_hp": "16",
+      "disobedience": "1",
+      "moves": [
+         {
+            "name": "Pound",
+            "exp": "0"
+         },
+         {
+            "name": "Poison Gas",
+            "exp": "0"
+         },
+         {
+            "name": "Harden",
+            "exp": "4"
+         },
+         {
+            "name": "Bite",
+            "exp": "7"
+         },
+         {
+            "name": "Disable",
+            "exp": "12"
+         },
+         {
+            "name": "Acid Spray",
+            "exp": "15"
+         },
+         {
+            "name": "Poison Fang",
+            "exp": "18"
+         },
+         {
+            "name": "Minimize",
+            "exp": "21"
+         },
+         {
+            "name": "Fling",
+            "exp": "26"
+         },
+         {
+            "name": "Knock Off",
+            "exp": "29"
+         },
+         {
+            "name": "Crunch",
+            "exp": "32"
+         },
+         {
+            "name": "Screech",
+            "exp": "37"
+         },
+         {
+            "name": "Gunk Shot",
+            "exp": "40"
+         },
+         {
+            "name": "Acid Armor",
+            "exp": "43"
+         },
+         {
+            "name": "Belch",
+            "exp": "46"
+         },
+         {
+            "name": "Memento",
+            "exp": "48"
+         },
+         {
+            "name": "Shadow Sneak",
+            "exp": "?"
+         },
+         {
+            "name": "Assurance",
+            "exp": "?"
+         },
+         {
+            "name": "Clear Smog",
+            "exp": "?"
+         }
+      ]
+   },
+   {
       "number": "089",
       "name": "Muk",
       "height": "1.19",
@@ -10724,6 +12602,141 @@
          },
          {
             "name": "Giga Drain",
+            "exp": "."
+         }
+      ]
+   },
+   {
+      "number": "089",
+      "name": "Muk-Alola",
+      "height": "1.19",
+      "weight": "30",
+      "category": "Sludge",
+      "pokedex": "It is as friendly as it is toxic, be careful for it tries to hug others regularly. A good diet does not help reduce its toxicity levels, it only makes it cranky and prone to destroy furniture. It releases toxic fumes all the time.",
+      "evolutions": [
+         "Grimer-Alola",
+         "Muk-Alola"
+      ],
+      "evolution_method": "",
+      "stage": "2",
+      "generation": "1",
+      "types": [
+         "Poison",
+         "Dark"
+      ],
+      "strength": [
+         "3",
+         "6"
+      ],
+      "dexterity": [
+         "2",
+         "4"
+      ],
+      "vitality": [
+         "2",
+         "5"
+      ],
+      "special": [
+         "2",
+         "4"
+      ],
+      "insight": [
+         "3",
+         "6"
+      ],
+      "defense": [
+         "2",
+         "5"
+      ],
+      "spdef": [
+         "3",
+         "6"
+      ],
+      "abilities": [
+         "Poson Touch",
+         "Power of Alchemy"
+      ],
+      "base_hp": "21",
+      "disobedience": "0",
+      "moves": [
+        {
+           "name": "Venom Drench",
+           "exp": "0"
+        },
+         {
+            "name": "Pound",
+            "exp": "0"
+         },
+         {
+            "name": "Poison Gas",
+            "exp": "0"
+         },
+         {
+            "name": "Harden",
+            "exp": "0"
+         },
+         {
+            "name": "Bite",
+            "exp": "0"
+         },
+         {
+            "name": "Disable",
+            "exp": "12"
+         },
+         {
+            "name": "Acid Spray",
+            "exp": "13"
+         },
+         {
+            "name": "Poison Fang",
+            "exp": "18"
+         },
+         {
+            "name": "Minimize",
+            "exp": "21"
+         },
+         {
+            "name": "Fling",
+            "exp": "26"
+         },
+         {
+            "name": "Knock Off",
+            "exp": "29"
+         },
+         {
+            "name": "Crunch",
+            "exp": "32"
+         },
+         {
+            "name": "Screech",
+            "exp": "37"
+         },
+         {
+            "name": "Gunk Shot",
+            "exp": "40"
+         },
+         {
+            "name": "Acid Armor",
+            "exp": "46"
+         },
+         {
+            "name": "Belch",
+            "exp": "52"
+         },
+         {
+            "name": "Memento",
+            "exp": "57"
+         },
+         {
+            "name": "Stockpile",
+            "exp": "."
+         },
+         {
+            "name": "Shadow Sneak",
+            "exp": "."
+         },
+         {
+            "name": "Swallow",
             "exp": "."
          }
       ]
@@ -12298,7 +14311,8 @@
       "pokedex": "Even though it appears to be eggs of some sort, it is related more to a seed. It gathers in packs of six that have a mental link with each other. Each one of them has a different personality.",
       "evolutions": [
          "Exeggcute",
-         "Exeggutor"
+         "Exeggutor",
+         "Exeggutor-Alola"
       ],
       "evolution_method": "",
       "stage": "1",
@@ -12519,6 +14533,109 @@
       ]
    },
    {
+      "number": "103",
+      "name": "Exeggutor-Alola",
+      "height": "36.00",
+      "weight": "415",
+      "category": "Coconut",
+      "pokedex": "Alola is the native region for this Pokémon, only in there it can evolve into this form. With this size, its Psychic abilites are rarely needed and its trainer's order's rarely heard. They enjoy the sun in the beach.",
+      "evolutions": [
+         "Exeggcute",
+         "Exeggutor-Alola"
+      ],
+      "evolution_method": "",
+      "stage": "2",
+      "generation": "1",
+      "types": [
+         "Grass",
+         "Dragon"
+      ],
+      "strength": [
+         "3",
+         "6"
+      ],
+      "dexterity": [
+         "2",
+         "4"
+      ],
+      "vitality": [
+         "2",
+         "5"
+      ],
+      "special": [
+         "3",
+         "7"
+      ],
+      "insight": [
+         "2",
+         "5"
+      ],
+      "defense": [
+         "2",
+         "5"
+      ],
+      "spdef": [
+         "2",
+         "5"
+      ],
+      "abilities": [
+         "Frisk",
+         "Harvest"
+      ],
+      "base_hp": "19",
+      "disobedience": "3",
+      "moves": [
+         {
+            "name": "Seed Bomb",
+            "exp": "0"
+         },
+         {
+            "name": "Barrage",
+            "exp": "0"
+         },
+         {
+            "name": "Hypnosis",
+            "exp": "0"
+         },
+         {
+            "name": "Confusion",
+            "exp": "0"
+         },
+         {
+            "name": "Dragon Hammer",
+            "exp": "0"
+         },
+         {
+            "name": "Psyshock",
+            "exp": "17"
+         },
+         {
+            "name": "Egg Bomb",
+            "exp": "27"
+         },
+         {
+            "name": "Wood Hammer",
+            "exp": "37"
+         },
+         {
+            "name": "Leaf Storm",
+            "exp": "47"
+         },
+         {
+            "name": "Dragon Tail",
+            "exp": "."
+         },
+         {
+            "name": "Ingrain",
+            "exp": "."
+         },
+         {
+            "name": "Giga Impact",
+            "exp": "."
+         }
+      ]
+   },
+   {
       "number": "104",
       "name": "Cubone",
       "height": "0.41",
@@ -12527,7 +14644,8 @@
       "pokedex": "Cubone wears a skull helmet it never removes. It is said to be from its mother or someone dear to it. Lives in the mountains where it cries at night due to the sadness it feels. It is distrustful of humans.",
       "evolutions": [
          "Cubone",
-         "Marowak"
+         "Marowak",
+         "Marowak-Alola"
       ],
       "evolution_method": "Evolves after overcoming its loss.",
       "stage": "1",
@@ -12774,6 +14892,137 @@
          },
          {
             "name": "Detect",
+            "exp": "."
+         }
+      ]
+   },
+   {
+      "number": "105",
+      "name": "Marowak-Alola",
+      "height": "0.99",
+      "weight": "45",
+      "category": "Bone Keeper ",
+      "pokedex": "Alola has many predators for an orphaned Cubone, so its mother's spirit lingered close to protect her baby. This otherwordly influence made Marowak fiercer and changed its type completely.",
+      "evolutions": [
+         "Cubone",
+         "Marowak-Alola"
+      ],
+      "evolution_method": "",
+      "stage": "2",
+      "generation": "1",
+      "types": [
+         "Fire",
+         "Ghost"
+      ],
+      "strength": [
+         "2",
+         "5"
+      ],
+      "dexterity": [
+         "2",
+         "4"
+      ],
+      "vitality": [
+         "3",
+         "6"
+      ],
+      "special": [
+         "2",
+         "4"
+      ],
+      "insight": [
+         "2",
+         "5"
+      ],
+      "defense": [
+         "3",
+         "6"
+      ],
+      "spdef": [
+         "2",
+         "5"
+      ],
+      "abilities": [
+         "Cursed Body",
+         "Lightning Rod"
+      ],
+      "base_hp": "12",
+      "disobedience": "2",
+      "moves": [
+         {
+            "name": "Growl",
+            "exp": "0"
+         },
+         {
+            "name": "Tail Whip",
+            "exp": "0"
+         },
+         {
+            "name": "Bone Club",
+            "exp": "0"
+         },
+         {
+            "name": "Flame Wheel",
+            "exp": "0"
+         },
+         {
+            "name": "Leer",
+            "exp": "0"
+         },
+         {
+            "name": "Hex",
+            "exp": "17"
+         },
+         {
+            "name": "Bonemerang",
+            "exp": "21"
+         },
+         {
+            "name": "Will-o-Wisp",
+            "exp": "23"
+         },
+         {
+            "name": "Shadow Bone",
+            "exp": "27"
+         },
+         {
+            "name": "Thrash",
+            "exp": "33"
+         },
+         {
+            "name": "Fling",
+            "exp": "37"
+         },
+         {
+            "name": "Stomping Tantrum",
+            "exp": "43"
+         },
+         {
+            "name": "Endeavor",
+            "exp": "49"
+         },
+         {
+            "name": "Flare Blitz",
+            "exp": "53"
+         },
+         {
+            "name": "Retaliate",
+            "exp": "59"
+         },
+         {
+            "name": "Bone Rush",
+            "exp": "65"
+         },
+         {
+            "name": "Perish Song",
+            "exp": "."
+         },
+         {
+            "name": "Brutal Swing",
+            "exp": "."
+         },
+         {
+            "name": "Flamge Charge",
             "exp": "."
          }
       ]
@@ -16079,7 +18328,7 @@
       "category": "Evolution",
       "pokedex": "This Pokémon is extremely rare to find. Eevee has an unstable genetic makeup that suddenly mutates to fit its environment. Radiation from various stones causes this Pokémon to evolve.",
       "evolutions": [
-         "Eevee","Vaporeon","Jolteon","Flareon","Umbreon","Espeon","Glaceon","Leafeon"
+         "Eevee","Vaporeon","Jolteon","Flareon","Umbreon","Espeon","Glaceon","Leafeon","Sylveon"
       ],
       "evolution_method": "Evolves through stones happiness and special conditions.",
       "stage": "1",
@@ -20697,7 +22946,7 @@
          "Pichu",
          "Pikachu",
          "Raichu",
-         "Raichu (Alola)"
+         "Raichu-Alola"
       ],
       "evolution_method": "Evolves with happiness.",
       "stage": "0",
@@ -55876,55 +58125,47 @@
             "exp": "13"
          },
          {
-            "name": "Fury Cutter",
-            "exp": "16"
+            "name": "Bite",
+            "exp": "17"
          },
          {
-            "name": "Feint Attack",
-            "exp": "19"
+            "name": "Ice Fang",
+            "exp": "20"
          },
          {
-            "name": "Acrobatics",
-            "exp": "22"
+            "name": "Ice Shard",
+            "exp": "25"
          },
          {
-            "name": "Night Slash",
-            "exp": "27"
+            "name": "Barrier",
+            "exp": "29"
          },
          {
-            "name": "U-Turn",
-            "exp": "30"
+            "name": "Mirror Coat",
+            "exp": "33"
          },
          {
-            "name": "Screech",
-            "exp": "35"
+            "name": "Hail",
+            "exp": "37"
          },
          {
-            "name": "X-Scissor",
-            "exp": "40"
+            "name": "Last Resort",
+            "exp": "41"
          },
          {
-            "name": "Sky Uppercut",
+            "name": "Blizzard",
             "exp": "45"
          },
          {
-            "name": "Swords Dance",
-            "exp": "50"
-         },
-         {
-            "name": "Guillotine",
-            "exp": "55"
-         },
-         {
-            "name": "Agility",
+            "name": "Wish",
             "exp": "."
          },
          {
-            "name": "Metal Claw",
+            "name": "Captivate",
             "exp": "."
          },
          {
-            "name": "Cross Poison",
+            "name": "Fake Tears",
             "exp": "."
          }
       ]
@@ -57147,7 +59388,7 @@
    },
    {
       "number": "479",
-      "name": "Rotom Fan",
+      "name": "Rotom-Fan",
       "height": "0.30",
       "weight": "0.3",
       "category": "Plasma",
@@ -57160,7 +59401,7 @@
       "generation": "4",
       "types": [
          "Electric",
-         "Ghost"
+         "Flying"
       ],
       "strength": [
          "2",
@@ -57280,7 +59521,7 @@
    },
    {
       "number": "479",
-      "name": "Rotom Frost",
+      "name": "Rotom -rost",
       "height": "0.30",
       "weight": "0.3",
       "category": "Plasma",
@@ -57293,7 +59534,7 @@
       "generation": "4",
       "types": [
          "Electric",
-         "Ghost"
+         "Ice"
       ],
       "strength": [
          "2",
@@ -57413,7 +59654,7 @@
    },
    {
       "number": "479",
-      "name": "Rotom Heat",
+      "name": "Rotom-Heat",
       "height": "0.30",
       "weight": "0.3",
       "category": "Plasma",
@@ -57546,7 +59787,7 @@
    },
    {
       "number": "479",
-      "name": "Rotom Mow",
+      "name": "Rotom-Mow",
       "height": "0.30",
       "weight": "0.3",
       "category": "Plasma",
@@ -57679,7 +59920,7 @@
    },
    {
       "number": "479",
-      "name": "Rotom Wash",
+      "name": "Rotom-Wash",
       "height": "0.30",
       "weight": "0.3",
       "category": "Plasma",
@@ -63394,7 +65635,7 @@
       "weight": "4.5",
       "category": "Tadpole Pokémon",
       "pokedex": "They warn others of danger by\nvibrating their cheeks to create\na high-pitched sound.",
-      "evolutions": [],
+      "evolutions": ["Tympole","Palpitoad","Seismitoad"],
       "evolution_method": "",
       "stage": "1",
       "generation": "5",
@@ -63513,7 +65754,7 @@
       "weight": "17",
       "category": "Vibration Pokémon",
       "pokedex": "When they vibrate the bumps on their\nheads, they can make waves in water\nor earthquake-like vibrations on land.",
-      "evolutions": [],
+      "evolutions": ["Tympole","Palpitoad","Seismitoad"],
       "evolution_method": "",
       "stage": "2",
       "generation": "5",
@@ -63633,7 +65874,7 @@
       "weight": "62",
       "category": "Vibration Pokémon",
       "pokedex": "They shoot paralyzing liquid from their\nhead bumps. They use vibration to hurt\ntheir opponents.",
-      "evolutions": [],
+      "evolutions": ["Tympole","Palpitoad","Seismitoad"],
       "evolution_method": "",
       "stage": "3",
       "generation": "5",
@@ -80448,7 +82689,7 @@
       "weight": "2",
       "category": "Sword Pokémon",
       "pokedex": "Apparently this Pokémon is born when a\ndeparted spirit inhabits a sword. It attaches itself\nto people and drinks their life force.",
-      "evolutions": [],
+      "evolutions": ["Honedge","Doublade","Aegislash-Shield","Aegislash-Blade"],
       "evolution_method": "",
       "stage": "1",
       "generation": "6",
@@ -80571,7 +82812,7 @@
       "weight": "4.5",
       "category": "Sword Pokémon",
       "pokedex": "When Honedge evolves, it divides into two swords,\nwhich cooperate via telepathy to coordinate attacks\nand slash their enemies to ribbons.",
-      "evolutions": [],
+      "evolutions": ["Honedge","Doublade","Aegislash-Shield","Aegislash-Blade"],
       "evolution_method": "",
       "stage": "2",
       "generation": "6",
@@ -80684,6 +82925,236 @@
          {
             "name": "Wide Guard",
             "exp": "."
+         }
+      ]
+   },
+   {
+      "number": "681",
+      "name": "Aegislash-Shield",
+      "height": "1.7",
+      "weight": "53",
+      "category": "Royal Sword Pokémon",
+      "pokedex": "The legend tells of how this pokémon lead the first King of Kalos to victory. A crushing grip can be felt on the arm of the wielder. While in this form it can only use support moves.",
+      "evolutions": ["Honedge","Doublade","Aegislash-Shield","Aegislash-Blade"],
+      "evolution_method": "",
+      "stage": "3",
+      "generation": "6",
+      "types": [
+         "Steel",
+         "Ghost"
+      ],
+      "strength": [
+         "4",
+         "4"
+      ],
+      "dexterity": [
+         "3",
+         "3"
+      ],
+      "vitality": [
+         "8",
+         "8"
+      ],
+      "special": [
+         "4",
+         "4"
+      ],
+      "insight": [
+         "4",
+         "4"
+      ],
+      "defense": [
+         "8",
+         "8"
+      ],
+      "spdef": [
+         "8",
+         "8"
+      ],
+      "abilities": [
+         "Stance Change"
+      ],
+      "base_hp": "12",
+      "disobedience": "5",
+      "moves": [
+         {
+            "name": "Fury Cutter",
+            "exp": "0"
+         },
+         {
+            "name": "Autotomize",
+            "exp": "0"
+         },
+         {
+            "name": "Aerial Ace",
+            "exp": "0"
+         },
+         {
+            "name": "Iron Defense",
+            "exp": "8"
+         },
+         {
+            "name": "Power Trick",
+            "exp": "0"
+         },
+         {
+            "name": "Kings Shield",
+            "exp": "0"
+         },
+         {
+            "name": "Pursuit",
+            "exp": "0"
+         },
+         {
+            "name": "Shadow Sneak",
+            "exp": "0"
+         },
+         {
+            "name": "Slash",
+            "exp": "0"
+         },
+         {
+            "name": "Night Slash",
+            "exp": "0"
+         },
+         {
+            "name": "Iron Head",
+            "exp": "0"
+         },
+         {
+            "name": "Head Smash",
+            "exp": "51"
+         },
+         {
+            "name": "Sacred Sword",
+            "exp": "65"
+         },
+         {
+            "name": "Destiny Bond",
+            "exp": "?"
+         },
+         {
+            "name": "Spite",
+            "exp": "?"
+         },
+         {
+            "name": "Magnet Rise",
+            "exp": "?"
+         }
+      ]
+   },
+   {
+      "number": "681",
+      "name": "Aegislash-Blade",
+      "height": "1.7",
+      "weight": "53",
+      "category": "Royal Sword Pokémon",
+      "pokedex": "The legend tells of how this pokémon lead the first King of Kalos to victory. A crushing grip can be felt on the arm of the wielder. While in this form it can only use attack moves.",
+      "evolutions": ["Honedge","Doublade","Aegislash-Shield","Aegislash-Blade"],
+      "evolution_method": "",
+      "stage": "3",
+      "generation": "6",
+      "types": [
+         "Steel",
+         "Ghost"
+      ],
+      "strength": [
+         "8",
+         "8"
+      ],
+      "dexterity": [
+         "3",
+         "3"
+      ],
+      "vitality": [
+         "8",
+         "8"
+      ],
+      "special": [
+         "8",
+         "8"
+      ],
+      "insight": [
+         "4",
+         "4"
+      ],
+      "defense": [
+         "4",
+         "4"
+      ],
+      "spdef": [
+         "4",
+         "4"
+      ],
+      "abilities": [
+         "Stance Change"
+      ],
+      "base_hp": "12",
+      "disobedience": "5",
+      "moves": [
+         {
+            "name": "Fury Cutter",
+            "exp": "0"
+         },
+         {
+            "name": "Autotomize",
+            "exp": "0"
+         },
+         {
+            "name": "Aerial Ace",
+            "exp": "0"
+         },
+         {
+            "name": "Iron Defense",
+            "exp": "8"
+         },
+         {
+            "name": "Power Trick",
+            "exp": "0"
+         },
+         {
+            "name": "Kings Shield",
+            "exp": "0"
+         },
+         {
+            "name": "Pursuit",
+            "exp": "0"
+         },
+         {
+            "name": "Shadow Sneak",
+            "exp": "0"
+         },
+         {
+            "name": "Slash",
+            "exp": "0"
+         },
+         {
+            "name": "Night Slash",
+            "exp": "0"
+         },
+         {
+            "name": "Iron Head",
+            "exp": "0"
+         },
+         {
+            "name": "Head Smash",
+            "exp": "51"
+         },
+         {
+            "name": "Sacred Sword",
+            "exp": "65"
+         },
+         {
+            "name": "Destiny Bond",
+            "exp": "?"
+         },
+         {
+            "name": "Spite",
+            "exp": "?"
+         },
+         {
+            "name": "Magnet Rise",
+            "exp": "?"
          }
       ]
    },
@@ -83003,7 +85474,7 @@
       "weight": "23.5",
       "category": "Intertwining Pokémon",
       "pokedex": "It sends a soothing aura from its\nribbonlike feelers to calm fights.",
-      "evolutions": [],
+      "evolutions": ["Eevee","Sylveon"],
       "evolution_method": "",
       "stage": "2",
       "generation": "6",

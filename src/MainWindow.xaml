@@ -149,9 +149,33 @@
                         <ColumnDefinition Width="Auto" />
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
-                    <Image Stretch="UniformToFill"
+                    <Image Stretch="UniformToFill" MaxHeight="125" MaxWidth="125"
                            DataContext="{Binding Path=selectedPokemon, Converter={StaticResource PokemonImageConverter}}"
-                           Source="{Binding Path=Result}" />
+                           Source="{Binding Path=Result}">
+                        <Image.ToolTip>
+                            <ToolTip DataContext="{Binding Path=PlacementTarget,
+                                            RelativeSource={x:Static RelativeSource.Self}}"
+                                                 HasDropShadow="False">
+                                <Border Background="{x:Null}" VerticalAlignment="Center"
+                                                    Height="495" Margin="0" Width="495"
+                                                    HorizontalAlignment="Center">
+                                    <Grid Background="{x:Null}">
+                                        <Image Source="{Binding Path=Result}" Stretch="Fill"/>
+                                        <Border Margin="10,10,10,10" Width="475" Height="475">
+                                            <Border.Background>
+                                                <LinearGradientBrush EndPoint="0.859,0.893" StartPoint="0.141,0.107">
+                                                    <GradientStop Color="#FFFFFFFF" Offset="0"/>
+                                                    <GradientStop Color="#FFFFFFFF" Offset="1"/>
+                                                    <GradientStop Color="#FFFFFFFF" Offset="0.289"/>
+                                                </LinearGradientBrush>
+                                            </Border.Background>
+                                            <Image Source="{Binding Path=Source}"/>
+                                        </Border>
+                                    </Grid>
+                                </Border>
+                            </ToolTip>
+                        </Image.ToolTip>
+                    </Image>
 
                     <Grid Grid.Column="1">
                         <Grid.RowDefinitions>
@@ -634,17 +658,25 @@
                                                     <Grid.ColumnDefinitions>
                                                         <ColumnDefinition Width="Auto" />
                                                         <ColumnDefinition />
+                                                        <ColumnDefinition />
                                                     </Grid.ColumnDefinitions>
                                                     <materialDesign:PackIcon Kind="Blood" VerticalAlignment="Center"
                                                                              Margin="0 0 8 0" />
 
-                                                    <controls:SelectableTextBlock Grid.Column="1"
-                                                                                  HorizontalAlignment="Left"
-                                                                                  MaxWidth="400"
-                                                                                  Text="{Binding Detail.damage_pool}"
-                                                                                  TextWrapping="Wrap"
-                                                                                  Style="{StaticResource MaterialDesignCaptionTextBlock}" />
+                                                    <Grid Grid.Row="1" Grid.Column="1">
+                                                        <TextBlock VerticalAlignment="Center" Grid.Column="1" TextAlignment="Left">
+                                                            <TextBlock.Text>
+                                                                <MultiBinding Converter="{StaticResource MoveDamageConverter}">
+                                                                    <Binding
+                                                                                Path="Detail.damage_pool" />
+                                                                    <Binding
+                                                                                Path="Detail.category" />
+                                                                </MultiBinding>
+                                                            </TextBlock.Text>
+                                                        </TextBlock>
+                                                    </Grid>
                                                 </Grid>
+
 
                                                 <controls:SelectableTextBlock Grid.Row="2" HorizontalAlignment="Left"
                                                                               MaxWidth="400"
@@ -656,6 +688,7 @@
                                                                               Text="{Binding Detail.description}"
                                                                               TextWrapping="Wrap"
                                                                               Style="{StaticResource MaterialDesignCaptionTextBlock}" />
+
                                             </Grid>
                                         </Grid>
                                     </Border>

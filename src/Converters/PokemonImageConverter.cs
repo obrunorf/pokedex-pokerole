@@ -33,7 +33,7 @@ namespace Pokedex.Pokerole.Converters
                     {
                         if (t.IsFaulted || t.IsCanceled)
                             return null;
-                        return new Uri(t.Result.Sprites.FrontMale);
+                        return new Uri(t.Result.Sprites.other.official_artwork.front_default);
                     }));
         }
 
