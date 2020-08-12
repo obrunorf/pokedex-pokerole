@@ -642,7 +642,7 @@
     "type": "Dark",
     "targets": "Foe",
     "power": "2",
-    "category": "Support",
+    "category": "Fighting",
     "accuracy": "Dexterity + Survival + Stealth",
     "damage_pool": "2d4",
     "effect": "The user steals the foe's Held Item.",
