@@ -96787,5 +96787,93 @@
       "base_hp": "17",
       "disobedience": "",
       "moves": []
+   },
+   {
+      "number": "808",
+      "name": "Meltan",
+      "height": "0.2",
+      "weight": "8",
+      "category": "",
+      "pokedex": "",
+      "evolutions": [],
+      "evolution_method": "",
+      "stage": "",
+      "generation": "",
+      "types": [
+         "Steel"
+      ],
+      "strength": [
+         "2",
+         "4"
+      ],
+      "dexterity": [
+         "1",
+         "3"
+      ],
+      "vitality": [
+         "2",
+         "4"
+      ],
+      "special": [
+         "2",
+         "4"
+      ],
+      "insight": [
+         "1",
+         "3"
+      ],
+      "defense": [
+         "",
+         ""
+      ],
+      "spdef": [
+         "",
+         ""
+      ],
+      "abilities": ["Magnet Pull"],
+      "base_hp": "17",
+      "disobedience": "",
+      "moves": [
+        {
+         "name": "Thunder Shock",
+         "exp": "0"
+        },
+        {
+         "name": "Harden",
+         "exp": "0"
+        },
+        {
+         "name": "Tail Whip",
+         "exp": "2"
+        },
+        {
+         "name": "Headbutt",
+         "exp": "4"
+        },
+        {
+         "name": "Thunder Wave",
+         "exp": "8"
+        },
+        {
+         "name": "Acid Armor",
+         "exp": "12"
+        },
+        {
+         "name": "Flash Cannon",
+         "exp": "18"
+        },
+        {
+         "name": "Protect",
+         "exp": "???"
+        },
+        {
+         "name": "Gyro Ball",
+         "exp": "???"
+        },
+        {
+         "name": "Steel Beam",
+         "exp": "???"
+        }
+    ]
    }
 ]
