@@ -489,7 +489,7 @@
     "targets": "User",
     "power": "-",
     "category": "Support",
-    "accuracy": "Special + Physical + Alert",
+    "accuracy": "Special + Survival + Alert",
     "damage_pool": "-",
     "effect": "Increase the user's Special by 1.",
     "description": "The Pokémon starts plotting on how to defeat the enemy. Its evil laugh reveals the bad intentions."
@@ -763,9 +763,9 @@
     "type": "Dragon",
     "targets": "Foe",
     "power": "-",
-    "category": "Special",
+    "category": "N/A",
     "accuracy": "Dexterity + Physical + Channel",
-    "damage_pool": "2 Automatic Damage-",
+    "damage_pool": "6 Automatic Damage",
     "effect": "Set damage.",
     "description": "A dual colored flame that always leaves the same burn marks on everything it touches."
   },
@@ -1380,7 +1380,7 @@
     "targets": "User",
     "power": "-",
     "category": "Support",
-    "accuracy": "Special + Physical + Alert",
+    "accuracy": "Special + Survival + Alert",
     "damage_pool": "-",
     "effect": "Priority 5. Shield Move. Negate damage and effects of Support Moves that target the user. Fails if used twice in sequence.",
     "description": "The user detects the intentions of the attacker and acts out to minimize the damage."
@@ -1578,7 +1578,7 @@
     "targets": "UserAndAllies",
     "power": "-",
     "category": "Support",
-    "accuracy": "Dexterity + Physical + Alert",
+    "accuracy": "Dexterity + Survival + Alert",
     "damage_pool": "-",
     "effect": "Shield Move. This move will only protect against Damaging Moves with \"Priority\" and surprise attacks. Reduce to 0 all damage from those moves.",
     "description": "The user reacts instinctively and defends itself and its teammates, nullifying the effects of the fastest attacks."
@@ -2006,7 +2006,7 @@
     "type": "Fire",
     "targets": "Foe",
     "power": "6",
-    "category": "Support",
+    "category": "Special",
     "accuracy": "Dexterity + Survival + Stealth",
     "damage_pool": "2d8+5",
     "effect": "Volt. Low Priority 3. This Move strikes the next time the user is hit with a Non-Ranged Physical attack.",
@@ -2457,7 +2457,7 @@
     "type": "Ghost",
     "targets": "Foe",
     "power": "2",
-    "category": "Support",
+    "category": "Fighting",
     "accuracy": "Dexterity + Survival + Stealth",
     "damage_pool": "1d8",
     "effect": "Priority.",
@@ -3417,7 +3417,7 @@
     "category": "Support",
     "accuracy": "Dexterity + Survival + Stealth",
     "damage_pool": "-",
-    "effect": "Usable by both Humans and Pokemon. The user rolls against an unsuspecting foe's Special + Physical + Alert. If the user wins the roll, it gets a free action against it.",
+    "effect": "Usable by both Humans and Pokemon. The user rolls against an unsuspecting foe's Special + Survival + Alert. If the user wins the roll, it gets a free action against it.",
     "description": "An attempt to sneak up on a foe."
   },
   {
@@ -3943,7 +3943,7 @@
     "targets": "Foe",
     "power": "-",
     "category": "Support",
-    "accuracy": "Special + Physical + Alert",
+    "accuracy": "Special + Survival + Alert",
     "damage_pool": "-",
     "effect": "Ignore any Increase in the foe's Evasion. User's Normal and Physicaling Moves can affect Ghost Types and Ghost Moves can affect Normal Types.",
     "description": "The Pokémon uses its developed senses and mental ability to foresee the immediate future."
@@ -4196,7 +4196,7 @@
     "targets": "User",
     "power": "-",
     "category": "Support",
-    "accuracy": "Special + Physical + Alert",
+    "accuracy": "Special + Survival + Alert",
     "damage_pool": "-",
     "effect": "The next time the user lands a hit, it will be treated as if it were a Critical Hit.",
     "description": "Through its incredible awareness the Pokémon finds a straight path into a weak point of the foe. The attack that follows is usually devastating."
@@ -4229,9 +4229,9 @@
     "targets": "User",
     "power": "-",
     "category": "Support",
-    "accuracy": "Special + Physical + Alert",
+    "accuracy": "Special + Survival + Alert",
     "damage_pool": "-",
-    "effect": "The next attack the user performs has 2 automatic unremovable successes on its Accuracy Roll.",
+    "effect": "The next attack the user performs has a +5 on its Accuracy Roll.",
     "description": "The Pokémon's eyes zoom at a moving target to ensure that the next attack will be dealt with precision."
   },
   {
@@ -4416,7 +4416,7 @@
     "targets": "Foe",
     "power": "-",
     "category": "Support",
-    "accuracy": "Special + Physical + Alert",
+    "accuracy": "Special + Survival + Alert",
     "damage_pool": "-",
     "effect": "Ignore any Increase in the foe's Evasion. User's Normal and Fighting Moves can affect Ghost Types and Ghost Moves can affect Normal Types. Add +5 to any Rolls to track the target.",
     "description": "The Pokémon uses its keen smell to detect the foe."
@@ -5626,7 +5626,7 @@
     "targets": "Foe",
     "power": "-",
     "category": "Support",
-    "accuracy": "Special + Physical + Alert",
+    "accuracy": "Special + Survival + Alert",
     "damage_pool": "-",
     "effect": "Increase the User's Sp. Defense by 2.",
     "description": "As a fine example of mind over matter, the user temporarily empties its mind to make it more resilient."
@@ -5879,7 +5879,7 @@
     "targets": "Foe",
     "power": "-",
     "category": "Support",
-    "accuracy": "Special + Physical + Alert",
+    "accuracy": "Special + Survival + Alert",
     "damage_pool": "-",
     "effect": "Increase the User's Strength.",
     "description": "The Pokémon meditates to unleash a power that's been sleeping deep inside other user."
@@ -5890,7 +5890,7 @@
     "targets": "User",
     "power": "-",
     "category": "Support",
-    "accuracy": "Special + Physical + Alert",
+    "accuracy": "Special + Survival + Alert",
     "damage_pool": "-",
     "effect": "The User may hit Dark Type Pokémon with Psychic Moves. The Pokémon ignores Evasion modifiers. Opponents can't reduce the User's Accuracy.",
     "description": "The user's sight transcends the flesh and can look directly into the innermost mental presence of the everyone around. Hidden enemies can be detected."
@@ -6556,7 +6556,7 @@
     "description": "The Pokémon has its gears rotate quickly. Working like a powerful machine."
   },
   {
-    "name": "Special Strike",
+    "name": "Smart Strike",
     "type": "Steel",
     "targets": "Foe",
     "power": "3",

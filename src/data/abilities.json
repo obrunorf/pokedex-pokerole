@@ -312,7 +312,7 @@
   {
     "name": "Huge Power",
     "description": "The Pokémon has an unnatural source of Strength beyond its physical appearance.",
-    "effect": "This Pokémon is able to lift up to double the weight it should be able to according to the Strength Chart (p. 369). This ability stacks with moves like Strength."
+    "effect": "Increases this Pokémon Strength and Strength limit by 1. This Pokémon is able to lift up to double the weight it should be able to according to the Strength Chart (p. 369). This ability stacks with moves like Strength."
   },
   {
     "name": "Hustle",

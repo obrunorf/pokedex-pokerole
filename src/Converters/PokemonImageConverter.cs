@@ -27,6 +27,7 @@ namespace Pokedex.Pokerole.Converters
 
         private static object BuildImageTask(string pokemonName)
         {
+            //var deburger = DataFetcher.GetNamedApiObject<Pokemon>(pokemonName?.ToLower());
             return new TaskCompletionNotifier<Uri>(DataFetcher.GetNamedApiObject<Pokemon>(pokemonName?.ToLower())
                 .ContinueWith(
                     t =>
