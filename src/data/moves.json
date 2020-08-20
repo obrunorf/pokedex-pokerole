@@ -72,8 +72,8 @@
     "power": "1",
     "category": "Fighting",
     "accuracy": "Dexterity + Physical + Brawl - 1",
-    "damage_pool": "1d8",
-    "effect": "Successive Action (5 Attacks).",
+    "damage_pool": "1d4",
+    "effect": "Successive Actions. Add Damage for every successive time the pokemon performed Fury Cutter. (1: 0, 2: 1d4, 3: 1d6, 4: 2d4, 5+: 1d8+2)",
     "description": "The Pokémon makes use of its claws or scythes to land as many hits as possible."
   },
   {
@@ -139,7 +139,7 @@
     "category": "Special",
     "accuracy": "Dexterity + Physical + Channel - 1",
     "damage_pool": "1d6",
-    "effect": "Ranged. Successive Action (5 Attacks).",
+    "effect": "Ranged. When this move lands, it hits 1d4+1 times, roll 1d6+Special for each time it hits and subtract Special Defense every time. Apply weakness and resistance afterwards and only once.",
     "description": "The Pokémon showers its foe with stingers or spikes that pierce like needles."
   },
   {
@@ -799,7 +799,7 @@
     "category": "Fighting",
     "accuracy": "Dexterity + Physical + Brawl - 1",
     "damage_pool": "1d8",
-    "effect": "Double Action.",
+    "effect": "Double Action. When this move lands, it hits twice, roll damage twice and subtract defense each time. Apply weakness and resistance afterwards and only once..",
     "description": "The Pokémon strikes the foe with two brutal blows."
   },
   {
@@ -1294,7 +1294,7 @@
     "category": "Fighting",
     "accuracy": "Dexterity + Physical + Brawl",
     "damage_pool": "1d4",
-    "effect": "Successive Actions.",
+    "effect": "When this move lands, it hits 1d4+1 times, roll 1d4+STR for each time it hits and subtract defense every time. Apply weakness and resistance afterwards and only once.",
     "description": "The user quickly throws blows of open-palmed thrusts against the foe."
   },
   {
@@ -1393,8 +1393,8 @@
     "category": "Fighting",
     "accuracy": "Dexterity + Physical + Brawl",
     "damage_pool": "1d6",
-    "effect": "Double Action.",
-    "description": "The user throws to powerful kicks."
+    "effect": "Double Action. When this move lands, it hits twice, roll damage twice and subtract defense each time. Apply weakness and resistance afterwards and only once..",
+    "description": "The user throws two powerful kicks."
   },
   {
     "name": "Drain Punch",
@@ -1701,7 +1701,7 @@
     "category": "Fighting",
     "accuracy": "Dexterity + Physical + Brawl - 1",
     "damage_pool": "1d4",
-    "effect": "Successive Actions. Add 1d4 to Damage Pool to the last kick performed.",
+    "effect": "Successive Actions. When this move lands, it hits 1d6/2(rounded down) times (1 to 3 hits), roll 1d4+STR for each time it hits and subtract defense every time. Add 1d4 extra Damage to the last kick performed. Apply weakness and resistance afterwards and only once.",
     "description": "The user throws three or more kicks, leaving the harder blow for the end."
   },
   {
@@ -2526,7 +2526,7 @@
     "category": "Special",
     "accuracy": "Dexterity + Physical + Channel",
     "damage_pool": "1d6",
-    "effect": "Ranged. Successive Actions.",
+    "effect": "Ranged. When this move lands, it hits 1d4+1 times, roll 1d6+Special for each time it hits and subtract special defense every time. Apply weakness and resistance afterwards and only once.",
     "description": "The Pokémon shoots seeds rapidly as if they were bullets."
   },
   {
@@ -2955,7 +2955,7 @@
     "category": "Fighting",
     "accuracy": "Dexterity + Physical + Brawl - 1",
     "damage_pool": "1d6",
-    "effect": "Successive Actions.",
+    "effect": "When this move lands, it hits 1d4+1 times, roll 1d6+STR for each time it hits and subtract defense every time. Apply weakness and resistance afterwards and only once.",
     "description": "The user quickly strikes the foe with a bone, one blow after another."
   },
   {
@@ -2966,7 +2966,7 @@
     "category": "Special",
     "accuracy": "Dexterity + Physical + Channel - 1",
     "damage_pool": "1d8",
-    "effect": "Ranged. Double Action.",
+    "effect": "Ranged. Double Action. When this move lands, it hits twice, roll damage twice and subtract defense each time. Apply weakness and resistance afterwards and only once..",
     "description": "The Pokémon throws a bone to hit the foe. The bone returns like a boomerang striking a second time."
   },
   {
@@ -3263,7 +3263,7 @@
     "category": "Fighting",
     "accuracy": "Dexterity + Physical + Brawl - 1",
     "damage_pool": "1d6",
-    "effect": "Successive Actions. Add1d4 Damage Roll of the last Ice Ball hit the user performs. If the Pokémon used Defense Curl this Round, add 1d4 to the Damage Roll of every hit.",
+    "effect": "Successive Actions. Add Damage for every successive time the pokemon performed Ice Ball. If the Pokémon used Defense Curl this Round, add 1d4 to the Damage Roll of every hit. (1: 0, 2: 1d4, 3: 1d6, 4: 2d4, 5: 1d8+2, 6: 2d4+2, 7+: 1d10+3)",
     "description": "The user curls into a snowball, rolling against the foe. The ball grows bigger as it rolls."
   },
   {
@@ -3340,7 +3340,7 @@
     "category": "Special",
     "accuracy": "Dexterity + Physical + Channel",
     "damage_pool": "1d6",
-    "effect": "Ranged. Successive Actions.",
+    "effect": "Ranged. When this move lands, it hits 1d4+1 times, roll 1d6+Special for each time it hits and subtract special defense every time. Apply weakness and resistance afterwards and only once.",
     "description": "The user launches a wave of small but pointy icicles towards the target."
   },
   {
@@ -3450,7 +3450,7 @@
     "category": "Special",
     "accuracy": "Dexterity + Physical + Channel - 1",
     "damage_pool": "1d4",
-    "effect": "Ranged. Successive Actions.",
+    "effect": "Ranged. When this move lands, it hits 1d4+1 times, roll 1d4+STR for each time it hits and subtract defense every time. Apply weakness and resistance afterwards and only once.",
     "description": "The Pokémon throws many round objects at the target, one after the other."
   },
   {
@@ -3580,9 +3580,9 @@
     "targets": "Foe",
     "power": "1",
     "category": "Fighting",
-    "accuracy": "Dexterity + Physical + Brawl",
-    "damage_pool": "1d4 ",
-    "effect": "Successive Actions. Fist Based.",
+    "accuracy": "Dexterity + Physical + Brawl - 1",
+    "damage_pool": "1d4",
+    "effect": "When this move lands, it hits 1d4+1 times, roll 1d4+STR for each time it hits and subtract defense every time. Apply weakness and resistance afterwards and only once. Fist Based.",
     "description": "The user throws a quick series of punches at the foe."
   },
   {
@@ -3725,7 +3725,7 @@
     "category": "Fighting",
     "accuracy": "Dexterity + Physical + Brawl - 1",
     "damage_pool": "1d6",
-    "effect": "Double Action.",
+    "effect": "Double Action. When this move lands, it hits twice, roll damage twice and subtract defense each time. Apply weakness and resistance afterwards and only once..",
     "description": "The Pokémon uses the classic \"One-Two\" to attack the foe."
   },
   {
@@ -3734,9 +3734,9 @@
     "targets": "Foe",
     "power": "1",
     "category": "Fighting",
-    "accuracy": "Dexterity + Physical + Brawl - 2",
+    "accuracy": "Dexterity + Physical + Brawl - 1",
     "damage_pool": "1d4",
-    "effect": "Successive Actions.",
+    "effect": "When this move lands, it hits 1d4+1 times, roll 1d4+STR for each time it hits and subtract defense every time. Apply weakness and resistance afterwards and only once.",
     "description": "The user attacks its foe with two or more slaps in the face."
   },
   {
@@ -3967,7 +3967,7 @@
     "category": "Fighting",
     "accuracy": "Dexterity + Physical + Brawl - 2",
     "damage_pool": "1d4",
-    "effect": "Successive Actions.",
+    "effect": "When this move lands, it hits 1d4+1 times, roll 1d4+STR for each time it hits and subtract defense every time. Apply weakness and resistance afterwards and only once.",
     "description": "The Pokémon goes at it with everything it's got in a rather disordered way."
   },
   {
@@ -3978,7 +3978,7 @@
     "category": "Fighting",
     "accuracy": "Dexterity + Physical + Brawl - 1",
     "damage_pool": "1d4",
-    "effect": "Successive Actions.",
+    "effect": "When this move lands, it hits 1d4+1 times, roll 1d4+STR for each time it hits and subtract defense every time. Apply weakness and resistance afterwards and only once.",
     "description": "The user swiftly uses its claws to strike the foe multiple times."
   },
   {
@@ -4891,7 +4891,7 @@
     "category": "Special",
     "accuracy": "Dexterity + Physical + Channel",
     "damage_pool": "-",
-    "effect": "This moves always inflicts 1 damage.",
+    "effect": "This moves always inflicts 3 damage.",
     "description": "The Pokémon attacks with a small destructive shock that can go through armor, thich hide, or walls to deal some damage."
   },
   {
@@ -4902,7 +4902,7 @@
     "category": "Special",
     "accuracy": "Dexterity + Physical + Channel",
     "damage_pool": "1d4 ",
-    "effect": "Ranged. Successive Actions.",
+    "effect": "Ranged. When this move lands, it hits 1d4+1 times, roll 1d4+Special for each time it hits and subtract Special Defense every time. Apply weakness and resistance afterwards and only once.",
     "description": "The Pokémon shoots a wave of pointy projectiles at the foe."
   },
   {
@@ -5111,7 +5111,7 @@
     "category": "Fighting",
     "accuracy": "Dexterity + Physical + Brawl - 2",
     "damage_pool": "1d6",
-    "effect": "Successive Actions.",
+    "effect": "When this move lands, it hits 1d4+1 times, roll 1d6+STR for each time it hits and subtract defense every time. Apply weakness and resistance afterwards and only once.",
     "description": "The Pokémon slaps the foe's face with its strong tail."
   },
   {
@@ -6222,7 +6222,7 @@
     "category": "Special",
     "accuracy": "Dexterity + Physical + Channel - 1",
     "damage_pool": "1d6",
-    "effect": "Ranged. Successive Actions.",
+    "effect": "Ranged. When this move lands, it hits 1d4+1 times, roll 1d6+Special for each time it hits and subtract Special Defense every time. Apply weakness and resistance afterwards and only once.",
     "description": "The Pokémon shoots and throws small rock pebbles that burst into tiny pieces as they touch the foe."
   },
   {
@@ -6321,7 +6321,7 @@
     "category": "Support",
     "accuracy": "Special + Survival + Stealth",
     "damage_pool": "-",
-    "effect": "Entry Hazard. Foe Pokémon that enter the battlefield lose 1 HP, this effect does not stack.",
+    "effect": "Entry Hazard. Foe Pokémon that enter the battlefield lose 4 HP, this effect does not stack.",
     "description": "The Pokémon hides sharp and pointy rocks all over the foe's side of the battlefield."
   },
   {
@@ -6398,7 +6398,7 @@
     "category": "Fighting",
     "accuracy": "Dexterity + Physical + Brawl - 2",
     "damage_pool": "1d8",
-    "effect": "Double Action.",
+    "effect": "Double Action. When this move lands, it hits twice, roll damage twice and subtract defense each time. Apply weakness and resistance afterwards and only once.. When this move lands, it hits twice, roll damage twice and subtract defense each time. Apply weakness and resistance afterwards and only once.",
     "description": "The user traps the foe between its gears and crushes it with two painful grinds."
   },
   {
@@ -6838,7 +6838,7 @@
     "category": "Special",
     "accuracy": "Dexterity + Physical + Channel",
     "damage_pool": "1d4 ",
-    "effect": "Ranged. Priority. Successive Actions.",
+    "effect": "Ranged. Priority. When this move lands, it hits 1d4+1 times, roll 1d4+Special for each time it hits and subtract special defense every time. Apply weakness and resistance afterwards and only once.",
     "description": "The Pokémon quickly throws sharp jets of water in the shape of a shuriken."
   },
   {
