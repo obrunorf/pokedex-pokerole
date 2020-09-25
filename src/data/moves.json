@@ -40,7 +40,7 @@
     "category": "Special",
     "accuracy": "Tough + Physical + Channel",
     "damage_pool": "-",
-    "effect": "User Increases its Defense and Sp. Defense by 1.",
+    "effect": "User Increases its Defense and Sp. Defense by 2.",
     "description": "A swarm of bugs protect this Pokémon from damage."
   },
   {
@@ -139,7 +139,7 @@
     "category": "Special",
     "accuracy": "Dexterity + Physical + Channel - 1",
     "damage_pool": "1d6",
-    "effect": "Ranged. When this move lands, it hits 1d4+1 times, roll 1d6+Special for each time it hits and subtract Special Defense every time. Apply weakness and resistance afterwards and only once.",
+    "effect": "Ranged. When this move lands, it hits 1d4+1 times, roll 1d6+Special for each time it hits and subtract Special Defense every time. Apply weakness and resistance afterwards and only once. (multiple action moves only add ½ of the STR/SPE rounded up to each damage roll)",
     "description": "The Pokémon showers its foe with stingers or spikes that pierce like needles."
   },
   {
@@ -458,7 +458,7 @@
     "category": "Fighting",
     "accuracy": "Special + Physical + Brawl",
     "damage_pool": "-",
-    "effect": "Increase the User's Strength and Accuracy.",
+    "effect": "Increase the User's Strength+1 and Accuracy+1.",
     "description": "The Pokémon sharpens its claws to perform more precise attacks."
   },
   {
@@ -491,7 +491,7 @@
     "category": "Support",
     "accuracy": "Special + Survival + Alert",
     "damage_pool": "-",
-    "effect": "Increase the user's Special by 1.",
+    "effect": "Increase the user's Special by 3.",
     "description": "The Pokémon starts plotting on how to defeat the enemy. Its evil laugh reveals the bad intentions."
   },
   {
@@ -634,7 +634,7 @@
     "category": "Support",
     "accuracy": "Tough + Social + Intimidate",
     "damage_pool": "-",
-    "effect": "The target Pokémon can only perform Damaging Moves and Evasion actions for the next 4 Rounds.",
+    "effect": "The target Pokémon can only perform Damaging Moves and Evasion actions for the next 5 Rounds.",
     "description": "The user mocks and teases the target to make it attack in a raging fury."
   },
   {
@@ -678,7 +678,7 @@
     "category": "Support",
     "accuracy": "Tough + Social + Intimidate",
     "damage_pool": "-",
-    "effect": "The target cannot use the same Moves it used during the last Round. Lasts 4 Rounds.",
+    "effect": "The target cannot use the same Moves it used during the last Round. Lasts 5 Rounds.",
     "description": "The user torments and enrages the foe, making it unable to keep using its strategy."
   },
   {
@@ -733,7 +733,7 @@
     "category": "Support",
     "accuracy": "Tough + Social + Perform",
     "damage_pool": "-",
-    "effect": "Increase the User's Strength and Dexterity.",
+    "effect": "Increase the User's Strength +1 and Dexterity +1.",
     "description": "The user performs a rigorous and mystical dance that boosts the fighting spirit and reflexes."
   },
   {
@@ -799,7 +799,7 @@
     "category": "Fighting",
     "accuracy": "Dexterity + Physical + Brawl - 1",
     "damage_pool": "1d8",
-    "effect": "Double Action. When this move lands, it hits twice, roll damage twice and subtract defense each time. Apply weakness and resistance afterwards and only once..",
+    "effect": "Double Action. When this move lands, it hits twice, roll damage twice and subtract defense each time. Apply weakness and resistance afterwards and only once. (multiple action moves only add ½ of the STR/SPE rounded up to each damage roll)",
     "description": "The Pokémon strikes the foe with two brutal blows."
   },
   {
@@ -876,7 +876,7 @@
     "category": "Special",
     "accuracy": "Special + Physical + Channel",
     "damage_pool": "-",
-    "effect": "For the Next 4 Rounds all Electric Attacks will deal 1d4 Extra Damage. Anyone on the ground will from \"Sleep\" Status.",
+    "effect": "For the Next 5 Rounds all Electric Attacks will deal 1d4 Extra Damage. Anyone on the ground will be immune from \"Sleep\" Status.",
     "description": "The user electrifies the terrain, making it impossible to get a good night's sleep on it."
   },
   {
@@ -931,7 +931,7 @@
     "category": "Special",
     "accuracy": "Special + Physical + Channel",
     "damage_pool": "-",
-    "effect": "For the Next 4 Rounds the User gains immunity against Ground Type Moves.",
+    "effect": "For the Next 5 Rounds the User gains immunity against Ground Type Moves.",
     "description": "The Pokémon uses the magnetic field of the earth to repel itself from the ground, allowing it to float for a short period of time."
   },
   {
@@ -942,7 +942,7 @@
     "category": "Special",
     "accuracy": "Special + Physical + Channel",
     "damage_pool": "-",
-    "effect": "Increase the Defense and Sp. Defense of User and all its Electric and Steel Type Allies.",
+    "effect": "Increase the Defense +1 and Sp. Defense +1 of User and all its Electric and Steel Type Allies.",
     "description": "The Pokémon bends the magnetic field around itself, this also affects all allies who are sensible to it."
   },
   {
@@ -1118,7 +1118,7 @@
     "category": "Special",
     "accuracy": "Special + Physical + Channel",
     "damage_pool": "-",
-    "effect": "Increase one Ally's Defense and Sp. Defense.",
+    "effect": "Increase one Ally's Defense +2 and Sp. Defense +2.",
     "description": "The Pokémon showers an ally in a mist with revitalizing aroma."
   },
   {
@@ -1228,7 +1228,7 @@
     "category": "Support",
     "accuracy": "Special + Survival + Nature",
     "damage_pool": "-",
-    "effect": "Increase the Defense of All Grass Type Pokémon on the field.",
+    "effect": "Increase the Defense + 2 of All Grass Type Pokémon on the field.",
     "description": "The Pokémon uses a mysterious power that causes flowers to bloom beneath every Grass Pokémon nearby. Flora in this field is more resilient and beautiful."
   },
   {
@@ -1239,7 +1239,7 @@
     "category": "Special",
     "accuracy": "Special + Physical + Channel",
     "damage_pool": "-",
-    "effect": "Creatures standing on the battlefield won't be affected by Status Ailments. Dragon Type attacks won't add their Power to the Damage Pool. Lasts 4 Rounds.",
+    "effect": "Creatures standing on the battlefield won't be affected by Status Ailments. Dragon Type attacks won't add their Power to the Damage Pool. Lasts 5 Rounds.",
     "description": "The user surrounds the battlefield with a mystical mist that feels protective. Mythical Pokémon find something eerie about it."
   },
   {
@@ -1294,7 +1294,7 @@
     "category": "Fighting",
     "accuracy": "Dexterity + Physical + Brawl",
     "damage_pool": "1d4",
-    "effect": "When this move lands, it hits 1d4+1 times, roll 1d4+STR for each time it hits and subtract defense every time. Apply weakness and resistance afterwards and only once.",
+    "effect": "When this move lands, it hits 1d4+1 times, roll 1d4+STR for each time it hits and subtract defense every time. Apply weakness and resistance afterwards and only once. (multiple action moves only add ½ of the STR/SPE rounded up to each damage roll)",
     "description": "The user quickly throws blows of open-palmed thrusts against the foe."
   },
   {
@@ -1327,7 +1327,7 @@
     "category": "Support",
     "accuracy": "Tough + Social + Intimidate",
     "damage_pool": "-",
-    "effect": "Increase the User's Strength and Defense.",
+    "effect": "Increase the User's Strength +1 and Defense +1.",
     "description": "The Pokémon shows its muscles with intimidating poses to look bigger and stronger."
   },
   {
@@ -1393,7 +1393,7 @@
     "category": "Fighting",
     "accuracy": "Dexterity + Physical + Brawl",
     "damage_pool": "1d6",
-    "effect": "Double Action. When this move lands, it hits twice, roll damage twice and subtract defense each time. Apply weakness and resistance afterwards and only once..",
+    "effect": "Double Action. When this move lands, it hits twice, roll damage twice and subtract defense each time. Apply weakness and resistance afterwards and only once. (multiple action moves only add ½ of the STR/SPE rounded up to each damage roll)",
     "description": "The user throws two powerful kicks."
   },
   {
@@ -1569,7 +1569,7 @@
     "category": "Fighting",
     "accuracy": "Dexterity + Physical + Brawl",
     "damage_pool": "1d8",
-    "effect": "Fist Based. Increase User's Strength.",
+    "effect": "Fist Based. Increase User's Strength +1.",
     "description": "The Pokémon uses this punch to test the surface of an object. The user toughens up to deal better blows."
   },
   {
@@ -1701,7 +1701,7 @@
     "category": "Fighting",
     "accuracy": "Dexterity + Physical + Brawl - 1",
     "damage_pool": "1d4",
-    "effect": "Successive Actions. When this move lands, it hits 1d6/2(rounded down) times (1 to 3 hits), roll 1d4+STR for each time it hits and subtract defense every time. Add 1d4 extra Damage to the last kick performed. Apply weakness and resistance afterwards and only once.",
+    "effect": "Successive Actions. When this move lands, it hits 1d6/2(rounded down) times (1 to 3 hits), roll 1d4+STR for each time it hits and subtract defense every time. Add 1d4 extra Damage to the last kick performed. Apply weakness and resistance afterwards and only once. (multiple action moves only add ½ of the STR/SPE rounded up to each damage roll)",
     "description": "The user throws three or more kicks, leaving the harder blow for the end."
   },
   {
@@ -1800,7 +1800,7 @@
     "category": "Special",
     "accuracy": "Dexterity + Social + Perform",
     "damage_pool": "2d4+2",
-    "effect": "50% Chance to Increase the User's Special.",
+    "effect": "50% Chance to Increase the User's Special +1.",
     "description": "The user cloaks itself in flames and shoots them while dancing gracefully."
   },
   {
@@ -1888,7 +1888,7 @@
     "category": "Fighting",
     "accuracy": "Dexterity + Physical + Brawl",
     "damage_pool": "1d8",
-    "effect": "Increase the User's Dexterity.",
+    "effect": "Increase the User's Dexterity +1.",
     "description": "The Pokémon uses its flames as propulsion to strike the foe."
   },
   {
@@ -2020,7 +2020,7 @@
     "category": "Support",
     "accuracy": "Special + Survival + Nature",
     "damage_pool": "-",
-    "effect": "Sunny Weather is activated for the next 4 Rounds.",
+    "effect": "Sunny Weather is activated for the next 5 Rounds.",
     "description": "The Pokémon will raise the temperature along with the sun, it doesn't work at night, indoors, underground or underwater."
   },
   {
@@ -2262,7 +2262,7 @@
     "category": "Special",
     "accuracy": "Special + Physical + Channel",
     "damage_pool": "-",
-    "effect": "For the Next 4 Rounds. Increase the Dexterity of the User and All Allies in the field by 2.",
+    "effect": "For the Next 5 Rounds. Increase the Dexterity of the User and All Allies in the field by 2.",
     "description": "User flaps its wings and casts a turbulent wind that helps the team move significantly faster."
   },
   {
@@ -2317,7 +2317,7 @@
     "category": "Support",
     "accuracy": "Will",
     "damage_pool": "-",
-    "effect": "Increase the User's Strength and Defend. Reduce the User's Speed. This effect is only for Pokémon who are not Ghost-Type.",
+    "effect": "Increase the User's Strength +1 and Defense +1. Reduce the User's Speed -1. This effect is only for Pokémon who are not Ghost-Type.",
     "description": "The Pokémon prepares to deal and receive damage by muttering something not appropriate for kids."
   },
   {
@@ -2526,7 +2526,7 @@
     "category": "Special",
     "accuracy": "Dexterity + Physical + Channel",
     "damage_pool": "1d6",
-    "effect": "Ranged. When this move lands, it hits 1d4+1 times, roll 1d6+Special for each time it hits and subtract special defense every time. Apply weakness and resistance afterwards and only once.",
+    "effect": "Ranged. When this move lands, it hits 1d4+1 times, roll 1d6+Special for each time it hits and subtract special defense every time. Apply weakness and resistance afterwards and only once. (multiple action moves only add ½ of the STR/SPE rounded up to each damage roll)",
     "description": "The Pokémon shoots seeds rapidly as if they were bullets."
   },
   {
@@ -2636,7 +2636,7 @@
     "category": "Support",
     "accuracy": "Special + Survival + Nature",
     "damage_pool": "-",
-    "effect": "For the next 4 Rounds, User and Allies on the ground Restore 3 HP at the end of each round. Add 1d4 to the Damage Rolls of Grass Type Moves.",
+    "effect": "For the next 5 Rounds, User and Allies on the ground Restore 3 HP at the end of each round. Add 1d4 to the Damage Rolls of Grass Type Moves.",
     "description": "The Pokémon calls upon the healing power of nature to grow a patch of miraculous grass on its side of the battlefield."
   },
   {
@@ -2955,7 +2955,7 @@
     "category": "Fighting",
     "accuracy": "Dexterity + Physical + Brawl - 1",
     "damage_pool": "1d6",
-    "effect": "When this move lands, it hits 1d4+1 times, roll 1d6+STR for each time it hits and subtract defense every time. Apply weakness and resistance afterwards and only once.",
+    "effect": "When this move lands, it hits 1d4+1 times, roll 1d6+STR for each time it hits and subtract defense every time. Apply weakness and resistance afterwards and only once. (multiple action moves only add ½ of the STR/SPE rounded up to each damage roll)",
     "description": "The user quickly strikes the foe with a bone, one blow after another."
   },
   {
@@ -2966,7 +2966,7 @@
     "category": "Special",
     "accuracy": "Dexterity + Physical + Channel - 1",
     "damage_pool": "1d8",
-    "effect": "Ranged. Double Action. When this move lands, it hits twice, roll damage twice and subtract defense each time. Apply weakness and resistance afterwards and only once..",
+    "effect": "Ranged. Double Action. When this move lands, it hits twice, roll damage twice and subtract defense each time. Apply weakness and resistance afterwards and only once. (multiple action moves only add ½ of the STR/SPE rounded up to each damage roll)",
     "description": "The Pokémon throws a bone to hit the foe. The bone returns like a boomerang striking a second time."
   },
   {
@@ -3098,7 +3098,7 @@
     "category": "Special",
     "accuracy": "Dexterity + Physical + Channel",
     "damage_pool": "-",
-    "effect": "For the next 4 Rounds Electric Type attacks won't add their Power to the Damage Pool.",
+    "effect": "For the next 5 Rounds Electric Type attacks won't add their Power to the Damage Pool.",
     "description": "The user covers everything with mud, reducing the effectiveness of electric attacks made on the field."
   },
   {
@@ -3131,7 +3131,7 @@
     "category": "Fighting",
     "accuracy": "Dexterity + Physical + Brawl - 2",
     "damage_pool": "1d6",
-    "effect": "Ranged. Block. 1d6 Damage against the foe at the end of every Round. Lasts 4 Rounds.",
+    "effect": "Ranged. Block. 1d6 Damage against the foe at the end of every Round. Lasts 5 Rounds.",
     "description": "The Pokémon creates a shifting sand pit around the foe, leaving it unable to escape."
   },
   {
@@ -3241,7 +3241,7 @@
     "category": "Support",
     "accuracy": "Special + Survival + Nature",
     "damage_pool": "-",
-    "effect": "Hail Weather is activated for the next 4 Rounds.",
+    "effect": "Hail Weather is activated for the next 5 Rounds.",
     "description": "The user summons a hailstorm that will stay on the battlefield for some time."
   },
   {
@@ -3307,7 +3307,7 @@
     "category": "Fighting",
     "accuracy": "Dexterity + Physical + Brawl",
     "damage_pool": "2d4+2",
-    "effect": "Ranged. Priority.",
+    "effect": "10% chance of Freezing the target.",
     "description": "The Pokémon delivers a strike covered in ice. The user's hands can freeze anything they touch."
   },
   {
@@ -3340,7 +3340,7 @@
     "category": "Special",
     "accuracy": "Dexterity + Physical + Channel",
     "damage_pool": "1d6",
-    "effect": "Ranged. When this move lands, it hits 1d4+1 times, roll 1d6+Special for each time it hits and subtract special defense every time. Apply weakness and resistance afterwards and only once.",
+    "effect": "Ranged. When this move lands, it hits 1d4+1 times, roll 1d6+Special for each time it hits and subtract special defense every time. Apply weakness and resistance afterwards and only once. (multiple action moves only add ½ of the STR/SPE rounded up to each damage roll)",
     "description": "The user launches a wave of small but pointy icicles towards the target."
   },
   {
@@ -3362,7 +3362,7 @@
     "category": "Special",
     "accuracy": "Special + Physical + Channel",
     "damage_pool": "-",
-    "effect": "For the next 4 Rounds, the User and Allies cannot have their Attributes or Traits reduced.",
+    "effect": "For the next 5 Rounds, the User and Allies cannot have their Attributes or Traits reduced.",
     "description": "The user cloaks itself and its allies within a cold mist with mystic properties. It may conceal whoever is nearby."
   },
   {
@@ -3395,7 +3395,7 @@
     "category": "Support",
     "accuracy": "User",
     "damage_pool": "-",
-    "effect": "Increase a Random Attribute. If this Move is used again, the previous Attribute Modifier is removed.",
+    "effect": "Increase a Random Attribute +2. If this Move is used again, the previous Attribute Modifier is removed.",
     "description": "The user starts pushing its pressure points releasing the energy that was stored in its body."
   },
   {
@@ -3450,7 +3450,7 @@
     "category": "Special",
     "accuracy": "Dexterity + Physical + Channel - 1",
     "damage_pool": "1d4",
-    "effect": "Ranged. When this move lands, it hits 1d4+1 times, roll 1d4+STR for each time it hits and subtract defense every time. Apply weakness and resistance afterwards and only once.",
+    "effect": "Ranged. When this move lands, it hits 1d4+1 times, roll 1d4+STR for each time it hits and subtract defense every time. Apply weakness and resistance afterwards and only once. (multiple action moves only add ½ of the STR/SPE rounded up to each damage roll)",
     "description": "The Pokémon throws many round objects at the target, one after the other."
   },
   {
@@ -3472,7 +3472,7 @@
     "category": "Support",
     "accuracy": "Tough + Social + Perform",
     "damage_pool": "-",
-    "effect": "User deals Damage to itself equal to Half of its total HP rounded down. Increase User's Strength by 3.",
+    "effect": "User deals Damage to itself equal to Half of its total HP rounded down. Increase User's Strength by 4.",
     "description": "The Pokémon roars a war cry while hitting its belly."
   },
   {
@@ -3505,7 +3505,7 @@
     "category": "Fighting",
     "accuracy": "Dexterity + Physical + Brawl - 2",
     "damage_pool": "1d4 ",
-    "effect": "Block. Deal 1d6 damage at the end of each Round. Lasts 4 Rounds.",
+    "effect": "Block. Deal 1d6 damage at the end of each Round. Lasts 5 Rounds.",
     "description": "The Pokémon uses its body to bind the foe, restraining and squeezing it."
   },
   {
@@ -3582,7 +3582,7 @@
     "category": "Fighting",
     "accuracy": "Dexterity + Physical + Brawl - 1",
     "damage_pool": "1d4",
-    "effect": "When this move lands, it hits 1d4+1 times, roll 1d4+STR for each time it hits and subtract defense every time. Apply weakness and resistance afterwards and only once. Fist Based.",
+    "effect": "When this move lands, it hits 1d4+1 times, roll 1d4+STR for each time it hits and subtract defense every time. Apply weakness and resistance afterwards and only once. Fist Based. (multiple action moves only add ½ of the STR/SPE rounded up to each damage roll)",
     "description": "The user throws a quick series of punches at the foe."
   },
   {
@@ -3692,7 +3692,7 @@
     "category": "Fighting",
     "accuracy": "Vitality + Physical + Brawl",
     "damage_pool": "-",
-    "effect": "Increase the User's Defense.",
+    "effect": "Increase the User's Defense +2.",
     "description": "THe user curls like a ball to protect against most threats."
   },
   {
@@ -3725,7 +3725,7 @@
     "category": "Fighting",
     "accuracy": "Dexterity + Physical + Brawl - 1",
     "damage_pool": "1d6",
-    "effect": "Double Action. When this move lands, it hits twice, roll damage twice and subtract defense each time. Apply weakness and resistance afterwards and only once..",
+    "effect": "Double Action. When this move lands, it hits twice, roll damage twice and subtract defense each time. Apply weakness and resistance afterwards and only once. (multiple action moves only add ½ of the STR/SPE rounded up to each damage roll)",
     "description": "The Pokémon uses the classic \"One-Two\" to attack the foe."
   },
   {
@@ -3736,7 +3736,7 @@
     "category": "Fighting",
     "accuracy": "Dexterity + Physical + Brawl - 1",
     "damage_pool": "1d4",
-    "effect": "When this move lands, it hits 1d4+1 times, roll 1d4+STR for each time it hits and subtract defense every time. Apply weakness and resistance afterwards and only once.",
+    "effect": "When this move lands, it hits 1d4+1 times, roll 1d4+STR for each time it hits and subtract defense every time. Apply weakness and resistance afterwards and only once. (multiple action moves only add ½ of the STR/SPE rounded up to each damage roll)",
     "description": "The user attacks its foe with two or more slaps in the face."
   },
   {
@@ -3747,7 +3747,7 @@
     "category": "Support",
     "accuracy": "Dexterity + Physical + Evasion",
     "damage_pool": "-",
-    "effect": "Increase the User's Evasion by 2.",
+    "effect": "Increase the User's Evasion by 4.",
     "description": "The user moves rapidly around the foe, creating illusory copies of itself."
   },
   {
@@ -3967,7 +3967,7 @@
     "category": "Fighting",
     "accuracy": "Dexterity + Physical + Brawl - 2",
     "damage_pool": "1d4",
-    "effect": "When this move lands, it hits 1d4+1 times, roll 1d4+STR for each time it hits and subtract defense every time. Apply weakness and resistance afterwards and only once.",
+    "effect": "When this move lands, it hits 1d4+1 times, roll 1d4+STR for each time it hits and subtract defense every time. Apply weakness and resistance afterwards and only once. (multiple action moves only add ½ of the STR/SPE rounded up to each damage roll)",
     "description": "The Pokémon goes at it with everything it's got in a rather disordered way."
   },
   {
@@ -3978,7 +3978,7 @@
     "category": "Fighting",
     "accuracy": "Dexterity + Physical + Brawl - 1",
     "damage_pool": "1d4",
-    "effect": "When this move lands, it hits 1d4+1 times, roll 1d4+STR for each time it hits and subtract defense every time. Apply weakness and resistance afterwards and only once.",
+    "effect": "When this move lands, it hits 1d4+1 times, roll 1d4+STR for each time it hits and subtract defense every time. Apply weakness and resistance afterwards and only once. (multiple action moves only add ½ of the STR/SPE rounded up to each damage roll)",
     "description": "The user swiftly uses its claws to strike the foe multiple times."
   },
   {
@@ -4033,7 +4033,7 @@
     "category": "Support",
     "accuracy": "Special + Survival + Nature",
     "damage_pool": "-",
-    "effect": "Increase the User's Strength and Special.",
+    "effect": "Increase the User's Strength +1 and Special +1.",
     "description": "The Pokémon expands its body, it grows bigger and stronger."
   },
   {
@@ -4055,7 +4055,7 @@
     "category": "Support",
     "accuracy": "Vitality + Survival + Nature",
     "damage_pool": "-",
-    "effect": "Increase the User's Defense.",
+    "effect": "Increase the User's Defense +2.",
     "description": "The user stiffens its body and prepares for any incoming attack."
   },
   {
@@ -4143,7 +4143,7 @@
     "category": "Support",
     "accuracy": "Cool + Social + Intimidate",
     "damage_pool": "-",
-    "effect": "Increase the User's Strength.",
+    "effect": "Increase the User's Strength +2.",
     "description": "The Pokémon let's out an impressive howl, making it appear a lot more menacing."
   },
   {
@@ -4341,7 +4341,7 @@
     "category": "Special",
     "accuracy": "Special + Physical + Channel",
     "damage_pool": "-",
-    "effect": "This Pokémon gets 2 automatic successes on the next Accuracy Roll or Evasion Roll against the target.",
+    "effect": "This Pokémon gets +6 on the next Accuracy Roll or Evasion Roll against the target.",
     "description": "The user reads the foe's mind. It knows exactly what to do next."
   },
   {
@@ -4352,7 +4352,7 @@
     "category": "Special",
     "accuracy": "Special + Physical + Channel",
     "damage_pool": "-",
-    "effect": "Increase the User's Evasion.",
+    "effect": "Increase the User's Evasion +4.",
     "description": "The Pokémon compacts its body, appearing small than its normal size."
   },
   {
@@ -4528,7 +4528,7 @@
     "category": "Fighting",
     "accuracy": "Dexterity + Physical + Brawl",
     "damage_pool": "1d4",
-    "effect": "If the Pokémon receives damage after using this move, Increase the User's Strength.",
+    "effect": "If the Pokémon receives damage after using this move, Increase the User's Strength +1.",
     "description": "The user gets angry and throws a tantrum at the foe. If the attacker keeps on fighting, it will make the user rage even harder."
   },
   {
@@ -4737,7 +4737,7 @@
     "category": "Fighting",
     "accuracy": "Dexterity + Physical + Brawl",
     "damage_pool": "-",
-    "effect": "Increase the User's Strength 1.",
+    "effect": "Increase the User's Strength +2.",
     "description": "The user cuts down the rough edges of its body to make it as sharp as a razor."
   },
   {
@@ -4792,7 +4792,7 @@
     "category": "Fighting",
     "accuracy": "Dexterity + Physical + Brawl",
     "damage_pool": "2d8+3",
-    "effect": "Increase the User's Defense. Charge.",
+    "effect": "Increase the User's Defense +1. Charge.",
     "description": "The Pokémon withdraws to its shell then charges against the foe."
   },
   {
@@ -4902,7 +4902,7 @@
     "category": "Special",
     "accuracy": "Dexterity + Physical + Channel",
     "damage_pool": "1d4 ",
-    "effect": "Ranged. When this move lands, it hits 1d4+1 times, roll 1d4+Special for each time it hits and subtract Special Defense every time. Apply weakness and resistance afterwards and only once.",
+    "effect": "Ranged. When this move lands, it hits 1d4+1 times, roll 1d4+Special for each time it hits and subtract Special Defense every time. Apply weakness and resistance afterwards and only once. (multiple action moves only add ½ of the STR/SPE rounded up to each damage roll)",
     "description": "The Pokémon shoots a wave of pointy projectiles at the foe."
   },
   {
@@ -4957,7 +4957,7 @@
     "category": "Special",
     "accuracy": "Special + Physical + Channel",
     "damage_pool": "-",
-    "effect": "Increase the User's Defense and Sp. Defense by 1",
+    "effect": "Increase the User's Defense and Sp. Defense by 2",
     "description": "The Pokémon swells up by storing power with its mouth, this makes the user a little more resistant to damage."
   },
   {
@@ -5067,7 +5067,7 @@
     "category": "Support",
     "accuracy": "Special + Survival + Nature",
     "damage_pool": "-",
-    "effect": "Reduce the foe's Evasion. Attracts wild Pokémon.",
+    "effect": "Reduce the foe's Evasion -2. Attracts wild Pokémon.",
     "description": "The Pokémon releases an aroma that its enemies will love."
   },
   {
@@ -5089,7 +5089,7 @@
     "category": "Support",
     "accuracy": "Dexterity + Social + Perform",
     "damage_pool": "-",
-    "effect": "Increase the User's Strength.",
+    "effect": "Increase the User's Strength +3.",
     "description": "The Pokémon makes a dance that raises its battle spirit."
   },
   {
@@ -5111,7 +5111,7 @@
     "category": "Fighting",
     "accuracy": "Dexterity + Physical + Brawl - 2",
     "damage_pool": "1d6",
-    "effect": "When this move lands, it hits 1d4+1 times, roll 1d6+STR for each time it hits and subtract defense every time. Apply weakness and resistance afterwards and only once.",
+    "effect": "When this move lands, it hits 1d4+1 times, roll 1d6+STR for each time it hits and subtract defense every time. Apply weakness and resistance afterwards and only once. (multiple action moves only add ½ of the STR/SPE rounded up to each damage roll)",
     "description": "The Pokémon slaps the foe's face with its strong tail."
   },
   {
@@ -5239,7 +5239,7 @@
     "name": "Weather Ball",
     "type": "Normal",
     "targets": "Foe",
-    "power": ")",
+    "power": "-",
     "category": "Special",
     "accuracy": "Dexterity + Physical + Channel",
     "damage_pool": "1d8",
@@ -5276,7 +5276,7 @@
     "category": "Support",
     "accuracy": "Strength + Physical + Athletic",
     "damage_pool": "-",
-    "effect": "Increase the User's Strength and Special.",
+    "effect": "Increase the User's Strength +2 and Special +2.",
     "description": "The Pokémon exercises with vigor to be physically and mentally prepared for battle."
   },
   {
@@ -5331,7 +5331,7 @@
     "category": "Support",
     "accuracy": "Special + Survival + Nature",
     "damage_pool": "-",
-    "effect": "Increase the User's Defense.",
+    "effect": "Increase the User's Defense +3.",
     "description": "A liquid acid substance seeps through this Pokémon's body turning it into a liquid-like state. The acid deters foes from touching this Pokémon at full force."
   },
   {
@@ -5386,7 +5386,7 @@
     "category": "Support",
     "accuracy": "Tough + Social + Intimidate",
     "damage_pool": "-",
-    "effect": "Increase the User's Strength, Defense, and Accuracy.",
+    "effect": "Increase the User's Strength +1, Defense +1, and Accuracy +2.",
     "description": "The Pokémon curls up its body. In a calm but menacing position it prepares to deliver its strike."
   },
   {
@@ -5606,7 +5606,7 @@
     "category": "Support",
     "accuracy": "Dexterity + Physical + Athletic",
     "damage_pool": "-",
-    "effect": "Increase the User's Dexterity by 2.",
+    "effect": "Increase the User's Dexterity by 1.",
     "description": "The user relaxes and lightens its body to move faster."
   },
   {
@@ -5628,7 +5628,7 @@
     "category": "Support",
     "accuracy": "Special + Survival + Alert",
     "damage_pool": "-",
-    "effect": "Increase the User's Sp. Defense by 2.",
+    "effect": "Increase the User's Sp. Defense by 3.",
     "description": "As a fine example of mind over matter, the user temporarily empties its mind to make it more resilient."
   },
   {
@@ -5639,7 +5639,7 @@
     "category": "Special",
     "accuracy": "Special + Physical + Channel",
     "damage_pool": "-",
-    "effect": "Increase the User's Defense by 2.",
+    "effect": "Increase the User's Defense by 3.",
     "description": "The user cats a protective field around itself."
   },
   {
@@ -5650,7 +5650,7 @@
     "category": "Special",
     "accuracy": "Special + Physical + Channel",
     "damage_pool": "-",
-    "effect": "Increase the User's Special and Sp. Defense.",
+    "effect": "Increase the User's Special +2 and Sp. Defense +2.",
     "description": "The user quietly calms its spirit to strengthen its mind and body."
   },
   {
@@ -5672,7 +5672,7 @@
     "category": "Special",
     "accuracy": "Special + Physical + Channel",
     "damage_pool": "-",
-    "effect": "Increase the User's Defense and Sp. Defense.",
+    "effect": "Increase the User's Defense +2 and Sp. Defense +2.",
     "description": "The user absorbs power from space. This Pokémon glows faintly with energy afterwards."
   },
   {
@@ -5716,7 +5716,7 @@
     "category": "Special",
     "accuracy": "Special + Physical + Channel",
     "damage_pool": "-",
-    "effect": "Flying and Levitating Pokémon can be hit by Ground Type Moves. Lasts 4 Rounds.",
+    "effect": "Flying and Levitating Pokémon can be hit by Ground Type Moves. Lasts 5 Rounds.",
     "description": "The gravity is intensified, bringing everyone to their knees. Flying Pokémon are slammed to the ground."
   },
   {
@@ -5749,7 +5749,7 @@
     "category": "Special",
     "accuracy": "Special + Physical + Channel",
     "damage_pool": "-",
-    "effect": "No one can regain any lost HP. Lasts 4 Rounds.",
+    "effect": "No one can regain any lost HP. Lasts 5 Rounds.",
     "description": "The user forces everyone's wounds to stay open by using its immense psychic power."
   },
   {
@@ -5848,7 +5848,7 @@
     "category": "Special",
     "accuracy": "Special + Physical + Channel",
     "damage_pool": "-",
-    "effect": "User and Allies will receive 1 less Damage from Special Attacks. Lasts 4 Rounds.",
+    "effect": "User and Allies will receive 2 less Damage from Special Attacks. Lasts 5 Rounds.",
     "description": "The user manifests its mental power on the world, creating walls and floors of light that help prevent the passing of energies."
   },
   {
@@ -5870,7 +5870,7 @@
     "category": "Special",
     "accuracy": "Special + Physical + Channel",
     "damage_pool": "-",
-    "effect": "No one can use their Held Item nor any other Item. Lasts 4 Rounds.",
+    "effect": "No one can use their Held Item nor any other Item. Lasts 5 Rounds.",
     "description": "Inside the effects of Magic Room, technology, tools and items that require manual use do not work. Automated technology will func"
   },
   {
@@ -5881,7 +5881,7 @@
     "category": "Support",
     "accuracy": "Special + Survival + Alert",
     "damage_pool": "-",
-    "effect": "Increase the User's Strength.",
+    "effect": "Increase the User's Strength +3.",
     "description": "The Pokémon meditates to unleash a power that's been sleeping deep inside other user."
   },
   {
@@ -5980,7 +5980,7 @@
     "category": "Special",
     "accuracy": "Special + Physical + Channel",
     "damage_pool": "-",
-    "effect": "For the next 4 Rounds, all Psychic Attacks will deal 1d4 of Damage. No Pokémon on the ground can use moves with increased Priority.",
+    "effect": "For the next 5 Rounds, all Psychic Attacks will deal 1d4 of Damage. No Pokémon on the ground can use moves with increased Priority.",
     "description": "The arena becomes radiated by psychic waves. Everyone begins to think slowly due to the buzz in their heads, making all tasks take more time."
   },
   {
@@ -6035,7 +6035,7 @@
     "category": "Special",
     "accuracy": "Special + Physical + Channel",
     "damage_pool": "-",
-    "effect": "User and Allies will receive 1 less Damage from Physical Attacks. Lasts 4 Rounds.",
+    "effect": "User and Allies will receive 2 less Damage from Physical Attacks. Lasts 5 Rounds.",
     "description": "The user manifests its mental power on the world, creating invisible walls and floors that prevent the passing of objects."
   },
   {
@@ -6145,7 +6145,7 @@
     "category": "Special",
     "accuracy": "Special + Physical + Channel",
     "damage_pool": "-",
-    "effect": "Invert the order of Initiative. Lasts 4 Rounds.",
+    "effect": "Invert the order of Initiative. Lasts 5 Rounds.",
     "description": "This reality altering move can manipulate time, so slow creatures are fast and fast creatures are slow."
   },
   {
@@ -6156,7 +6156,7 @@
     "category": "Special",
     "accuracy": "Special + Physical + Channel",
     "damage_pool": "-",
-    "effect": "Defense and Sp. Defense will be reversed for damage reduction calculations. Lasts 4 Rounds.",
+    "effect": "Defense and Sp. Defense will be reversed for damage reduction calculations. Lasts 5 Rounds.",
     "description": "Inside the Wonder Room, a strong mind makes a strong body and a resilient body makes a resilient mind. However, if the mind is weak, the body will be weak and vice versa."
   },
   {
@@ -6222,7 +6222,7 @@
     "category": "Special",
     "accuracy": "Dexterity + Physical + Channel - 1",
     "damage_pool": "1d6",
-    "effect": "Ranged. When this move lands, it hits 1d4+1 times, roll 1d6+Special for each time it hits and subtract Special Defense every time. Apply weakness and resistance afterwards and only once.",
+    "effect": "Ranged. When this move lands, it hits 1d4+1 times, roll 1d6+Special for each time it hits and subtract Special Defense every time. Apply weakness and resistance afterwards and only once. (multiple action moves only add ½ of the STR/SPE rounded up to each damage roll)",
     "description": "The Pokémon shoots and throws small rock pebbles that burst into tiny pieces as they touch the foe."
   },
   {
@@ -6299,7 +6299,7 @@
     "category": "Support",
     "accuracy": "Special + Survival + Nature",
     "damage_pool": "-",
-    "effect": "Sandstorm Weather is activated for the next 4 Rounds.",
+    "effect": "Sandstorm Weather is activated for the next 5 Rounds.",
     "description": "The Pokémon casts a fierce wind that carries millions of rough sand particles."
   },
   {
@@ -6398,7 +6398,7 @@
     "category": "Fighting",
     "accuracy": "Dexterity + Physical + Brawl - 2",
     "damage_pool": "1d8",
-    "effect": "Double Action. When this move lands, it hits twice, roll damage twice and subtract defense each time. Apply weakness and resistance afterwards and only once.. When this move lands, it hits twice, roll damage twice and subtract defense each time. Apply weakness and resistance afterwards and only once.",
+    "effect": "Double Action. When this move lands, it hits twice, roll damage twice and subtract defense each time. Apply weakness and resistance afterwards and only once. (multiple action moves only add ½ of the STR/SPE rounded up to each damage roll)",
     "description": "The user traps the foe between its gears and crushes it with two painful grinds."
   },
   {
@@ -6409,7 +6409,7 @@
     "category": "Support",
     "accuracy": "OneAlly",
     "damage_pool": "-",
-    "effect": "Increase the Strength and Special of one Steel-Type or Electric-Type Ally.",
+    "effect": "Increase the Strength +2 and Special +2 of one Steel-Type or Electric-Type Ally.",
     "description": "The user engages its gears on an ally to leave the ally's body working like a well-oiled machine."
   },
   {
@@ -6442,7 +6442,7 @@
     "category": "Special",
     "accuracy": "Vitality + Physical + Channel",
     "damage_pool": "-",
-    "effect": "Increase the User's Defense.",
+    "effect": "Increase the User's Defense +3.",
     "description": "The Pokémon hardens its body surface as if it was made from the strongest iron around."
   },
   {
@@ -6508,7 +6508,7 @@
     "category": "Fighting",
     "accuracy": "Dexterity + Physical + Brawl - 1",
     "damage_pool": "1d8",
-    "effect": "10% Chance to Increase the user's Strength.",
+    "effect": "10% Chance to Increase the user's Strength +1.",
     "description": "The Pokémon attacks using its sharp claws, the friction may leave them even sharper."
   },
   {
@@ -6552,7 +6552,7 @@
     "category": "Special",
     "accuracy": "Dexterity + Physical + Channel",
     "damage_pool": "-",
-    "effect": "Increase the User's Strength and Dexterity.",
+    "effect": "Increase the User's Strength +2 and Dexterity +1.",
     "description": "The Pokémon has its gears rotate quickly. Working like a powerful machine."
   },
   {
@@ -6574,7 +6574,7 @@
     "category": "Fighting",
     "accuracy": "Dexterity + Physical + Brawl - 1",
     "damage_pool": "1d8+2",
-    "effect": "10% Chance to Increase the User's Defense.",
+    "effect": "10% Chance to Increase the User's Defense +1.",
     "description": "The Pokémon uses its sharp feathers as if they were razors."
   },
   {
@@ -6739,7 +6739,7 @@
     "category": "Support",
     "accuracy": "Dexterity + Social + Perform",
     "damage_pool": "-",
-    "effect": "Rain Weather is activated for the next 4 Rounds.",
+    "effect": "Rain Weather is activated for the next 5 Rounds.",
     "description": "The user performs a curious mystic dance that summons a heavy rainfall."
   },
   {
@@ -6838,7 +6838,7 @@
     "category": "Special",
     "accuracy": "Dexterity + Physical + Channel",
     "damage_pool": "1d4 ",
-    "effect": "Ranged. Priority. When this move lands, it hits 1d4+1 times, roll 1d4+Special for each time it hits and subtract special defense every time. Apply weakness and resistance afterwards and only once.",
+    "effect": "Ranged. Priority. When this move lands, it hits 1d4+1 times, roll 1d4+Special for each time it hits and subtract special defense every time. Apply weakness and resistance afterwards and only once. (multiple action moves only add ½ of the STR/SPE rounded up to each damage roll)",
     "description": "The Pokémon quickly throws sharp jets of water in the shape of a shuriken."
   },
   {
@@ -6849,7 +6849,7 @@
     "category": "Special",
     "accuracy": "Special + Physical + Channel",
     "damage_pool": "-",
-    "effect": "For the next 4 Rounds Fire Type attacks won't add their Power to the Damage Pool.",
+    "effect": "For the next 5 Rounds Fire Type attacks won't add their Power to the Damage Pool.",
     "description": "The user soaks the battlefield with moisture, making it harder for fire attacks to ignite."
   },
   {
@@ -6893,7 +6893,7 @@
     "category": "Special",
     "accuracy": "Dexterity + Physical + Channel",
     "damage_pool": "-",
-    "effect": "Increase User's Defense by 1.",
+    "effect": "Increase User's Defense by 3.",
     "description": "The user hides inside its hard shell to protect itself from incoming attacks."
   }
 ]
