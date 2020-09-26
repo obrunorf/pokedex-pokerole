@@ -25,7 +25,7 @@ namespace pokedex_pokerole
         public MainWindow()
         {
             InitializeComponent();           
-            pkmns = LoadPokeData(@"C:\Users\e-eu\Documents\GitHub\pokedex-pokerole\pokedex pokerole\data\pokemon.json");
+            pkmns = LoadPokeData(@"C:\Users\e-eu\Documents\GitHub\pokedex-pokerole\pokedex pokerole\data\pokemon_finalzao.json");
             pkmnList.ItemsSource = pkmns;
             moves = LoadMoves(@"C:\Users\e-eu\Documents\GitHub\pokedex-pokerole\pokedex pokerole\data\moves.json");
 
@@ -143,7 +143,7 @@ namespace pokedex_pokerole
 
             foreach (pokemon pok in pkmns) //buscar pelo nome! ignorar o q tiver entre parenteses!           
             {
-                if (!string.IsNullOrEmpty(pok.number))
+                if (!string.IsNullOrEmpty(pok.number) && (Int32.Parse(pok.number)<808))
                 //if (!string.IsNullOrEmpty(pok.name))
                 {// { pok.number = i.ToString(); }
                     string pokemonnameprocessado = pok.name.Replace("'", "");
@@ -161,15 +161,31 @@ namespace pokedex_pokerole
                     if (pokemonnameprocessado.Contains("Wishiwashi")) { pokemonnameprocessado2 = "Wishiwashi"; }
                     if (pokemonnameprocessado.Contains("Minior")) { pokemonnameprocessado2 = "Minior"; }
                     if (pokemonnameprocessado.Contains("Mimikyu")) { pokemonnameprocessado2 = "Mimikyu"; }
+                    if (pokemonnameprocessado.Contains("-Alola")) { pokemonnameprocessado2 = pokemonnameprocessado.Replace("-Alola",""); }
+                    if (pokemonnameprocessado.Contains("-Galar")) { pokemonnameprocessado2 = pokemonnameprocessado.Replace("-Galar", ""); }
+                    if (pokemonnameprocessado.Contains("Aegislash")) { pokemonnameprocessado2 = "Aegislash"; }
+                    if (pokemonnameprocessado.Contains("Darmanitan")) { pokemonnameprocessado2 = "Darmanitan"; }
+
                     PokemonSpecies p2 = await DataFetcher.GetNamedApiObject<PokemonSpecies>(pokemonnameprocessado2.ToLower()); //ESPECIE
 
                     if (pokemonnameprocessado.Contains("Giratina")) { pokemonnameprocessado = "giratina-altered"; } //meu deus
                     if (pokemonnameprocessado.Contains("Basculin")) { pokemonnameprocessado = "basculin-red-striped"; }
-                    if (pokemonnameprocessado.Contains("Darmanitan")) { pokemonnameprocessado = "darmanitan-standard"; }                    
+                    if (pokemonnameprocessado.Contains("Darmanitan")) { pokemonnameprocessado = "darmanitan-standard"; }
+                    if (pokemonnameprocessado.Contains("Meowstic")) { pokemonnameprocessado = "meowstic-male"; }
+                    if (pokemonnameprocessado.Contains("-Galar")) { pokemonnameprocessado = pokemonnameprocessado.Replace("-Galar", ""); }
                     Pokemon p3 = await DataFetcher.GetNamedApiObject<Pokemon>(pokemonnameprocessado.ToLower());             //POKEMON
+
+                    pok.abilities.Clear();
+                    foreach (PokemonAbility abil in p3.Abilities)
+                    {
+                        if (abil.IsHidden) { pok.abilities.Add(abil.Ability.Name + "[HA]"); }
+                        else { pok.abilities.Add(abil.Ability.Name); } 
+
+                    };
+                    
                     //Pokemon p3 = await DataFetcher.GetApiObject<Pokemon>(Int32.Parse(pok.number));
 
-                    pok.base_hp = hpBase(pok,
+                    /*pok.base_hp = hpBase(pok,
                                     p2,
                                     todasEvolucaoMapeada,
                                     p3);
@@ -193,15 +209,15 @@ namespace pokedex_pokerole
                         pok.height = temp.ToString();
                         temp = p3.Mass / 10;
                         pok.weight = temp.ToString();
-                    }
+                    } */
                    // if (pok.types.Count == 0)
-                    {
+                   /* {
                         pok.types = new List<string>();
                         pok.types.Add(UppercaseFirst(p3.Types[0].Type.Name));
                         if (p3.Types.Count() > 1){ //se houver dois tipos
                             pok.types.Add(UppercaseFirst(p3.Types[1].Type.Name));
                         }
-                    }
+                    }*/
                     /*if (pok.evolutions.Count == 0){
                         //a cadeia evolucionaria é composta pelos q vieram antes, ele mesmo, e as evolucoes, em ordem
                         pok.evolutions = new List<string>();
@@ -225,13 +241,13 @@ namespace pokedex_pokerole
 
                         }                                              
                     }*/
-                    pok.defense =new List<string>();
-                    pok.spdef = new List<string>();                    
+                    //pok.defense =new List<string>();
+                    //pok.spdef = new List<string>();                    
 
-                    pok.defense.AddRange(converterStatus(p3.Stats[2].BaseValue));
-                    pok.spdef.AddRange(converterStatus(p3.Stats[4].BaseValue));
+                    //pok.defense.AddRange(converterStatus(p3.Stats[2].BaseValue));
+                    //pok.spdef.AddRange(converterStatus(p3.Stats[4].BaseValue));
 
-                    if (pok.strength.Count == 0)
+                    /*if (pok.strength.Count == 0)
                     {
                         pok.strength = new List<string>();
                         pok.special = new List<string>();
@@ -239,7 +255,7 @@ namespace pokedex_pokerole
                         pok.strength.AddRange(converterStatus(p3.Stats[1].BaseValue));
                         pok.special.AddRange(converterStatus(p3.Stats[3].BaseValue));
                         pok.dexterity.AddRange(converterStatus(p3.Stats[5].BaseValue));
-                    }
+                    }*/
 
                 }
                  //   i++;                
